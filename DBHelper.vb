@@ -42,4 +42,24 @@ Module DBHelper
         Return result
     End Function
 
+    Public Function GetDataTable(query As String, parameters As Dictionary(Of String, Object)) As DataTable
+        Dim dt As New DataTable()
+        Using connection As MySqlConnection = GetConnection()
+            Try
+                connection.Open()
+                Using cmd As New MySqlCommand(query, connection)
+                    For Each param In parameters
+                        cmd.Parameters.AddWithValue(param.Key, param.Value)
+                    Next
+                    Dim adapter As New MySqlDataAdapter(cmd)
+                    adapter.Fill(dt)
+                End Using
+            Catch ex As MySqlException
+                Console.WriteLine("Database error: " & ex.Message)
+            End Try
+        End Using
+        Return dt
+    End Function
+
+
 End Module

@@ -22,75 +22,76 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnSignUp = New System.Windows.Forms.Button()
-        Me.btnLogIn = New System.Windows.Forms.Button()
-        Me.btnSearch = New System.Windows.Forms.Button()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.cbNumGuests = New System.Windows.Forms.ComboBox()
+        Me.btnApply = New System.Windows.Forms.Button()
+        Me.lblCapacity = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblLocation = New System.Windows.Forms.Label()
-        Me.cbEventType = New System.Windows.Forms.ComboBox()
         Me.pnlFilter = New System.Windows.Forms.Panel()
-        Me.lblSearchFilters = New System.Windows.Forms.Label()
-        Me.cbVenueType = New System.Windows.Forms.ComboBox()
-        Me.lblVenueType = New System.Windows.Forms.Label()
-        Me.cbLocation = New System.Windows.Forms.ComboBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.cbAvailableOn = New System.Windows.Forms.ComboBox()
+        Me.lblAvailability = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lblSortDirection = New System.Windows.Forms.Label()
+        Me.cbSortDirection = New System.Windows.Forms.ComboBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblSortBy = New System.Windows.Forms.Label()
+        Me.cbSort = New System.Windows.Forms.ComboBox()
+        Me.pnlPrice = New System.Windows.Forms.Panel()
+        Me.txtMinPrice = New System.Windows.Forms.TextBox()
+        Me.txtMaxPrice = New System.Windows.Forms.TextBox()
+        Me.pnlCapacity = New System.Windows.Forms.Panel()
+        Me.txtMinCapacity = New System.Windows.Forms.TextBox()
+        Me.txtMaxCapacity = New System.Windows.Forms.TextBox()
+        Me.pnlEventType = New System.Windows.Forms.Panel()
+        Me.clbEventType = New System.Windows.Forms.CheckedListBox()
         Me.flpResults = New System.Windows.Forms.FlowLayoutPanel()
-        Me.cbVenue = New System.Windows.Forms.ComboBox()
         Me.btnNext = New System.Windows.Forms.Button()
         Me.btnBack = New System.Windows.Forms.Button()
+        Me.btnCustomerView = New System.Windows.Forms.Button()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.btnSearch = New System.Windows.Forms.Button()
+        Me.btnLogOut = New System.Windows.Forms.Button()
+        Me.lblUser = New System.Windows.Forms.Label()
+        Me.lblUsername = New System.Windows.Forms.Label()
+        Me.pbProfile = New System.Windows.Forms.PictureBox()
+        Me.pnlAccount = New System.Windows.Forms.Panel()
+        Me.btnLogIn = New System.Windows.Forms.Button()
+        Me.btnSignUp = New System.Windows.Forms.Button()
+        Me.pnlSignUpLogIn = New System.Windows.Forms.Panel()
         Me.pnlFilter.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.pnlPrice.SuspendLayout()
+        Me.pnlCapacity.SuspendLayout()
+        Me.pnlEventType.SuspendLayout()
+        CType(Me.pbProfile, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlAccount.SuspendLayout()
+        Me.pnlSignUpLogIn.SuspendLayout()
         Me.SuspendLayout()
         '
-        'btnSignUp
+        'btnApply
         '
-        Me.btnSignUp.Location = New System.Drawing.Point(1197, 25)
-        Me.btnSignUp.Name = "btnSignUp"
-        Me.btnSignUp.Size = New System.Drawing.Size(99, 33)
-        Me.btnSignUp.TabIndex = 0
-        Me.btnSignUp.Text = "Sign Up"
-        Me.btnSignUp.UseVisualStyleBackColor = True
+        Me.btnApply.Location = New System.Drawing.Point(204, 629)
+        Me.btnApply.Name = "btnApply"
+        Me.btnApply.Size = New System.Drawing.Size(99, 33)
+        Me.btnApply.TabIndex = 17
+        Me.btnApply.Text = "Apply"
+        Me.btnApply.UseVisualStyleBackColor = True
         '
-        'btnLogIn
+        'lblCapacity
         '
-        Me.btnLogIn.Location = New System.Drawing.Point(1303, 25)
-        Me.btnLogIn.Name = "btnLogIn"
-        Me.btnLogIn.Size = New System.Drawing.Size(99, 33)
-        Me.btnLogIn.TabIndex = 1
-        Me.btnLogIn.Text = "Log In"
-        Me.btnLogIn.UseVisualStyleBackColor = True
-        '
-        'btnSearch
-        '
-        Me.btnSearch.Location = New System.Drawing.Point(1092, 25)
-        Me.btnSearch.Name = "btnSearch"
-        Me.btnSearch.Size = New System.Drawing.Size(99, 33)
-        Me.btnSearch.TabIndex = 17
-        Me.btnSearch.Text = "Search"
-        Me.btnSearch.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(34, 177)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 13)
-        Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Number of Guests"
-        '
-        'cbNumGuests
-        '
-        Me.cbNumGuests.FormattingEnabled = True
-        Me.cbNumGuests.Items.AddRange(New Object() {"Up to 5 pax", "6 - 25 pax", "26 - 50 pax", "51 - 100 pax", "101 - 150 pax", "151 - 200 pax", "201 - 250 pax", "251 - 300 pax", "300 pax and above"})
-        Me.cbNumGuests.Location = New System.Drawing.Point(34, 203)
-        Me.cbNumGuests.Name = "cbNumGuests"
-        Me.cbNumGuests.Size = New System.Drawing.Size(247, 21)
-        Me.cbNumGuests.TabIndex = 6
+        Me.lblCapacity.AutoSize = True
+        Me.lblCapacity.Location = New System.Drawing.Point(17, 9)
+        Me.lblCapacity.Name = "lblCapacity"
+        Me.lblCapacity.Size = New System.Drawing.Size(48, 13)
+        Me.lblCapacity.TabIndex = 7
+        Me.lblCapacity.Text = "Capacity"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(34, 117)
+        Me.Label2.Location = New System.Drawing.Point(3, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(74, 13)
         Me.Label2.TabIndex = 5
@@ -99,89 +100,185 @@ Partial Class FormMain
         'lblLocation
         '
         Me.lblLocation.AutoSize = True
-        Me.lblLocation.Location = New System.Drawing.Point(34, 237)
+        Me.lblLocation.Location = New System.Drawing.Point(17, 9)
         Me.lblLocation.Name = "lblLocation"
-        Me.lblLocation.Size = New System.Drawing.Size(48, 13)
+        Me.lblLocation.Size = New System.Drawing.Size(31, 13)
         Me.lblLocation.TabIndex = 3
-        Me.lblLocation.Text = "Location"
-        '
-        'cbEventType
-        '
-        Me.cbEventType.FormattingEnabled = True
-        Me.cbEventType.Items.AddRange(New Object() {"Classes", "     Cooking", "     Fitness", "     Workshop", "     Yoga", "Corporate Event", "     Dining", "     Large Scale", "     Party", "     Small Scale", "Formal Meeting", "     Board Meeting", "     Client Meeting", "     Conference", "     Interview", "     Meeting", "     Sales Meeting", "Party", "     After Party", "     After Prom", "     Anniversary", "     Baby Shower", "     Baptismal", "     Birthday Party", "     Chinese New Year", "     Christmas Party", "     Deepavali", "     Dinner and Dance", "     Graduation Party", "     Halloween Party", "     Hari Raya", "     Lunch/Dinner", "     Prom", "     Year End Party", "Shoots", "     3D Virtual Studio Production", "     Fashion Shoot", "     Film", "     Green Screen Shoot", "     Live Stream", "     Live Webinar", "     Photo Shoot", "     Video Production", "     Video Shoot", "Team Meeting", "     Offsite Meeting", "     Team Bonding", "     Training", "Wedding", "     Bachelor Party", "     Bachelorette Party", "     Bridal Shower", "     Ceremony", "     Engagement", "     Proposal", "     Reception", "     Solemnization", "     Wedding", "Workshops", "     Art", "     Candle Making Workshop", "     Coffee Workshop", "     Cooking Workshop", "     Flower Workshop", "     Leather", "     Perfume", "     Tea", "     Tea Workshop"})
-        Me.cbEventType.Location = New System.Drawing.Point(34, 143)
-        Me.cbEventType.Name = "cbEventType"
-        Me.cbEventType.Size = New System.Drawing.Size(247, 21)
-        Me.cbEventType.TabIndex = 4
+        Me.lblLocation.Text = "Price"
         '
         'pnlFilter
         '
-        Me.pnlFilter.Controls.Add(Me.lblSearchFilters)
-        Me.pnlFilter.Controls.Add(Me.cbVenueType)
-        Me.pnlFilter.Controls.Add(Me.lblVenueType)
-        Me.pnlFilter.Controls.Add(Me.cbEventType)
-        Me.pnlFilter.Controls.Add(Me.cbLocation)
-        Me.pnlFilter.Controls.Add(Me.lblLocation)
-        Me.pnlFilter.Controls.Add(Me.Label2)
-        Me.pnlFilter.Controls.Add(Me.cbNumGuests)
-        Me.pnlFilter.Controls.Add(Me.Label3)
-        Me.pnlFilter.Location = New System.Drawing.Point(1092, 64)
+        Me.pnlFilter.Controls.Add(Me.Panel3)
+        Me.pnlFilter.Controls.Add(Me.Panel2)
+        Me.pnlFilter.Controls.Add(Me.Panel1)
+        Me.pnlFilter.Controls.Add(Me.pnlPrice)
+        Me.pnlFilter.Controls.Add(Me.pnlCapacity)
+        Me.pnlFilter.Controls.Add(Me.pnlEventType)
+        Me.pnlFilter.Controls.Add(Me.btnApply)
+        Me.pnlFilter.Location = New System.Drawing.Point(1092, 82)
         Me.pnlFilter.Name = "pnlFilter"
-        Me.pnlFilter.Size = New System.Drawing.Size(310, 681)
+        Me.pnlFilter.Size = New System.Drawing.Size(324, 681)
         Me.pnlFilter.TabIndex = 15
         '
-        'lblSearchFilters
+        'Panel3
         '
-        Me.lblSearchFilters.AutoSize = True
-        Me.lblSearchFilters.Location = New System.Drawing.Point(34, 21)
-        Me.lblSearchFilters.Name = "lblSearchFilters"
-        Me.lblSearchFilters.Size = New System.Drawing.Size(71, 13)
-        Me.lblSearchFilters.TabIndex = 20
-        Me.lblSearchFilters.Text = "Search Filters"
+        Me.Panel3.Controls.Add(Me.cbAvailableOn)
+        Me.Panel3.Controls.Add(Me.lblAvailability)
+        Me.Panel3.Location = New System.Drawing.Point(25, 378)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(278, 54)
+        Me.Panel3.TabIndex = 30
         '
-        'cbVenueType
+        'cbAvailableOn
         '
-        Me.cbVenueType.FormattingEnabled = True
-        Me.cbVenueType.Items.AddRange(New Object() {"Auditorium", "Ballroom", "Banquet", "Bar", "Cafe", "Club", "Co-Working Space", "Conference Hall", "Country Club", "Event Space", "Function Room", "Gallery", "Halal Venue", "Hotel", "Kids Friendly Venue", "MICE Venue", "Meeting Room", "Museum", "Outdoor Venue", "Private Estate", "Restaurant", "Rooftop Venue", "Seminar Room", "Studio", "Theater", "Training Room", "Unique Venue", "Yacht"})
-        Me.cbVenueType.Location = New System.Drawing.Point(34, 83)
-        Me.cbVenueType.Name = "cbVenueType"
-        Me.cbVenueType.Size = New System.Drawing.Size(247, 21)
-        Me.cbVenueType.TabIndex = 18
+        Me.cbAvailableOn.FormattingEnabled = True
+        Me.cbAvailableOn.Items.AddRange(New Object() {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"})
+        Me.cbAvailableOn.Location = New System.Drawing.Point(20, 26)
+        Me.cbAvailableOn.Name = "cbAvailableOn"
+        Me.cbAvailableOn.Size = New System.Drawing.Size(241, 21)
+        Me.cbAvailableOn.TabIndex = 8
         '
-        'lblVenueType
+        'lblAvailability
         '
-        Me.lblVenueType.AutoSize = True
-        Me.lblVenueType.Location = New System.Drawing.Point(34, 57)
-        Me.lblVenueType.Name = "lblVenueType"
-        Me.lblVenueType.Size = New System.Drawing.Size(65, 13)
-        Me.lblVenueType.TabIndex = 19
-        Me.lblVenueType.Text = "Venue Type"
+        Me.lblAvailability.AutoSize = True
+        Me.lblAvailability.Location = New System.Drawing.Point(17, 9)
+        Me.lblAvailability.Name = "lblAvailability"
+        Me.lblAvailability.Size = New System.Drawing.Size(65, 13)
+        Me.lblAvailability.TabIndex = 7
+        Me.lblAvailability.Text = "Available on"
         '
-        'cbLocation
+        'Panel2
         '
-        Me.cbLocation.FormattingEnabled = True
-        Me.cbLocation.Items.AddRange(New Object() {"Region 1 - Ilocos Region", "    Ilocos Norte", "        Laoag City", "    Ilocos Sur", "        Vigan City", "        Candon City", "    La Union", "        San Fernando City", "    Pangasinan", "        Dagupan City", "        San Carlos City", "        Urdaneta City", "        Alaminos City", "Region 2 - Cagayan Valley", "    Batanes", "        Basco", "    Cagayan", "        Tuguegarao City", "    Isabela", "        Ilagan City", "        Cauayan City", "        Santiago City", "    Nueva Vizcaya", "        Bayombong", "    Quirino", "        Cabarroguis", "Region 3 - Central Luzon", "    Aurora", "        Baler", "    Bataan", "        Balanga City", "    Bulacan", "        Malolos City", "        San Jose del Monte City", "        Meycauayan City", "    Nueva Ecija", "        Cabanatuan City", "        Gapan City", "        San Jose City", "    Pampanga", "        Angeles City", "        San Fernando City", "    Tarlac", "        Tarlac City", "    Zambales", "        Olongapo City", "Region 4-A - CALABARZON", "    Cavite", "        Tagaytay City", "        Trece Martires City", "        Dasmariñas City", "        Bacoor City", "        Imus City", "    Laguna", "        Santa Rosa City", "        San Pablo City", "        Calamba City", "        Biñan City", "    Batangas", "        Batangas City", "        Lipa City", "        Tanauan City", "    Rizal", "        Antipolo City", "    Quezon", "        Lucena City", "        Tayabas City", "Region 4-B - MIMAROPA", "    Occidental Mindoro", "        San Jose", "    Oriental Mindoro", "        Calapan City", "    Marinduque", "        Boac", "    Romblon", "        Romblon", "    Palawan", "        Puerto Princesa City", "Region 5 - Bicol Region", "    Albay", "        Legazpi City", "        Ligao City", "        Tabaco City", "    Camarines Norte", "        Daet", "    Camarines Sur", "        Naga City", "        Iriga City", "    Catanduanes", "        Virac", "    Masbate", "        Masbate City", "    Sorsogon", "        Sorsogon City", "Region 6 - Western Visayas", "    Aklan", "        Kalibo", "    Antique", "        San Jose de Buenavista", "    Capiz", "        Roxas City", "    Guimaras", "        Jordan", "    Iloilo", "        Iloilo City", "        Passi City", "    Negros Occidental", "        Bacolod City", "        Silay City", "        Talisay City", "Region 7 - Central Visayas", "    Bohol", "        Tagbilaran City", "    Cebu", "        Cebu City", "        Lapu-Lapu City", "        Mandaue City", "        Talisay City", "    Negros Oriental", "        Dumaguete City", "        Bayawan City", "    Siquijor", "        Siquijor", "Region 8 - Eastern Visayas", "    Biliran", "        Naval", "    Eastern Samar", "        Borongan City", "    Leyte", "        Tacloban City", "        Ormoc City", "    Northern Samar", "        Catarman", "    Samar (Western Samar)", "        Calbayog City", "        Catbalogan City", "    Southern Leyte", "        Maasin City", "Region 9 - Zamboanga Peninsula", "    Zamboanga del Norte", "        Dipolog City", "        Dapitan City", "    Zamboanga del Sur", "        Pagadian City", "    Zamboanga Sibugay", "        Ipil", "Region 10 - Northern Mindanao", "    Bukidnon", "        Malaybalay City", "        Valencia City", "    Camiguin", "        Mambajao", "    Lanao del Norte", "        Iligan City", "    Misamis Occidental", "        Oroquieta City", "        Tangub City", "        Ozamiz City", "    Misamis Oriental", "        Cagayan de Oro City", "        Gingoog City", "Region 11 - Davao Region", "    Davao de Oro", "        Compostela", "    Davao del Norte", "        Tagum City", "        Panabo City", "        Samal City", "    Davao del Sur", "        Davao City", "    Davao Occidental", "        Malita", "    Davao Oriental", "        Mati City", "Region 12 - SOCCSKSARGEN", "    Cotabato", "        Kidapawan City", "    Sarangani", "        Alabel", "    South Cotabato", "        Koronadal City", "        General Santos City", "    Sultan Kudarat", "        Tacurong City", "Region 13 - Caraga", "    Agusan del Norte", "        Butuan City", "        Cabadbaran City", "    Agusan del Sur", "        Bayugan City", "    Dinagat Islands", "        San Jose", "    Surigao del Norte", "        Surigao City", "    Surigao del Sur", "        Tandag City", "        Bislig City", "CAR - Cordillera Administrative Region", "    Abra", "        Bangued", "    Apayao", "        Kabugao", "    Benguet", "        La Trinidad", "    Ifugao", "        Lagawe", "    Kalinga", "        Tabuk City", "    Mountain Province", "        Bontoc", "NCR - National Capital Region", "    Manila", "    Quezon City", "    Caloocan City", "    Las Piñas City", "    Makati City", "    Malabon City", "    Mandaluyong City", "    Marikina City", "    Muntinlupa City", "    Navotas City", "    Parañaque City", "    Pasay City", "    Pasig City", "    San Juan City", "    Taguig City", "    Valenzuela City", "BARMM - Bangsamoro Autonomous Region in Muslim Mindanao", "    Basilan", "        Isabela City", "        Lamitan City", "    Lanao del Sur", "        Marawi City", "    Maguindanao", "        Cotabato City", "    Sulu", "        Jolo", "    Tawi-Tawi", "        Bongao"})
-        Me.cbLocation.Location = New System.Drawing.Point(34, 263)
-        Me.cbLocation.Name = "cbLocation"
-        Me.cbLocation.Size = New System.Drawing.Size(247, 21)
-        Me.cbLocation.TabIndex = 2
+        Me.Panel2.Controls.Add(Me.lblSortDirection)
+        Me.Panel2.Controls.Add(Me.cbSortDirection)
+        Me.Panel2.Location = New System.Drawing.Point(189, 558)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(114, 65)
+        Me.Panel2.TabIndex = 32
+        '
+        'lblSortDirection
+        '
+        Me.lblSortDirection.AutoSize = True
+        Me.lblSortDirection.Location = New System.Drawing.Point(17, 6)
+        Me.lblSortDirection.Name = "lblSortDirection"
+        Me.lblSortDirection.Size = New System.Drawing.Size(69, 13)
+        Me.lblSortDirection.TabIndex = 29
+        Me.lblSortDirection.Text = "Sort direction"
+        '
+        'cbSortDirection
+        '
+        Me.cbSortDirection.FormattingEnabled = True
+        Me.cbSortDirection.Items.AddRange(New Object() {"Least to Greatest", "Greatest to Least"})
+        Me.cbSortDirection.Location = New System.Drawing.Point(20, 22)
+        Me.cbSortDirection.Name = "cbSortDirection"
+        Me.cbSortDirection.Size = New System.Drawing.Size(77, 21)
+        Me.cbSortDirection.TabIndex = 0
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.lblSortBy)
+        Me.Panel1.Controls.Add(Me.cbSort)
+        Me.Panel1.Location = New System.Drawing.Point(25, 558)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(158, 65)
+        Me.Panel1.TabIndex = 31
+        '
+        'lblSortBy
+        '
+        Me.lblSortBy.AutoSize = True
+        Me.lblSortBy.Location = New System.Drawing.Point(17, 6)
+        Me.lblSortBy.Name = "lblSortBy"
+        Me.lblSortBy.Size = New System.Drawing.Size(40, 13)
+        Me.lblSortBy.TabIndex = 29
+        Me.lblSortBy.Text = "Sort by"
+        '
+        'cbSort
+        '
+        Me.cbSort.FormattingEnabled = True
+        Me.cbSort.Items.AddRange(New Object() {"Alphabetical", "Capacity", "Price"})
+        Me.cbSort.Location = New System.Drawing.Point(20, 22)
+        Me.cbSort.Name = "cbSort"
+        Me.cbSort.Size = New System.Drawing.Size(127, 21)
+        Me.cbSort.TabIndex = 0
+        '
+        'pnlPrice
+        '
+        Me.pnlPrice.Controls.Add(Me.lblLocation)
+        Me.pnlPrice.Controls.Add(Me.txtMinPrice)
+        Me.pnlPrice.Controls.Add(Me.txtMaxPrice)
+        Me.pnlPrice.Location = New System.Drawing.Point(25, 498)
+        Me.pnlPrice.Name = "pnlPrice"
+        Me.pnlPrice.Size = New System.Drawing.Size(278, 54)
+        Me.pnlPrice.TabIndex = 30
+        '
+        'txtMinPrice
+        '
+        Me.txtMinPrice.Location = New System.Drawing.Point(20, 25)
+        Me.txtMinPrice.Name = "txtMinPrice"
+        Me.txtMinPrice.Size = New System.Drawing.Size(74, 20)
+        Me.txtMinPrice.TabIndex = 27
+        Me.txtMinPrice.Text = "Min"
+        '
+        'txtMaxPrice
+        '
+        Me.txtMaxPrice.Location = New System.Drawing.Point(187, 25)
+        Me.txtMaxPrice.Name = "txtMaxPrice"
+        Me.txtMaxPrice.Size = New System.Drawing.Size(74, 20)
+        Me.txtMaxPrice.TabIndex = 28
+        Me.txtMaxPrice.Text = "Max"
+        '
+        'pnlCapacity
+        '
+        Me.pnlCapacity.Controls.Add(Me.lblCapacity)
+        Me.pnlCapacity.Controls.Add(Me.txtMinCapacity)
+        Me.pnlCapacity.Controls.Add(Me.txtMaxCapacity)
+        Me.pnlCapacity.Location = New System.Drawing.Point(25, 438)
+        Me.pnlCapacity.Name = "pnlCapacity"
+        Me.pnlCapacity.Size = New System.Drawing.Size(278, 54)
+        Me.pnlCapacity.TabIndex = 29
+        '
+        'txtMinCapacity
+        '
+        Me.txtMinCapacity.Location = New System.Drawing.Point(20, 25)
+        Me.txtMinCapacity.Name = "txtMinCapacity"
+        Me.txtMinCapacity.Size = New System.Drawing.Size(74, 20)
+        Me.txtMinCapacity.TabIndex = 24
+        Me.txtMinCapacity.Text = "Min"
+        '
+        'txtMaxCapacity
+        '
+        Me.txtMaxCapacity.Location = New System.Drawing.Point(187, 25)
+        Me.txtMaxCapacity.Name = "txtMaxCapacity"
+        Me.txtMaxCapacity.Size = New System.Drawing.Size(74, 20)
+        Me.txtMaxCapacity.TabIndex = 25
+        Me.txtMaxCapacity.Text = "Max"
+        '
+        'pnlEventType
+        '
+        Me.pnlEventType.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.pnlEventType.Controls.Add(Me.clbEventType)
+        Me.pnlEventType.Controls.Add(Me.Label2)
+        Me.pnlEventType.Location = New System.Drawing.Point(22, 19)
+        Me.pnlEventType.Name = "pnlEventType"
+        Me.pnlEventType.Size = New System.Drawing.Size(281, 353)
+        Me.pnlEventType.TabIndex = 22
+        '
+        'clbEventType
+        '
+        Me.clbEventType.FormattingEnabled = True
+        Me.clbEventType.Items.AddRange(New Object() {"Classes & Workshops", "    Coffee Workshop", "    Cooking", "    Fitness", "    Tea Workshop", "Corporate Event", "    Dining", "    Party", "Formal Meetings & Team Gatherings", "    Conference", "    Interview", "    Sales Meeting", "    Team Meeting", "        Offsite Meeting", "        Team Bonding", "        Training", "Parties & Celebrations", "    Anniversary", "    Baby Shower", "    Birthday Party", "    Holiday & Festive Celebrations", "        Deepavali", "        Hari Raya", "        Year-End Party", "    Graduation Party", "    Dinner & Dance", "    Lunch/Dinner", "    Prom", "Shoots & Productions", "    Green Screen Shoot", "    Live Stream", "    Live Webinar", "    Photo Shoot", "    Video Production", "Weddings & Related Events", "    Bachelor/Bachelorette Party", "    Bridal Shower", "    Ceremony", "    Engagement", "    Proposal", "    Reception", "    Solemnization", "    Wedding"})
+        Me.clbEventType.Location = New System.Drawing.Point(3, 16)
+        Me.clbEventType.Name = "clbEventType"
+        Me.clbEventType.Size = New System.Drawing.Size(275, 334)
+        Me.clbEventType.TabIndex = 0
         '
         'flpResults
         '
         Me.flpResults.AutoScroll = True
-        Me.flpResults.Location = New System.Drawing.Point(23, 64)
+        Me.flpResults.Location = New System.Drawing.Point(23, 82)
         Me.flpResults.Name = "flpResults"
         Me.flpResults.Size = New System.Drawing.Size(1063, 681)
         Me.flpResults.TabIndex = 18
-        '
-        'cbVenue
-        '
-        Me.cbVenue.FormattingEnabled = True
-        Me.cbVenue.Items.AddRange(New Object() {"Region 1 - Ilocos Region", "    Ilocos Norte", "        Laoag City", "    Ilocos Sur", "        Vigan City", "        Candon City", "    La Union", "        San Fernando City", "    Pangasinan", "        Dagupan City", "        San Carlos City", "        Urdaneta City", "        Alaminos City", "Region 2 - Cagayan Valley", "    Batanes", "        Basco", "    Cagayan", "        Tuguegarao City", "    Isabela", "        Ilagan City", "        Cauayan City", "        Santiago City", "    Nueva Vizcaya", "        Bayombong", "    Quirino", "        Cabarroguis", "Region 3 - Central Luzon", "    Aurora", "        Baler", "    Bataan", "        Balanga City", "    Bulacan", "        Malolos City", "        San Jose del Monte City", "        Meycauayan City", "    Nueva Ecija", "        Cabanatuan City", "        Gapan City", "        San Jose City", "    Pampanga", "        Angeles City", "        San Fernando City", "    Tarlac", "        Tarlac City", "    Zambales", "        Olongapo City", "Region 4-A - CALABARZON", "    Cavite", "        Tagaytay City", "        Trece Martires City", "        Dasmariñas City", "        Bacoor City", "        Imus City", "    Laguna", "        Santa Rosa City", "        San Pablo City", "        Calamba City", "        Biñan City", "    Batangas", "        Batangas City", "        Lipa City", "        Tanauan City", "    Rizal", "        Antipolo City", "    Quezon", "        Lucena City", "        Tayabas City", "Region 4-B - MIMAROPA", "    Occidental Mindoro", "        San Jose", "    Oriental Mindoro", "        Calapan City", "    Marinduque", "        Boac", "    Romblon", "        Romblon", "    Palawan", "        Puerto Princesa City", "Region 5 - Bicol Region", "    Albay", "        Legazpi City", "        Ligao City", "        Tabaco City", "    Camarines Norte", "        Daet", "    Camarines Sur", "        Naga City", "        Iriga City", "    Catanduanes", "        Virac", "    Masbate", "        Masbate City", "    Sorsogon", "        Sorsogon City", "Region 6 - Western Visayas", "    Aklan", "        Kalibo", "    Antique", "        San Jose de Buenavista", "    Capiz", "        Roxas City", "    Guimaras", "        Jordan", "    Iloilo", "        Iloilo City", "        Passi City", "    Negros Occidental", "        Bacolod City", "        Silay City", "        Talisay City", "Region 7 - Central Visayas", "    Bohol", "        Tagbilaran City", "    Cebu", "        Cebu City", "        Lapu-Lapu City", "        Mandaue City", "        Talisay City", "    Negros Oriental", "        Dumaguete City", "        Bayawan City", "    Siquijor", "        Siquijor", "Region 8 - Eastern Visayas", "    Biliran", "        Naval", "    Eastern Samar", "        Borongan City", "    Leyte", "        Tacloban City", "        Ormoc City", "    Northern Samar", "        Catarman", "    Samar (Western Samar)", "        Calbayog City", "        Catbalogan City", "    Southern Leyte", "        Maasin City", "Region 9 - Zamboanga Peninsula", "    Zamboanga del Norte", "        Dipolog City", "        Dapitan City", "    Zamboanga del Sur", "        Pagadian City", "    Zamboanga Sibugay", "        Ipil", "Region 10 - Northern Mindanao", "    Bukidnon", "        Malaybalay City", "        Valencia City", "    Camiguin", "        Mambajao", "    Lanao del Norte", "        Iligan City", "    Misamis Occidental", "        Oroquieta City", "        Tangub City", "        Ozamiz City", "    Misamis Oriental", "        Cagayan de Oro City", "        Gingoog City", "Region 11 - Davao Region", "    Davao de Oro", "        Compostela", "    Davao del Norte", "        Tagum City", "        Panabo City", "        Samal City", "    Davao del Sur", "        Davao City", "    Davao Occidental", "        Malita", "    Davao Oriental", "        Mati City", "Region 12 - SOCCSKSARGEN", "    Cotabato", "        Kidapawan City", "    Sarangani", "        Alabel", "    South Cotabato", "        Koronadal City", "        General Santos City", "    Sultan Kudarat", "        Tacurong City", "Region 13 - Caraga", "    Agusan del Norte", "        Butuan City", "        Cabadbaran City", "    Agusan del Sur", "        Bayugan City", "    Dinagat Islands", "        San Jose", "    Surigao del Norte", "        Surigao City", "    Surigao del Sur", "        Tandag City", "        Bislig City", "CAR - Cordillera Administrative Region", "    Abra", "        Bangued", "    Apayao", "        Kabugao", "    Benguet", "        La Trinidad", "    Ifugao", "        Lagawe", "    Kalinga", "        Tabuk City", "    Mountain Province", "        Bontoc", "NCR - National Capital Region", "    Manila", "    Quezon City", "    Caloocan City", "    Las Piñas City", "    Makati City", "    Malabon City", "    Mandaluyong City", "    Marikina City", "    Muntinlupa City", "    Navotas City", "    Parañaque City", "    Pasay City", "    Pasig City", "    San Juan City", "    Taguig City", "    Valenzuela City", "BARMM - Bangsamoro Autonomous Region in Muslim Mindanao", "    Basilan", "        Isabela City", "        Lamitan City", "    Lanao del Sur", "        Marawi City", "    Maguindanao", "        Cotabato City", "    Sulu", "        Jolo", "    Tawi-Tawi", "        Bongao"})
-        Me.cbVenue.Location = New System.Drawing.Point(277, 32)
-        Me.cbVenue.Name = "cbVenue"
-        Me.cbVenue.Size = New System.Drawing.Size(809, 21)
-        Me.cbVenue.TabIndex = 21
         '
         'btnNext
         '
@@ -201,45 +298,180 @@ Partial Class FormMain
         Me.btnBack.Text = "←"
         Me.btnBack.UseVisualStyleBackColor = True
         '
+        'btnCustomerView
+        '
+        Me.btnCustomerView.Location = New System.Drawing.Point(222, 9)
+        Me.btnCustomerView.Name = "btnCustomerView"
+        Me.btnCustomerView.Size = New System.Drawing.Size(99, 25)
+        Me.btnCustomerView.TabIndex = 2
+        Me.btnCustomerView.Text = "My Account"
+        Me.btnCustomerView.UseVisualStyleBackColor = True
+        '
+        'txtSearch
+        '
+        Me.txtSearch.Location = New System.Drawing.Point(97, 30)
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(884, 20)
+        Me.txtSearch.TabIndex = 34
+        '
+        'btnSearch
+        '
+        Me.btnSearch.Location = New System.Drawing.Point(987, 27)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(99, 33)
+        Me.btnSearch.TabIndex = 35
+        Me.btnSearch.Text = "Search"
+        Me.btnSearch.UseVisualStyleBackColor = True
+        '
+        'btnLogOut
+        '
+        Me.btnLogOut.Location = New System.Drawing.Point(222, 34)
+        Me.btnLogOut.Name = "btnLogOut"
+        Me.btnLogOut.Size = New System.Drawing.Size(99, 23)
+        Me.btnLogOut.TabIndex = 40
+        Me.btnLogOut.Text = "Log Out"
+        Me.btnLogOut.UseVisualStyleBackColor = True
+        '
+        'lblUser
+        '
+        Me.lblUser.AutoSize = True
+        Me.lblUser.Location = New System.Drawing.Point(69, 29)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(29, 13)
+        Me.lblUser.TabIndex = 39
+        Me.lblUser.Text = "User"
+        '
+        'lblUsername
+        '
+        Me.lblUsername.AutoSize = True
+        Me.lblUsername.Location = New System.Drawing.Point(69, 8)
+        Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.Size = New System.Drawing.Size(55, 13)
+        Me.lblUsername.TabIndex = 37
+        Me.lblUsername.Text = "Username"
+        '
+        'pbProfile
+        '
+        Me.pbProfile.BackColor = System.Drawing.Color.Gainsboro
+        Me.pbProfile.Location = New System.Drawing.Point(3, 8)
+        Me.pbProfile.Name = "pbProfile"
+        Me.pbProfile.Size = New System.Drawing.Size(60, 60)
+        Me.pbProfile.TabIndex = 36
+        Me.pbProfile.TabStop = False
+        '
+        'pnlAccount
+        '
+        Me.pnlAccount.Controls.Add(Me.pbProfile)
+        Me.pnlAccount.Controls.Add(Me.btnLogOut)
+        Me.pnlAccount.Controls.Add(Me.lblUsername)
+        Me.pnlAccount.Controls.Add(Me.lblUser)
+        Me.pnlAccount.Controls.Add(Me.btnCustomerView)
+        Me.pnlAccount.Location = New System.Drawing.Point(1092, 5)
+        Me.pnlAccount.Name = "pnlAccount"
+        Me.pnlAccount.Size = New System.Drawing.Size(324, 74)
+        Me.pnlAccount.TabIndex = 41
+        '
+        'btnLogIn
+        '
+        Me.btnLogIn.Location = New System.Drawing.Point(3, 31)
+        Me.btnLogIn.Name = "btnLogIn"
+        Me.btnLogIn.Size = New System.Drawing.Size(99, 24)
+        Me.btnLogIn.TabIndex = 1
+        Me.btnLogIn.Text = "Log In"
+        Me.btnLogIn.UseVisualStyleBackColor = True
+        '
+        'btnSignUp
+        '
+        Me.btnSignUp.Location = New System.Drawing.Point(3, 3)
+        Me.btnSignUp.Name = "btnSignUp"
+        Me.btnSignUp.Size = New System.Drawing.Size(99, 24)
+        Me.btnSignUp.TabIndex = 0
+        Me.btnSignUp.Text = "Sign Up"
+        Me.btnSignUp.UseVisualStyleBackColor = True
+        '
+        'pnlSignUpLogIn
+        '
+        Me.pnlSignUpLogIn.Controls.Add(Me.btnSignUp)
+        Me.pnlSignUpLogIn.Controls.Add(Me.btnLogIn)
+        Me.pnlSignUpLogIn.Location = New System.Drawing.Point(983, 5)
+        Me.pnlSignUpLogIn.Name = "pnlSignUpLogIn"
+        Me.pnlSignUpLogIn.Size = New System.Drawing.Size(103, 68)
+        Me.pnlSignUpLogIn.TabIndex = 42
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(1424, 771)
+        Me.Controls.Add(Me.pnlSignUpLogIn)
+        Me.Controls.Add(Me.pnlAccount)
+        Me.Controls.Add(Me.btnSearch)
+        Me.Controls.Add(Me.txtSearch)
         Me.Controls.Add(Me.btnNext)
         Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.cbVenue)
         Me.Controls.Add(Me.flpResults)
-        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.pnlFilter)
-        Me.Controls.Add(Me.btnLogIn)
-        Me.Controls.Add(Me.btnSignUp)
         Me.Name = "FormMain"
         Me.Padding = New System.Windows.Forms.Padding(5)
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Main"
         Me.pnlFilter.ResumeLayout(False)
-        Me.pnlFilter.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.pnlPrice.ResumeLayout(False)
+        Me.pnlPrice.PerformLayout()
+        Me.pnlCapacity.ResumeLayout(False)
+        Me.pnlCapacity.PerformLayout()
+        Me.pnlEventType.ResumeLayout(False)
+        Me.pnlEventType.PerformLayout()
+        CType(Me.pbProfile, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlAccount.ResumeLayout(False)
+        Me.pnlAccount.PerformLayout()
+        Me.pnlSignUpLogIn.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents btnSignUp As Button
-    Friend WithEvents btnLogIn As Button
-    Friend WithEvents btnSearch As Button
-    Friend WithEvents Label3 As Label
-    Friend WithEvents cbNumGuests As ComboBox
+    Friend WithEvents btnApply As Button
+    Friend WithEvents lblCapacity As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents lblLocation As Label
-    Friend WithEvents cbEventType As ComboBox
     Friend WithEvents pnlFilter As Panel
-    Friend WithEvents cbLocation As ComboBox
-    Friend WithEvents cbVenueType As ComboBox
-    Friend WithEvents lblVenueType As Label
     Friend WithEvents flpResults As FlowLayoutPanel
-    Friend WithEvents lblSearchFilters As Label
-    Friend WithEvents cbVenue As ComboBox
     Friend WithEvents btnNext As Button
     Friend WithEvents btnBack As Button
+    Friend WithEvents pnlEventType As Panel
+    Friend WithEvents clbEventType As CheckedListBox
+    Friend WithEvents txtMaxCapacity As TextBox
+    Friend WithEvents txtMinCapacity As TextBox
+    Friend WithEvents txtMaxPrice As TextBox
+    Friend WithEvents txtMinPrice As TextBox
+    Friend WithEvents btnCustomerView As Button
+    Friend WithEvents pnlPrice As Panel
+    Friend WithEvents pnlCapacity As Panel
+    Friend WithEvents txtSearch As TextBox
+    Friend WithEvents btnSearch As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents lblSortDirection As Label
+    Friend WithEvents cbSortDirection As ComboBox
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents lblSortBy As Label
+    Friend WithEvents cbSort As ComboBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents cbAvailableOn As ComboBox
+    Friend WithEvents lblAvailability As Label
+    Friend WithEvents btnLogOut As Button
+    Friend WithEvents lblUser As Label
+    Friend WithEvents lblUsername As Label
+    Friend WithEvents pbProfile As PictureBox
+    Friend WithEvents pnlAccount As Panel
+    Friend WithEvents btnLogIn As Button
+    Friend WithEvents btnSignUp As Button
+    Friend WithEvents pnlSignUpLogIn As Panel
 End Class

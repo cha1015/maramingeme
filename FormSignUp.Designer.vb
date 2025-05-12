@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormSignUp
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,11 @@ Partial Class FormSignUp
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.gbCreateAcc = New System.Windows.Forms.GroupBox()
+        Me.lblRole = New System.Windows.Forms.Label()
+        Me.cbRole = New System.Windows.Forms.ComboBox()
         Me.btnShowPass = New System.Windows.Forms.Button()
         Me.btnShowConfPass = New System.Windows.Forms.Button()
         Me.btnSignUp = New System.Windows.Forms.Button()
@@ -46,6 +48,8 @@ Partial Class FormSignUp
         '
         'gbCreateAcc
         '
+        Me.gbCreateAcc.Controls.Add(Me.lblRole)
+        Me.gbCreateAcc.Controls.Add(Me.cbRole)
         Me.gbCreateAcc.Controls.Add(Me.btnShowPass)
         Me.gbCreateAcc.Controls.Add(Me.btnShowConfPass)
         Me.gbCreateAcc.Controls.Add(Me.btnSignUp)
@@ -64,10 +68,28 @@ Partial Class FormSignUp
         Me.gbCreateAcc.Controls.Add(Me.lblFirstName)
         Me.gbCreateAcc.Location = New System.Drawing.Point(541, 271)
         Me.gbCreateAcc.Name = "gbCreateAcc"
-        Me.gbCreateAcc.Size = New System.Drawing.Size(342, 229)
+        Me.gbCreateAcc.Size = New System.Drawing.Size(342, 292)
         Me.gbCreateAcc.TabIndex = 14
         Me.gbCreateAcc.TabStop = False
         Me.gbCreateAcc.Text = "Create Account"
+        '
+        'lblRole
+        '
+        Me.lblRole.AutoSize = True
+        Me.lblRole.Location = New System.Drawing.Point(10, 177)
+        Me.lblRole.Name = "lblRole"
+        Me.lblRole.Size = New System.Drawing.Size(29, 13)
+        Me.lblRole.TabIndex = 23
+        Me.lblRole.Text = "Role"
+        '
+        'cbRole
+        '
+        Me.cbRole.FormattingEnabled = True
+        Me.cbRole.Items.AddRange(New Object() {"User", "Admin"})
+        Me.cbRole.Location = New System.Drawing.Point(107, 174)
+        Me.cbRole.Name = "cbRole"
+        Me.cbRole.Size = New System.Drawing.Size(226, 21)
+        Me.cbRole.TabIndex = 22
         '
         'btnShowPass
         '
@@ -89,7 +111,7 @@ Partial Class FormSignUp
         '
         'btnSignUp
         '
-        Me.btnSignUp.Location = New System.Drawing.Point(258, 189)
+        Me.btnSignUp.Location = New System.Drawing.Point(258, 258)
         Me.btnSignUp.Name = "btnSignUp"
         Me.btnSignUp.Size = New System.Drawing.Size(75, 23)
         Me.btnSignUp.TabIndex = 19
@@ -99,7 +121,7 @@ Partial Class FormSignUp
         'lnklblLogIn
         '
         Me.lnklblLogIn.AutoSize = True
-        Me.lnklblLogIn.Location = New System.Drawing.Point(9, 189)
+        Me.lnklblLogIn.Location = New System.Drawing.Point(9, 258)
         Me.lnklblLogIn.Name = "lnklblLogIn"
         Me.lnklblLogIn.Size = New System.Drawing.Size(130, 13)
         Me.lnklblLogIn.TabIndex = 18
@@ -257,4 +279,6 @@ Partial Class FormSignUp
     Friend WithEvents btnShowConfPass As Button
     Friend WithEvents btnNext As Button
     Friend WithEvents btnBack As Button
+    Friend WithEvents lblRole As Label
+    Friend WithEvents cbRole As ComboBox
 End Class

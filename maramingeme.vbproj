@@ -102,6 +102,7 @@
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -125,7 +126,33 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="CurrentUser.vb" />
     <Compile Include="DBHelper.vb" />
+    <Compile Include="FormAdminCenter.Designer.vb">
+      <DependentUpon>FormAdminCenter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdminCenter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdminInformation.Designer.vb">
+      <DependentUpon>FormAdminInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdminInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerInformation.Designer.vb">
+      <DependentUpon>FormCustomerInformation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerInformation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerView.Designer.vb">
+      <DependentUpon>FormCustomerView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormLogIn.Designer.vb">
       <DependentUpon>FormLogIn.vb</DependentUpon>
     </Compile>
@@ -145,22 +172,29 @@
     <Compile Include="FormBooking.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSearch.Designer.vb">
-      <DependentUpon>FormSearch.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FormSearch.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FormSignUp.Designer.vb">
       <DependentUpon>FormSignUp.vb</DependentUpon>
     </Compile>
     <Compile Include="FormSignUp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormUpdateBooking.Designer.vb">
+      <DependentUpon>FormUpdateBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVoucher.Designer.vb">
+      <DependentUpon>FormVoucher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormVoucher.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -176,6 +210,18 @@
     <Compile Include="ResultsDisplayHelper.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FormAdminCenter.resx">
+      <DependentUpon>FormAdminCenter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdminInformation.resx">
+      <DependentUpon>FormAdminInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerInformation.resx">
+      <DependentUpon>FormCustomerInformation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerView.resx">
+      <DependentUpon>FormCustomerView.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogIn.resx">
       <DependentUpon>FormLogIn.vb</DependentUpon>
     </EmbeddedResource>
@@ -185,11 +231,14 @@
     <EmbeddedResource Include="FormBooking.resx">
       <DependentUpon>FormBooking.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSearch.resx">
-      <DependentUpon>FormSearch.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormSignUp.resx">
       <DependentUpon>FormSignUp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateBooking.resx">
+      <DependentUpon>FormUpdateBooking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVoucher.resx">
+      <DependentUpon>FormVoucher.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

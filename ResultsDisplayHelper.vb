@@ -3,7 +3,7 @@
         Dim scrollbarWidth As Integer = SystemInformation.VerticalScrollBarWidth
         Dim availableWidth As Integer = 1063 - scrollbarWidth - (10 * 6)
         Dim panelWidth As Integer = availableWidth \ 3
-        Dim panelHeight As Integer = 275
+        Dim panelHeight As Integer = 300
 
         flpResults.WrapContents = True
         flpResults.AutoScroll = True
@@ -34,7 +34,7 @@
             lblName.AutoSize = False
             lblName.Size = New Size(panelWidth - 20, 26)
             lblName.Location = New Point(10, 185)
-            lblName.Text = row("venue_name").ToString()
+            lblName.Text = row("event_place").ToString()
             lblName.Font = New Font("Poppins", 12, FontStyle.Bold)
 
             Dim lblCapacity As New Label()
@@ -51,6 +51,14 @@
             lblPrice.Text = "Price per Day: " & row("price_per_day").ToString()
             lblPrice.Font = New Font("Poppins", 8)
 
+            Dim lblEventType As New Label()
+            lblEventType.AutoSize = False
+            lblEventType.Size = New Size(panelWidth - 20, 24)
+            lblEventType.Location = New Point(10, 263)
+            lblEventType.Text = "Event Types: " & row("event_type").ToString()
+            lblEventType.Font = New Font("Poppins", 8)
+            lblEventType.ForeColor = Color.DarkGray
+
             Dim btnBook As New Button()
             btnBook.Text = "Book Now"
             btnBook.Size = New Size(80, 30)
@@ -64,6 +72,7 @@
             panel.Controls.Add(lblName)
             panel.Controls.Add(lblCapacity)
             panel.Controls.Add(lblPrice)
+            panel.Controls.Add(lblEventType)
 
             flpResults.Controls.Add(panel)
         Next

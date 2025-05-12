@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormBooking
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,292 +20,214 @@ Partial Class FormBooking
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.txtCustomerName = New System.Windows.Forms.TextBox()
-        Me.txtAge = New System.Windows.Forms.TextBox()
-        Me.dtpBirthday = New System.Windows.Forms.DateTimePicker()
-        Me.cmbSex = New System.Windows.Forms.ComboBox()
-        Me.txtAddress = New System.Windows.Forms.TextBox()
-        Me.lblName = New System.Windows.Forms.Label()
-        Me.lblAge = New System.Windows.Forms.Label()
-        Me.lblBirthday = New System.Windows.Forms.Label()
-        Me.lblSex = New System.Windows.Forms.Label()
-        Me.lblAddress = New System.Windows.Forms.Label()
-        Me.gbCustomerInformation = New System.Windows.Forms.GroupBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblFeaturesContainer = New System.Windows.Forms.Label()
+        Me.lblPricePerDayContainer = New System.Windows.Forms.Label()
+        Me.lblCapacityContainer = New System.Windows.Forms.Label()
+        Me.lblPlaceIDContainer = New System.Windows.Forms.Label()
         Me.lblFeatures = New System.Windows.Forms.Label()
-        Me.txtCapacity = New System.Windows.Forms.TextBox()
-        Me.txtFeatures = New System.Windows.Forms.TextBox()
-        Me.txtPlaceID = New System.Windows.Forms.TextBox()
         Me.lblPricePerDay = New System.Windows.Forms.Label()
-        Me.txtVenueName = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtPricePerDay = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.btnBook = New System.Windows.Forms.Button()
+        Me.lblCapacity = New System.Windows.Forms.Label()
+        Me.lblPlaceID = New System.Windows.Forms.Label()
+        Me.lblEventPlace = New System.Windows.Forms.Label()
+        Me.dtpEventTimeStart = New System.Windows.Forms.DateTimePicker()
+        Me.lblEventSchedule = New System.Windows.Forms.Label()
+        Me.btBookingProceed = New System.Windows.Forms.Button()
         Me.chkVideoke = New System.Windows.Forms.CheckBox()
         Me.chkDancer = New System.Windows.Forms.CheckBox()
         Me.chkSinger = New System.Windows.Forms.CheckBox()
         Me.chkClown = New System.Windows.Forms.CheckBox()
         Me.chkCatering = New System.Windows.Forms.CheckBox()
-        Me.dtpEventDate = New System.Windows.Forms.DateTimePicker()
+        Me.dtpEventDateStart = New System.Windows.Forms.DateTimePicker()
         Me.txtNumGuests = New System.Windows.Forms.TextBox()
         Me.lblTotalPrice = New System.Windows.Forms.Label()
         Me.lblServicesAvailed = New System.Windows.Forms.Label()
-        Me.lblEventDate = New System.Windows.Forms.Label()
+        Me.lblEventDateStart = New System.Windows.Forms.Label()
         Me.txtTotalPrice = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.lblNumGuests = New System.Windows.Forms.Label()
         Me.btnBack = New System.Windows.Forms.Button()
         Me.btnNext = New System.Windows.Forms.Button()
-        Me.gbCustomerInformation.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.lblDescription = New System.Windows.Forms.Label()
+        Me.lblDescriptionContainer = New System.Windows.Forms.Label()
+        Me.dtpEventDateEnd = New System.Windows.Forms.DateTimePicker()
+        Me.lblEnd = New System.Windows.Forms.Label()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.lblTime = New System.Windows.Forms.Label()
+        Me.lblEventTimeEnd = New System.Windows.Forms.Label()
+        Me.lblEventTimeStart = New System.Windows.Forms.Label()
+        Me.dtpEventTimeEnd = New System.Windows.Forms.DateTimePicker()
+        Me.lblAvailability = New System.Windows.Forms.Label()
+        Me.tcDetails = New System.Windows.Forms.TabControl()
+        Me.tpBookingDetails = New System.Windows.Forms.TabPage()
+        Me.pnlBookingDetails = New System.Windows.Forms.Panel()
+        Me.mtxtEventTimeEnd = New System.Windows.Forms.MaskedTextBox()
+        Me.mtxtEventTimeStart = New System.Windows.Forms.MaskedTextBox()
+        Me.lblEventType = New System.Windows.Forms.Label()
+        Me.cbEventType = New System.Windows.Forms.ComboBox()
+        Me.tpCustomerDetails = New System.Windows.Forms.TabPage()
+        Me.pnlCustomerDetails = New System.Windows.Forms.Panel()
+        Me.btnCustomerProceed = New System.Windows.Forms.Button()
+        Me.txtCustomerName = New System.Windows.Forms.TextBox()
+        Me.lblName = New System.Windows.Forms.Label()
+        Me.lblAddress = New System.Windows.Forms.Label()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
+        Me.txtAge = New System.Windows.Forms.TextBox()
+        Me.lblAge = New System.Windows.Forms.Label()
+        Me.lblSex = New System.Windows.Forms.Label()
+        Me.cmbSex = New System.Windows.Forms.ComboBox()
+        Me.lblBirthday = New System.Windows.Forms.Label()
+        Me.dtpBirthday = New System.Windows.Forms.DateTimePicker()
+        Me.tpPaymentDetails = New System.Windows.Forms.TabPage()
+        Me.lblSelectedVoucherContainer = New System.Windows.Forms.Label()
+        Me.lblSelectedVoucher = New System.Windows.Forms.Label()
+        Me.btnPlaceBooking = New System.Windows.Forms.Button()
+        Me.lblVoucherDiscountContainer = New System.Windows.Forms.Label()
+        Me.lblVoucherDiscount = New System.Windows.Forms.Label()
+        Me.lblVoucher = New System.Windows.Forms.Label()
+        Me.btnVoucher = New System.Windows.Forms.Button()
+        Me.txtPayAmount = New System.Windows.Forms.TextBox()
+        Me.lblPayAmount = New System.Windows.Forms.Label()
+        Me.lblTotalPricePaymentContainer = New System.Windows.Forms.Label()
+        Me.lblTotalPricePayment = New System.Windows.Forms.Label()
+        Me.lblServicesPaymentContainer = New System.Windows.Forms.Label()
+        Me.lblServicesPayment = New System.Windows.Forms.Label()
+        Me.lblEventTimePaymentContainer = New System.Windows.Forms.Label()
+        Me.lblEventTimePayment = New System.Windows.Forms.Label()
+        Me.lblEventDatePaymentContainer = New System.Windows.Forms.Label()
+        Me.lblEventDatePayment = New System.Windows.Forms.Label()
+        Me.lblNumGuestsPaymentContainer = New System.Windows.Forms.Label()
+        Me.lblNumGuestsPayment = New System.Windows.Forms.Label()
+        Me.lblEventTypePaymentContainer = New System.Windows.Forms.Label()
+        Me.lblEventTypePayment = New System.Windows.Forms.Label()
+        Me.lblEventPlacePaymentContainer = New System.Windows.Forms.Label()
+        Me.lblEventPlacePayment = New System.Windows.Forms.Label()
+        Me.lblCustomerContainer = New System.Windows.Forms.Label()
+        Me.lblCustomerName = New System.Windows.Forms.Label()
+        Me.lblHoursContainer = New System.Windows.Forms.Label()
+        Me.lblAvailableDaysContainer = New System.Windows.Forms.Label()
+        Me.mcAvailability = New System.Windows.Forms.MonthCalendar()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tcDetails.SuspendLayout()
+        Me.tpBookingDetails.SuspendLayout()
+        Me.pnlBookingDetails.SuspendLayout()
+        Me.tpCustomerDetails.SuspendLayout()
+        Me.pnlCustomerDetails.SuspendLayout()
+        Me.tpPaymentDetails.SuspendLayout()
         Me.SuspendLayout()
         '
-        'txtCustomerName
+        'lblFeaturesContainer
         '
-        Me.txtCustomerName.Location = New System.Drawing.Point(106, 19)
-        Me.txtCustomerName.Name = "txtCustomerName"
-        Me.txtCustomerName.Size = New System.Drawing.Size(226, 20)
-        Me.txtCustomerName.TabIndex = 0
+        Me.lblFeaturesContainer.AutoSize = True
+        Me.lblFeaturesContainer.Location = New System.Drawing.Point(209, 675)
+        Me.lblFeaturesContainer.Name = "lblFeaturesContainer"
+        Me.lblFeaturesContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblFeaturesContainer.TabIndex = 19
+        Me.lblFeaturesContainer.Text = "-"
         '
-        'txtAge
+        'lblPricePerDayContainer
         '
-        Me.txtAge.Location = New System.Drawing.Point(106, 71)
-        Me.txtAge.Name = "txtAge"
-        Me.txtAge.ReadOnly = True
-        Me.txtAge.Size = New System.Drawing.Size(226, 20)
-        Me.txtAge.TabIndex = 1
+        Me.lblPricePerDayContainer.AutoSize = True
+        Me.lblPricePerDayContainer.Location = New System.Drawing.Point(514, 560)
+        Me.lblPricePerDayContainer.Name = "lblPricePerDayContainer"
+        Me.lblPricePerDayContainer.Size = New System.Drawing.Size(13, 13)
+        Me.lblPricePerDayContainer.TabIndex = 18
+        Me.lblPricePerDayContainer.Text = "0"
         '
-        'dtpBirthday
+        'lblCapacityContainer
         '
-        Me.dtpBirthday.Location = New System.Drawing.Point(106, 45)
-        Me.dtpBirthday.Name = "dtpBirthday"
-        Me.dtpBirthday.Size = New System.Drawing.Size(226, 20)
-        Me.dtpBirthday.TabIndex = 4
+        Me.lblCapacityContainer.AutoSize = True
+        Me.lblCapacityContainer.Location = New System.Drawing.Point(372, 560)
+        Me.lblCapacityContainer.Name = "lblCapacityContainer"
+        Me.lblCapacityContainer.Size = New System.Drawing.Size(13, 13)
+        Me.lblCapacityContainer.TabIndex = 17
+        Me.lblCapacityContainer.Text = "0"
         '
-        'cmbSex
+        'lblPlaceIDContainer
         '
-        Me.cmbSex.FormattingEnabled = True
-        Me.cmbSex.Items.AddRange(New Object() {"Male", "Female", "Non-Binary", "Other", "Prefer Not to Say"})
-        Me.cmbSex.Location = New System.Drawing.Point(106, 97)
-        Me.cmbSex.Name = "cmbSex"
-        Me.cmbSex.Size = New System.Drawing.Size(226, 21)
-        Me.cmbSex.TabIndex = 5
-        '
-        'txtAddress
-        '
-        Me.txtAddress.Location = New System.Drawing.Point(106, 124)
-        Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(226, 20)
-        Me.txtAddress.TabIndex = 6
-        '
-        'lblName
-        '
-        Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(8, 19)
-        Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(35, 13)
-        Me.lblName.TabIndex = 8
-        Me.lblName.Text = "Name"
-        '
-        'lblAge
-        '
-        Me.lblAge.AutoSize = True
-        Me.lblAge.Location = New System.Drawing.Point(8, 75)
-        Me.lblAge.Name = "lblAge"
-        Me.lblAge.Size = New System.Drawing.Size(26, 13)
-        Me.lblAge.TabIndex = 9
-        Me.lblAge.Text = "Age"
-        '
-        'lblBirthday
-        '
-        Me.lblBirthday.AutoSize = True
-        Me.lblBirthday.Location = New System.Drawing.Point(8, 47)
-        Me.lblBirthday.Name = "lblBirthday"
-        Me.lblBirthday.Size = New System.Drawing.Size(45, 13)
-        Me.lblBirthday.TabIndex = 10
-        Me.lblBirthday.Text = "Birthday"
-        '
-        'lblSex
-        '
-        Me.lblSex.AutoSize = True
-        Me.lblSex.Location = New System.Drawing.Point(8, 103)
-        Me.lblSex.Name = "lblSex"
-        Me.lblSex.Size = New System.Drawing.Size(25, 13)
-        Me.lblSex.TabIndex = 11
-        Me.lblSex.Text = "Sex"
-        '
-        'lblAddress
-        '
-        Me.lblAddress.AutoSize = True
-        Me.lblAddress.Location = New System.Drawing.Point(8, 131)
-        Me.lblAddress.Name = "lblAddress"
-        Me.lblAddress.Size = New System.Drawing.Size(45, 13)
-        Me.lblAddress.TabIndex = 12
-        Me.lblAddress.Text = "Address"
-        '
-        'gbCustomerInformation
-        '
-        Me.gbCustomerInformation.Controls.Add(Me.txtCustomerName)
-        Me.gbCustomerInformation.Controls.Add(Me.lblAddress)
-        Me.gbCustomerInformation.Controls.Add(Me.txtAge)
-        Me.gbCustomerInformation.Controls.Add(Me.lblSex)
-        Me.gbCustomerInformation.Controls.Add(Me.lblBirthday)
-        Me.gbCustomerInformation.Controls.Add(Me.dtpBirthday)
-        Me.gbCustomerInformation.Controls.Add(Me.cmbSex)
-        Me.gbCustomerInformation.Controls.Add(Me.lblAge)
-        Me.gbCustomerInformation.Controls.Add(Me.txtAddress)
-        Me.gbCustomerInformation.Controls.Add(Me.lblName)
-        Me.gbCustomerInformation.Location = New System.Drawing.Point(1050, 182)
-        Me.gbCustomerInformation.Name = "gbCustomerInformation"
-        Me.gbCustomerInformation.Size = New System.Drawing.Size(342, 164)
-        Me.gbCustomerInformation.TabIndex = 13
-        Me.gbCustomerInformation.TabStop = False
-        Me.gbCustomerInformation.Text = "Customer Information"
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.lblFeatures)
-        Me.GroupBox1.Controls.Add(Me.txtCapacity)
-        Me.GroupBox1.Controls.Add(Me.txtFeatures)
-        Me.GroupBox1.Controls.Add(Me.txtPlaceID)
-        Me.GroupBox1.Controls.Add(Me.lblPricePerDay)
-        Me.GroupBox1.Controls.Add(Me.txtVenueName)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.txtPricePerDay)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Location = New System.Drawing.Point(60, 279)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(342, 164)
-        Me.GroupBox1.TabIndex = 14
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Event Place Details"
+        Me.lblPlaceIDContainer.AutoSize = True
+        Me.lblPlaceIDContainer.Location = New System.Drawing.Point(225, 560)
+        Me.lblPlaceIDContainer.Name = "lblPlaceIDContainer"
+        Me.lblPlaceIDContainer.Size = New System.Drawing.Size(13, 13)
+        Me.lblPlaceIDContainer.TabIndex = 16
+        Me.lblPlaceIDContainer.Text = "0"
         '
         'lblFeatures
         '
         Me.lblFeatures.AutoSize = True
-        Me.lblFeatures.Location = New System.Drawing.Point(8, 103)
+        Me.lblFeatures.Location = New System.Drawing.Point(176, 660)
         Me.lblFeatures.Name = "lblFeatures"
         Me.lblFeatures.Size = New System.Drawing.Size(48, 13)
         Me.lblFeatures.TabIndex = 15
         Me.lblFeatures.Text = "Features"
         '
-        'txtCapacity
-        '
-        Me.txtCapacity.Location = New System.Drawing.Point(106, 73)
-        Me.txtCapacity.Name = "txtCapacity"
-        Me.txtCapacity.ReadOnly = True
-        Me.txtCapacity.Size = New System.Drawing.Size(226, 20)
-        Me.txtCapacity.TabIndex = 13
-        '
-        'txtFeatures
-        '
-        Me.txtFeatures.Location = New System.Drawing.Point(106, 100)
-        Me.txtFeatures.Name = "txtFeatures"
-        Me.txtFeatures.ReadOnly = True
-        Me.txtFeatures.Size = New System.Drawing.Size(226, 20)
-        Me.txtFeatures.TabIndex = 14
-        '
-        'txtPlaceID
-        '
-        Me.txtPlaceID.Location = New System.Drawing.Point(106, 19)
-        Me.txtPlaceID.Name = "txtPlaceID"
-        Me.txtPlaceID.ReadOnly = True
-        Me.txtPlaceID.Size = New System.Drawing.Size(226, 20)
-        Me.txtPlaceID.TabIndex = 0
-        '
         'lblPricePerDay
         '
         Me.lblPricePerDay.AutoSize = True
-        Me.lblPricePerDay.Location = New System.Drawing.Point(8, 131)
+        Me.lblPricePerDay.Location = New System.Drawing.Point(437, 545)
         Me.lblPricePerDay.Name = "lblPricePerDay"
         Me.lblPricePerDay.Size = New System.Drawing.Size(71, 13)
         Me.lblPricePerDay.TabIndex = 12
         Me.lblPricePerDay.Text = "Price per Day"
         '
-        'txtVenueName
+        'lblCapacity
         '
-        Me.txtVenueName.Location = New System.Drawing.Point(106, 46)
-        Me.txtVenueName.Name = "txtVenueName"
-        Me.txtVenueName.ReadOnly = True
-        Me.txtVenueName.Size = New System.Drawing.Size(226, 20)
-        Me.txtVenueName.TabIndex = 1
+        Me.lblCapacity.AutoSize = True
+        Me.lblCapacity.Location = New System.Drawing.Point(318, 545)
+        Me.lblCapacity.Name = "lblCapacity"
+        Me.lblCapacity.Size = New System.Drawing.Size(48, 13)
+        Me.lblCapacity.TabIndex = 11
+        Me.lblCapacity.Text = "Capacity"
         '
-        'Label2
+        'lblPlaceID
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(8, 75)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(48, 13)
-        Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Capacity"
+        Me.lblPlaceID.AutoSize = True
+        Me.lblPlaceID.Location = New System.Drawing.Point(171, 545)
+        Me.lblPlaceID.Name = "lblPlaceID"
+        Me.lblPlaceID.Size = New System.Drawing.Size(48, 13)
+        Me.lblPlaceID.TabIndex = 8
+        Me.lblPlaceID.Text = "Place ID"
         '
-        'Label4
+        'lblEventPlace
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(8, 47)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(69, 13)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Venue Name"
+        Me.lblEventPlace.AutoSize = True
+        Me.lblEventPlace.Location = New System.Drawing.Point(171, 530)
+        Me.lblEventPlace.Name = "lblEventPlace"
+        Me.lblEventPlace.Size = New System.Drawing.Size(65, 13)
+        Me.lblEventPlace.TabIndex = 9
+        Me.lblEventPlace.Text = "Event Place"
         '
-        'txtPricePerDay
+        'dtpEventTimeStart
         '
-        Me.txtPricePerDay.Location = New System.Drawing.Point(106, 127)
-        Me.txtPricePerDay.Name = "txtPricePerDay"
-        Me.txtPricePerDay.ReadOnly = True
-        Me.txtPricePerDay.Size = New System.Drawing.Size(226, 20)
-        Me.txtPricePerDay.TabIndex = 6
+        Me.dtpEventTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtpEventTimeStart.Location = New System.Drawing.Point(113, 171)
+        Me.dtpEventTimeStart.Name = "dtpEventTimeStart"
+        Me.dtpEventTimeStart.Size = New System.Drawing.Size(226, 20)
+        Me.dtpEventTimeStart.TabIndex = 22
         '
-        'Label5
+        'lblEventSchedule
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(8, 19)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(48, 13)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Place ID"
+        Me.lblEventSchedule.AutoSize = True
+        Me.lblEventSchedule.Location = New System.Drawing.Point(11, 71)
+        Me.lblEventSchedule.Name = "lblEventSchedule"
+        Me.lblEventSchedule.Size = New System.Drawing.Size(83, 13)
+        Me.lblEventSchedule.TabIndex = 21
+        Me.lblEventSchedule.Text = "Event Schedule"
         '
-        'GroupBox2
+        'btBookingProceed
         '
-        Me.GroupBox2.Controls.Add(Me.btnBook)
-        Me.GroupBox2.Controls.Add(Me.chkVideoke)
-        Me.GroupBox2.Controls.Add(Me.chkDancer)
-        Me.GroupBox2.Controls.Add(Me.chkSinger)
-        Me.GroupBox2.Controls.Add(Me.chkClown)
-        Me.GroupBox2.Controls.Add(Me.chkCatering)
-        Me.GroupBox2.Controls.Add(Me.dtpEventDate)
-        Me.GroupBox2.Controls.Add(Me.txtNumGuests)
-        Me.GroupBox2.Controls.Add(Me.lblTotalPrice)
-        Me.GroupBox2.Controls.Add(Me.lblServicesAvailed)
-        Me.GroupBox2.Controls.Add(Me.lblEventDate)
-        Me.GroupBox2.Controls.Add(Me.txtTotalPrice)
-        Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Location = New System.Drawing.Point(1050, 356)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(342, 233)
-        Me.GroupBox2.TabIndex = 16
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Booking Details"
-        '
-        'btnBook
-        '
-        Me.btnBook.Location = New System.Drawing.Point(222, 199)
-        Me.btnBook.Name = "btnBook"
-        Me.btnBook.Size = New System.Drawing.Size(110, 23)
-        Me.btnBook.TabIndex = 20
-        Me.btnBook.Text = "Book Now"
-        Me.btnBook.UseVisualStyleBackColor = True
+        Me.btBookingProceed.Location = New System.Drawing.Point(230, 344)
+        Me.btBookingProceed.Name = "btBookingProceed"
+        Me.btBookingProceed.Size = New System.Drawing.Size(110, 23)
+        Me.btBookingProceed.TabIndex = 20
+        Me.btBookingProceed.Text = "Proceed"
+        Me.btBookingProceed.UseVisualStyleBackColor = True
         '
         'chkVideoke
         '
         Me.chkVideoke.AutoSize = True
-        Me.chkVideoke.Location = New System.Drawing.Point(222, 97)
+        Me.chkVideoke.Location = New System.Drawing.Point(230, 250)
         Me.chkVideoke.Name = "chkVideoke"
         Me.chkVideoke.Size = New System.Drawing.Size(65, 17)
         Me.chkVideoke.TabIndex = 18
@@ -315,7 +237,7 @@ Partial Class FormBooking
         'chkDancer
         '
         Me.chkDancer.AutoSize = True
-        Me.chkDancer.Location = New System.Drawing.Point(222, 76)
+        Me.chkDancer.Location = New System.Drawing.Point(230, 229)
         Me.chkDancer.Name = "chkDancer"
         Me.chkDancer.Size = New System.Drawing.Size(61, 17)
         Me.chkDancer.TabIndex = 17
@@ -325,7 +247,7 @@ Partial Class FormBooking
         'chkSinger
         '
         Me.chkSinger.AutoSize = True
-        Me.chkSinger.Location = New System.Drawing.Point(106, 120)
+        Me.chkSinger.Location = New System.Drawing.Point(114, 273)
         Me.chkSinger.Name = "chkSinger"
         Me.chkSinger.Size = New System.Drawing.Size(56, 17)
         Me.chkSinger.TabIndex = 16
@@ -335,7 +257,7 @@ Partial Class FormBooking
         'chkClown
         '
         Me.chkClown.AutoSize = True
-        Me.chkClown.Location = New System.Drawing.Point(106, 97)
+        Me.chkClown.Location = New System.Drawing.Point(114, 250)
         Me.chkClown.Name = "chkClown"
         Me.chkClown.Size = New System.Drawing.Size(55, 17)
         Me.chkClown.TabIndex = 15
@@ -345,23 +267,23 @@ Partial Class FormBooking
         'chkCatering
         '
         Me.chkCatering.AutoSize = True
-        Me.chkCatering.Location = New System.Drawing.Point(106, 75)
+        Me.chkCatering.Location = New System.Drawing.Point(114, 228)
         Me.chkCatering.Name = "chkCatering"
         Me.chkCatering.Size = New System.Drawing.Size(65, 17)
         Me.chkCatering.TabIndex = 14
         Me.chkCatering.Text = "Catering"
         Me.chkCatering.UseVisualStyleBackColor = True
         '
-        'dtpEventDate
+        'dtpEventDateStart
         '
-        Me.dtpEventDate.Location = New System.Drawing.Point(106, 45)
-        Me.dtpEventDate.Name = "dtpEventDate"
-        Me.dtpEventDate.Size = New System.Drawing.Size(226, 20)
-        Me.dtpEventDate.TabIndex = 13
+        Me.dtpEventDateStart.Location = New System.Drawing.Point(113, 106)
+        Me.dtpEventDateStart.Name = "dtpEventDateStart"
+        Me.dtpEventDateStart.Size = New System.Drawing.Size(226, 20)
+        Me.dtpEventDateStart.TabIndex = 13
         '
         'txtNumGuests
         '
-        Me.txtNumGuests.Location = New System.Drawing.Point(106, 19)
+        Me.txtNumGuests.Location = New System.Drawing.Point(109, 44)
         Me.txtNumGuests.Name = "txtNumGuests"
         Me.txtNumGuests.Size = New System.Drawing.Size(226, 20)
         Me.txtNumGuests.TabIndex = 0
@@ -369,7 +291,7 @@ Partial Class FormBooking
         'lblTotalPrice
         '
         Me.lblTotalPrice.AutoSize = True
-        Me.lblTotalPrice.Location = New System.Drawing.Point(8, 147)
+        Me.lblTotalPrice.Location = New System.Drawing.Point(15, 306)
         Me.lblTotalPrice.Name = "lblTotalPrice"
         Me.lblTotalPrice.Size = New System.Drawing.Size(58, 13)
         Me.lblTotalPrice.TabIndex = 12
@@ -378,37 +300,37 @@ Partial Class FormBooking
         'lblServicesAvailed
         '
         Me.lblServicesAvailed.AutoSize = True
-        Me.lblServicesAvailed.Location = New System.Drawing.Point(8, 75)
+        Me.lblServicesAvailed.Location = New System.Drawing.Point(15, 228)
         Me.lblServicesAvailed.Name = "lblServicesAvailed"
         Me.lblServicesAvailed.Size = New System.Drawing.Size(86, 13)
         Me.lblServicesAvailed.TabIndex = 11
         Me.lblServicesAvailed.Text = "Services Availed"
         '
-        'lblEventDate
+        'lblEventDateStart
         '
-        Me.lblEventDate.AutoSize = True
-        Me.lblEventDate.Location = New System.Drawing.Point(8, 47)
-        Me.lblEventDate.Name = "lblEventDate"
-        Me.lblEventDate.Size = New System.Drawing.Size(61, 13)
-        Me.lblEventDate.TabIndex = 9
-        Me.lblEventDate.Text = "Event Date"
+        Me.lblEventDateStart.AutoSize = True
+        Me.lblEventDateStart.Location = New System.Drawing.Point(69, 112)
+        Me.lblEventDateStart.Name = "lblEventDateStart"
+        Me.lblEventDateStart.Size = New System.Drawing.Size(29, 13)
+        Me.lblEventDateStart.TabIndex = 9
+        Me.lblEventDateStart.Text = "Start"
         '
         'txtTotalPrice
         '
-        Me.txtTotalPrice.Location = New System.Drawing.Point(106, 143)
+        Me.txtTotalPrice.Location = New System.Drawing.Point(112, 303)
         Me.txtTotalPrice.Name = "txtTotalPrice"
         Me.txtTotalPrice.ReadOnly = True
         Me.txtTotalPrice.Size = New System.Drawing.Size(226, 20)
         Me.txtTotalPrice.TabIndex = 6
         '
-        'Label8
+        'lblNumGuests
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(8, 19)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(92, 13)
-        Me.Label8.TabIndex = 8
-        Me.Label8.Text = "Number of Guests"
+        Me.lblNumGuests.AutoSize = True
+        Me.lblNumGuests.Location = New System.Drawing.Point(11, 47)
+        Me.lblNumGuests.Name = "lblNumGuests"
+        Me.lblNumGuests.Size = New System.Drawing.Size(92, 13)
+        Me.lblNumGuests.TabIndex = 8
+        Me.lblNumGuests.Text = "Number of Guests"
         '
         'btnBack
         '
@@ -428,60 +350,644 @@ Partial Class FormBooking
         Me.btnNext.Text = "→"
         Me.btnNext.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(174, 102)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(715, 411)
+        Me.PictureBox1.TabIndex = 30
+        Me.PictureBox1.TabStop = False
+        '
+        'lblDescription
+        '
+        Me.lblDescription.AutoSize = True
+        Me.lblDescription.Location = New System.Drawing.Point(176, 690)
+        Me.lblDescription.Name = "lblDescription"
+        Me.lblDescription.Size = New System.Drawing.Size(60, 13)
+        Me.lblDescription.TabIndex = 31
+        Me.lblDescription.Text = "Description"
+        '
+        'lblDescriptionContainer
+        '
+        Me.lblDescriptionContainer.AutoSize = True
+        Me.lblDescriptionContainer.Location = New System.Drawing.Point(209, 705)
+        Me.lblDescriptionContainer.Name = "lblDescriptionContainer"
+        Me.lblDescriptionContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblDescriptionContainer.TabIndex = 32
+        Me.lblDescriptionContainer.Text = "-"
+        '
+        'dtpEventDateEnd
+        '
+        Me.dtpEventDateEnd.Location = New System.Drawing.Point(113, 132)
+        Me.dtpEventDateEnd.Name = "dtpEventDateEnd"
+        Me.dtpEventDateEnd.Size = New System.Drawing.Size(226, 20)
+        Me.dtpEventDateEnd.TabIndex = 24
+        '
+        'lblEnd
+        '
+        Me.lblEnd.AutoSize = True
+        Me.lblEnd.Location = New System.Drawing.Point(72, 137)
+        Me.lblEnd.Name = "lblEnd"
+        Me.lblEnd.Size = New System.Drawing.Size(26, 13)
+        Me.lblEnd.TabIndex = 23
+        Me.lblEnd.Text = "End"
+        '
+        'lblDate
+        '
+        Me.lblDate.AutoSize = True
+        Me.lblDate.Location = New System.Drawing.Point(43, 94)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(30, 13)
+        Me.lblDate.TabIndex = 25
+        Me.lblDate.Text = "Date"
+        '
+        'lblTime
+        '
+        Me.lblTime.AutoSize = True
+        Me.lblTime.Location = New System.Drawing.Point(43, 153)
+        Me.lblTime.Name = "lblTime"
+        Me.lblTime.Size = New System.Drawing.Size(30, 13)
+        Me.lblTime.TabIndex = 26
+        Me.lblTime.Text = "Time"
+        '
+        'lblEventTimeEnd
+        '
+        Me.lblEventTimeEnd.AutoSize = True
+        Me.lblEventTimeEnd.Location = New System.Drawing.Point(72, 196)
+        Me.lblEventTimeEnd.Name = "lblEventTimeEnd"
+        Me.lblEventTimeEnd.Size = New System.Drawing.Size(26, 13)
+        Me.lblEventTimeEnd.TabIndex = 28
+        Me.lblEventTimeEnd.Text = "End"
+        '
+        'lblEventTimeStart
+        '
+        Me.lblEventTimeStart.AutoSize = True
+        Me.lblEventTimeStart.Location = New System.Drawing.Point(69, 171)
+        Me.lblEventTimeStart.Name = "lblEventTimeStart"
+        Me.lblEventTimeStart.Size = New System.Drawing.Size(29, 13)
+        Me.lblEventTimeStart.TabIndex = 27
+        Me.lblEventTimeStart.Text = "Start"
+        '
+        'dtpEventTimeEnd
+        '
+        Me.dtpEventTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtpEventTimeEnd.Location = New System.Drawing.Point(113, 196)
+        Me.dtpEventTimeEnd.Name = "dtpEventTimeEnd"
+        Me.dtpEventTimeEnd.Size = New System.Drawing.Size(226, 20)
+        Me.dtpEventTimeEnd.TabIndex = 29
+        '
+        'lblAvailability
+        '
+        Me.lblAvailability.AutoSize = True
+        Me.lblAvailability.Location = New System.Drawing.Point(171, 582)
+        Me.lblAvailability.Name = "lblAvailability"
+        Me.lblAvailability.Size = New System.Drawing.Size(56, 13)
+        Me.lblAvailability.TabIndex = 33
+        Me.lblAvailability.Text = "Availability"
+        '
+        'tcDetails
+        '
+        Me.tcDetails.Controls.Add(Me.tpBookingDetails)
+        Me.tcDetails.Controls.Add(Me.tpCustomerDetails)
+        Me.tcDetails.Controls.Add(Me.tpPaymentDetails)
+        Me.tcDetails.Location = New System.Drawing.Point(904, 102)
+        Me.tcDetails.Name = "tcDetails"
+        Me.tcDetails.SelectedIndex = 0
+        Me.tcDetails.Size = New System.Drawing.Size(387, 411)
+        Me.tcDetails.TabIndex = 35
+        '
+        'tpBookingDetails
+        '
+        Me.tpBookingDetails.Controls.Add(Me.pnlBookingDetails)
+        Me.tpBookingDetails.Location = New System.Drawing.Point(4, 22)
+        Me.tpBookingDetails.Name = "tpBookingDetails"
+        Me.tpBookingDetails.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpBookingDetails.Size = New System.Drawing.Size(379, 385)
+        Me.tpBookingDetails.TabIndex = 0
+        Me.tpBookingDetails.Text = "Booking Details"
+        Me.tpBookingDetails.UseVisualStyleBackColor = True
+        '
+        'pnlBookingDetails
+        '
+        Me.pnlBookingDetails.Controls.Add(Me.mtxtEventTimeEnd)
+        Me.pnlBookingDetails.Controls.Add(Me.mtxtEventTimeStart)
+        Me.pnlBookingDetails.Controls.Add(Me.lblEventType)
+        Me.pnlBookingDetails.Controls.Add(Me.cbEventType)
+        Me.pnlBookingDetails.Controls.Add(Me.dtpEventTimeEnd)
+        Me.pnlBookingDetails.Controls.Add(Me.lblNumGuests)
+        Me.pnlBookingDetails.Controls.Add(Me.lblEventTimeEnd)
+        Me.pnlBookingDetails.Controls.Add(Me.txtTotalPrice)
+        Me.pnlBookingDetails.Controls.Add(Me.lblEventTimeStart)
+        Me.pnlBookingDetails.Controls.Add(Me.lblEventDateStart)
+        Me.pnlBookingDetails.Controls.Add(Me.lblTime)
+        Me.pnlBookingDetails.Controls.Add(Me.lblServicesAvailed)
+        Me.pnlBookingDetails.Controls.Add(Me.lblDate)
+        Me.pnlBookingDetails.Controls.Add(Me.lblTotalPrice)
+        Me.pnlBookingDetails.Controls.Add(Me.dtpEventDateEnd)
+        Me.pnlBookingDetails.Controls.Add(Me.txtNumGuests)
+        Me.pnlBookingDetails.Controls.Add(Me.lblEnd)
+        Me.pnlBookingDetails.Controls.Add(Me.dtpEventDateStart)
+        Me.pnlBookingDetails.Controls.Add(Me.dtpEventTimeStart)
+        Me.pnlBookingDetails.Controls.Add(Me.chkCatering)
+        Me.pnlBookingDetails.Controls.Add(Me.lblEventSchedule)
+        Me.pnlBookingDetails.Controls.Add(Me.chkClown)
+        Me.pnlBookingDetails.Controls.Add(Me.btBookingProceed)
+        Me.pnlBookingDetails.Controls.Add(Me.chkSinger)
+        Me.pnlBookingDetails.Controls.Add(Me.chkVideoke)
+        Me.pnlBookingDetails.Controls.Add(Me.chkDancer)
+        Me.pnlBookingDetails.Location = New System.Drawing.Point(6, 6)
+        Me.pnlBookingDetails.Name = "pnlBookingDetails"
+        Me.pnlBookingDetails.Size = New System.Drawing.Size(367, 373)
+        Me.pnlBookingDetails.TabIndex = 36
+        '
+        'mtxtEventTimeEnd
+        '
+        Me.mtxtEventTimeEnd.Location = New System.Drawing.Point(114, 196)
+        Me.mtxtEventTimeEnd.Name = "mtxtEventTimeEnd"
+        Me.mtxtEventTimeEnd.Size = New System.Drawing.Size(225, 20)
+        Me.mtxtEventTimeEnd.TabIndex = 39
+        '
+        'mtxtEventTimeStart
+        '
+        Me.mtxtEventTimeStart.Location = New System.Drawing.Point(112, 171)
+        Me.mtxtEventTimeStart.Name = "mtxtEventTimeStart"
+        Me.mtxtEventTimeStart.Size = New System.Drawing.Size(227, 20)
+        Me.mtxtEventTimeStart.TabIndex = 38
+        '
+        'lblEventType
+        '
+        Me.lblEventType.AutoSize = True
+        Me.lblEventType.Location = New System.Drawing.Point(11, 17)
+        Me.lblEventType.Name = "lblEventType"
+        Me.lblEventType.Size = New System.Drawing.Size(62, 13)
+        Me.lblEventType.TabIndex = 37
+        Me.lblEventType.Text = "Event Type"
+        '
+        'cbEventType
+        '
+        Me.cbEventType.FormattingEnabled = True
+        Me.cbEventType.Location = New System.Drawing.Point(110, 17)
+        Me.cbEventType.Name = "cbEventType"
+        Me.cbEventType.Size = New System.Drawing.Size(224, 21)
+        Me.cbEventType.TabIndex = 36
+        '
+        'tpCustomerDetails
+        '
+        Me.tpCustomerDetails.Controls.Add(Me.pnlCustomerDetails)
+        Me.tpCustomerDetails.Location = New System.Drawing.Point(4, 22)
+        Me.tpCustomerDetails.Name = "tpCustomerDetails"
+        Me.tpCustomerDetails.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpCustomerDetails.Size = New System.Drawing.Size(379, 385)
+        Me.tpCustomerDetails.TabIndex = 1
+        Me.tpCustomerDetails.Text = "Customer Details"
+        Me.tpCustomerDetails.UseVisualStyleBackColor = True
+        '
+        'pnlCustomerDetails
+        '
+        Me.pnlCustomerDetails.Controls.Add(Me.btnCustomerProceed)
+        Me.pnlCustomerDetails.Controls.Add(Me.txtCustomerName)
+        Me.pnlCustomerDetails.Controls.Add(Me.lblName)
+        Me.pnlCustomerDetails.Controls.Add(Me.lblAddress)
+        Me.pnlCustomerDetails.Controls.Add(Me.txtAddress)
+        Me.pnlCustomerDetails.Controls.Add(Me.txtAge)
+        Me.pnlCustomerDetails.Controls.Add(Me.lblAge)
+        Me.pnlCustomerDetails.Controls.Add(Me.lblSex)
+        Me.pnlCustomerDetails.Controls.Add(Me.cmbSex)
+        Me.pnlCustomerDetails.Controls.Add(Me.lblBirthday)
+        Me.pnlCustomerDetails.Controls.Add(Me.dtpBirthday)
+        Me.pnlCustomerDetails.Location = New System.Drawing.Point(6, 6)
+        Me.pnlCustomerDetails.Name = "pnlCustomerDetails"
+        Me.pnlCustomerDetails.Size = New System.Drawing.Size(367, 373)
+        Me.pnlCustomerDetails.TabIndex = 36
+        '
+        'btnCustomerProceed
+        '
+        Me.btnCustomerProceed.Location = New System.Drawing.Point(237, 350)
+        Me.btnCustomerProceed.Name = "btnCustomerProceed"
+        Me.btnCustomerProceed.Size = New System.Drawing.Size(110, 23)
+        Me.btnCustomerProceed.TabIndex = 21
+        Me.btnCustomerProceed.Text = "Proceed"
+        Me.btnCustomerProceed.UseVisualStyleBackColor = True
+        '
+        'txtCustomerName
+        '
+        Me.txtCustomerName.Location = New System.Drawing.Point(119, 11)
+        Me.txtCustomerName.Name = "txtCustomerName"
+        Me.txtCustomerName.Size = New System.Drawing.Size(226, 20)
+        Me.txtCustomerName.TabIndex = 0
+        '
+        'lblName
+        '
+        Me.lblName.AutoSize = True
+        Me.lblName.Location = New System.Drawing.Point(21, 11)
+        Me.lblName.Name = "lblName"
+        Me.lblName.Size = New System.Drawing.Size(35, 13)
+        Me.lblName.TabIndex = 8
+        Me.lblName.Text = "Name"
+        '
+        'lblAddress
+        '
+        Me.lblAddress.AutoSize = True
+        Me.lblAddress.Location = New System.Drawing.Point(21, 123)
+        Me.lblAddress.Name = "lblAddress"
+        Me.lblAddress.Size = New System.Drawing.Size(45, 13)
+        Me.lblAddress.TabIndex = 12
+        Me.lblAddress.Text = "Address"
+        '
+        'txtAddress
+        '
+        Me.txtAddress.Location = New System.Drawing.Point(119, 116)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(226, 20)
+        Me.txtAddress.TabIndex = 6
+        '
+        'txtAge
+        '
+        Me.txtAge.Location = New System.Drawing.Point(119, 63)
+        Me.txtAge.Name = "txtAge"
+        Me.txtAge.ReadOnly = True
+        Me.txtAge.Size = New System.Drawing.Size(226, 20)
+        Me.txtAge.TabIndex = 1
+        '
+        'lblAge
+        '
+        Me.lblAge.AutoSize = True
+        Me.lblAge.Location = New System.Drawing.Point(21, 67)
+        Me.lblAge.Name = "lblAge"
+        Me.lblAge.Size = New System.Drawing.Size(26, 13)
+        Me.lblAge.TabIndex = 9
+        Me.lblAge.Text = "Age"
+        '
+        'lblSex
+        '
+        Me.lblSex.AutoSize = True
+        Me.lblSex.Location = New System.Drawing.Point(21, 95)
+        Me.lblSex.Name = "lblSex"
+        Me.lblSex.Size = New System.Drawing.Size(25, 13)
+        Me.lblSex.TabIndex = 11
+        Me.lblSex.Text = "Sex"
+        '
+        'cmbSex
+        '
+        Me.cmbSex.FormattingEnabled = True
+        Me.cmbSex.Items.AddRange(New Object() {"Male", "Female", "Non-Binary", "Other", "Prefer Not to Say"})
+        Me.cmbSex.Location = New System.Drawing.Point(119, 89)
+        Me.cmbSex.Name = "cmbSex"
+        Me.cmbSex.Size = New System.Drawing.Size(226, 21)
+        Me.cmbSex.TabIndex = 5
+        '
+        'lblBirthday
+        '
+        Me.lblBirthday.AutoSize = True
+        Me.lblBirthday.Location = New System.Drawing.Point(21, 39)
+        Me.lblBirthday.Name = "lblBirthday"
+        Me.lblBirthday.Size = New System.Drawing.Size(45, 13)
+        Me.lblBirthday.TabIndex = 10
+        Me.lblBirthday.Text = "Birthday"
+        '
+        'dtpBirthday
+        '
+        Me.dtpBirthday.Location = New System.Drawing.Point(119, 37)
+        Me.dtpBirthday.Name = "dtpBirthday"
+        Me.dtpBirthday.Size = New System.Drawing.Size(226, 20)
+        Me.dtpBirthday.TabIndex = 4
+        '
+        'tpPaymentDetails
+        '
+        Me.tpPaymentDetails.Controls.Add(Me.lblSelectedVoucherContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.lblSelectedVoucher)
+        Me.tpPaymentDetails.Controls.Add(Me.btnPlaceBooking)
+        Me.tpPaymentDetails.Controls.Add(Me.lblVoucherDiscountContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.lblVoucherDiscount)
+        Me.tpPaymentDetails.Controls.Add(Me.lblVoucher)
+        Me.tpPaymentDetails.Controls.Add(Me.btnVoucher)
+        Me.tpPaymentDetails.Controls.Add(Me.txtPayAmount)
+        Me.tpPaymentDetails.Controls.Add(Me.lblPayAmount)
+        Me.tpPaymentDetails.Controls.Add(Me.lblTotalPricePaymentContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.lblTotalPricePayment)
+        Me.tpPaymentDetails.Controls.Add(Me.lblServicesPaymentContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.lblServicesPayment)
+        Me.tpPaymentDetails.Controls.Add(Me.lblEventTimePaymentContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.lblEventTimePayment)
+        Me.tpPaymentDetails.Controls.Add(Me.lblEventDatePaymentContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.lblEventDatePayment)
+        Me.tpPaymentDetails.Controls.Add(Me.lblNumGuestsPaymentContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.lblNumGuestsPayment)
+        Me.tpPaymentDetails.Controls.Add(Me.lblEventTypePaymentContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.lblEventTypePayment)
+        Me.tpPaymentDetails.Controls.Add(Me.lblEventPlacePaymentContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.lblEventPlacePayment)
+        Me.tpPaymentDetails.Controls.Add(Me.lblCustomerContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.lblCustomerName)
+        Me.tpPaymentDetails.Location = New System.Drawing.Point(4, 22)
+        Me.tpPaymentDetails.Name = "tpPaymentDetails"
+        Me.tpPaymentDetails.Padding = New System.Windows.Forms.Padding(3)
+        Me.tpPaymentDetails.Size = New System.Drawing.Size(379, 385)
+        Me.tpPaymentDetails.TabIndex = 2
+        Me.tpPaymentDetails.Text = "Payment Details"
+        Me.tpPaymentDetails.UseVisualStyleBackColor = True
+        '
+        'lblSelectedVoucherContainer
+        '
+        Me.lblSelectedVoucherContainer.AutoSize = True
+        Me.lblSelectedVoucherContainer.Location = New System.Drawing.Point(128, 209)
+        Me.lblSelectedVoucherContainer.Name = "lblSelectedVoucherContainer"
+        Me.lblSelectedVoucherContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblSelectedVoucherContainer.TabIndex = 26
+        Me.lblSelectedVoucherContainer.Text = "-"
+        '
+        'lblSelectedVoucher
+        '
+        Me.lblSelectedVoucher.AutoSize = True
+        Me.lblSelectedVoucher.Location = New System.Drawing.Point(17, 209)
+        Me.lblSelectedVoucher.Name = "lblSelectedVoucher"
+        Me.lblSelectedVoucher.Size = New System.Drawing.Size(92, 13)
+        Me.lblSelectedVoucher.TabIndex = 25
+        Me.lblSelectedVoucher.Text = "Selected Voucher"
+        '
+        'btnPlaceBooking
+        '
+        Me.btnPlaceBooking.Location = New System.Drawing.Point(237, 350)
+        Me.btnPlaceBooking.Name = "btnPlaceBooking"
+        Me.btnPlaceBooking.Size = New System.Drawing.Size(120, 23)
+        Me.btnPlaceBooking.TabIndex = 24
+        Me.btnPlaceBooking.Text = "Place Booking"
+        Me.btnPlaceBooking.UseVisualStyleBackColor = True
+        '
+        'lblVoucherDiscountContainer
+        '
+        Me.lblVoucherDiscountContainer.AutoSize = True
+        Me.lblVoucherDiscountContainer.Location = New System.Drawing.Point(345, 300)
+        Me.lblVoucherDiscountContainer.Name = "lblVoucherDiscountContainer"
+        Me.lblVoucherDiscountContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblVoucherDiscountContainer.TabIndex = 23
+        Me.lblVoucherDiscountContainer.Text = "-"
+        '
+        'lblVoucherDiscount
+        '
+        Me.lblVoucherDiscount.AutoSize = True
+        Me.lblVoucherDiscount.Location = New System.Drawing.Point(234, 300)
+        Me.lblVoucherDiscount.Name = "lblVoucherDiscount"
+        Me.lblVoucherDiscount.Size = New System.Drawing.Size(92, 13)
+        Me.lblVoucherDiscount.TabIndex = 22
+        Me.lblVoucherDiscount.Text = "Voucher Discount"
+        '
+        'lblVoucher
+        '
+        Me.lblVoucher.AutoSize = True
+        Me.lblVoucher.Location = New System.Drawing.Point(16, 185)
+        Me.lblVoucher.Name = "lblVoucher"
+        Me.lblVoucher.Size = New System.Drawing.Size(47, 13)
+        Me.lblVoucher.TabIndex = 19
+        Me.lblVoucher.Text = "Voucher"
+        '
+        'btnVoucher
+        '
+        Me.btnVoucher.Location = New System.Drawing.Point(118, 180)
+        Me.btnVoucher.Name = "btnVoucher"
+        Me.btnVoucher.Size = New System.Drawing.Size(238, 23)
+        Me.btnVoucher.TabIndex = 18
+        Me.btnVoucher.Text = "Select Voucher"
+        Me.btnVoucher.UseVisualStyleBackColor = True
+        '
+        'txtPayAmount
+        '
+        Me.txtPayAmount.Location = New System.Drawing.Point(119, 324)
+        Me.txtPayAmount.Name = "txtPayAmount"
+        Me.txtPayAmount.Size = New System.Drawing.Size(238, 20)
+        Me.txtPayAmount.TabIndex = 17
+        '
+        'lblPayAmount
+        '
+        Me.lblPayAmount.AutoSize = True
+        Me.lblPayAmount.Location = New System.Drawing.Point(17, 327)
+        Me.lblPayAmount.Name = "lblPayAmount"
+        Me.lblPayAmount.Size = New System.Drawing.Size(64, 13)
+        Me.lblPayAmount.TabIndex = 16
+        Me.lblPayAmount.Text = "Pay Amount"
+        '
+        'lblTotalPricePaymentContainer
+        '
+        Me.lblTotalPricePaymentContainer.AutoSize = True
+        Me.lblTotalPricePaymentContainer.Location = New System.Drawing.Point(345, 287)
+        Me.lblTotalPricePaymentContainer.Name = "lblTotalPricePaymentContainer"
+        Me.lblTotalPricePaymentContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblTotalPricePaymentContainer.TabIndex = 15
+        Me.lblTotalPricePaymentContainer.Text = "-"
+        '
+        'lblTotalPricePayment
+        '
+        Me.lblTotalPricePayment.AutoSize = True
+        Me.lblTotalPricePayment.Location = New System.Drawing.Point(268, 287)
+        Me.lblTotalPricePayment.Name = "lblTotalPricePayment"
+        Me.lblTotalPricePayment.Size = New System.Drawing.Size(58, 13)
+        Me.lblTotalPricePayment.TabIndex = 14
+        Me.lblTotalPricePayment.Text = "Total Price"
+        '
+        'lblServicesPaymentContainer
+        '
+        Me.lblServicesPaymentContainer.AutoSize = True
+        Me.lblServicesPaymentContainer.Location = New System.Drawing.Point(120, 151)
+        Me.lblServicesPaymentContainer.Name = "lblServicesPaymentContainer"
+        Me.lblServicesPaymentContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblServicesPaymentContainer.TabIndex = 13
+        Me.lblServicesPaymentContainer.Text = "-"
+        '
+        'lblServicesPayment
+        '
+        Me.lblServicesPayment.AutoSize = True
+        Me.lblServicesPayment.Location = New System.Drawing.Point(16, 151)
+        Me.lblServicesPayment.Name = "lblServicesPayment"
+        Me.lblServicesPayment.Size = New System.Drawing.Size(86, 13)
+        Me.lblServicesPayment.TabIndex = 12
+        Me.lblServicesPayment.Text = "Services Availed"
+        '
+        'lblEventTimePaymentContainer
+        '
+        Me.lblEventTimePaymentContainer.AutoSize = True
+        Me.lblEventTimePaymentContainer.Location = New System.Drawing.Point(120, 129)
+        Me.lblEventTimePaymentContainer.Name = "lblEventTimePaymentContainer"
+        Me.lblEventTimePaymentContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblEventTimePaymentContainer.TabIndex = 11
+        Me.lblEventTimePaymentContainer.Text = "-"
+        '
+        'lblEventTimePayment
+        '
+        Me.lblEventTimePayment.AutoSize = True
+        Me.lblEventTimePayment.Location = New System.Drawing.Point(16, 129)
+        Me.lblEventTimePayment.Name = "lblEventTimePayment"
+        Me.lblEventTimePayment.Size = New System.Drawing.Size(61, 13)
+        Me.lblEventTimePayment.TabIndex = 10
+        Me.lblEventTimePayment.Text = "Event Time"
+        '
+        'lblEventDatePaymentContainer
+        '
+        Me.lblEventDatePaymentContainer.AutoSize = True
+        Me.lblEventDatePaymentContainer.Location = New System.Drawing.Point(120, 107)
+        Me.lblEventDatePaymentContainer.Name = "lblEventDatePaymentContainer"
+        Me.lblEventDatePaymentContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblEventDatePaymentContainer.TabIndex = 9
+        Me.lblEventDatePaymentContainer.Text = "-"
+        '
+        'lblEventDatePayment
+        '
+        Me.lblEventDatePayment.AutoSize = True
+        Me.lblEventDatePayment.Location = New System.Drawing.Point(16, 107)
+        Me.lblEventDatePayment.Name = "lblEventDatePayment"
+        Me.lblEventDatePayment.Size = New System.Drawing.Size(61, 13)
+        Me.lblEventDatePayment.TabIndex = 8
+        Me.lblEventDatePayment.Text = "Event Date"
+        '
+        'lblNumGuestsPaymentContainer
+        '
+        Me.lblNumGuestsPaymentContainer.AutoSize = True
+        Me.lblNumGuestsPaymentContainer.Location = New System.Drawing.Point(120, 81)
+        Me.lblNumGuestsPaymentContainer.Name = "lblNumGuestsPaymentContainer"
+        Me.lblNumGuestsPaymentContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblNumGuestsPaymentContainer.TabIndex = 7
+        Me.lblNumGuestsPaymentContainer.Text = "-"
+        '
+        'lblNumGuestsPayment
+        '
+        Me.lblNumGuestsPayment.AutoSize = True
+        Me.lblNumGuestsPayment.Location = New System.Drawing.Point(16, 81)
+        Me.lblNumGuestsPayment.Name = "lblNumGuestsPayment"
+        Me.lblNumGuestsPayment.Size = New System.Drawing.Size(92, 13)
+        Me.lblNumGuestsPayment.TabIndex = 6
+        Me.lblNumGuestsPayment.Text = "Number of Guests"
+        '
+        'lblEventTypePaymentContainer
+        '
+        Me.lblEventTypePaymentContainer.AutoSize = True
+        Me.lblEventTypePaymentContainer.Location = New System.Drawing.Point(120, 57)
+        Me.lblEventTypePaymentContainer.Name = "lblEventTypePaymentContainer"
+        Me.lblEventTypePaymentContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblEventTypePaymentContainer.TabIndex = 5
+        Me.lblEventTypePaymentContainer.Text = "-"
+        '
+        'lblEventTypePayment
+        '
+        Me.lblEventTypePayment.AutoSize = True
+        Me.lblEventTypePayment.Location = New System.Drawing.Point(16, 57)
+        Me.lblEventTypePayment.Name = "lblEventTypePayment"
+        Me.lblEventTypePayment.Size = New System.Drawing.Size(62, 13)
+        Me.lblEventTypePayment.TabIndex = 4
+        Me.lblEventTypePayment.Text = "Event Type"
+        '
+        'lblEventPlacePaymentContainer
+        '
+        Me.lblEventPlacePaymentContainer.AutoSize = True
+        Me.lblEventPlacePaymentContainer.Location = New System.Drawing.Point(120, 35)
+        Me.lblEventPlacePaymentContainer.Name = "lblEventPlacePaymentContainer"
+        Me.lblEventPlacePaymentContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblEventPlacePaymentContainer.TabIndex = 3
+        Me.lblEventPlacePaymentContainer.Text = "-"
+        '
+        'lblEventPlacePayment
+        '
+        Me.lblEventPlacePayment.AutoSize = True
+        Me.lblEventPlacePayment.Location = New System.Drawing.Point(16, 35)
+        Me.lblEventPlacePayment.Name = "lblEventPlacePayment"
+        Me.lblEventPlacePayment.Size = New System.Drawing.Size(65, 13)
+        Me.lblEventPlacePayment.TabIndex = 2
+        Me.lblEventPlacePayment.Text = "Event Place"
+        '
+        'lblCustomerContainer
+        '
+        Me.lblCustomerContainer.AutoSize = True
+        Me.lblCustomerContainer.Location = New System.Drawing.Point(120, 12)
+        Me.lblCustomerContainer.Name = "lblCustomerContainer"
+        Me.lblCustomerContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblCustomerContainer.TabIndex = 1
+        Me.lblCustomerContainer.Text = "-"
+        '
+        'lblCustomerName
+        '
+        Me.lblCustomerName.AutoSize = True
+        Me.lblCustomerName.Location = New System.Drawing.Point(16, 12)
+        Me.lblCustomerName.Name = "lblCustomerName"
+        Me.lblCustomerName.Size = New System.Drawing.Size(51, 13)
+        Me.lblCustomerName.TabIndex = 0
+        Me.lblCustomerName.Text = "Customer"
+        '
+        'lblHoursContainer
+        '
+        Me.lblHoursContainer.AutoSize = True
+        Me.lblHoursContainer.Location = New System.Drawing.Point(212, 599)
+        Me.lblHoursContainer.Name = "lblHoursContainer"
+        Me.lblHoursContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblHoursContainer.TabIndex = 36
+        Me.lblHoursContainer.Text = "-"
+        '
+        'lblAvailableDaysContainer
+        '
+        Me.lblAvailableDaysContainer.AutoSize = True
+        Me.lblAvailableDaysContainer.Location = New System.Drawing.Point(212, 612)
+        Me.lblAvailableDaysContainer.Name = "lblAvailableDaysContainer"
+        Me.lblAvailableDaysContainer.Size = New System.Drawing.Size(53, 13)
+        Me.lblAvailableDaysContainer.TabIndex = 38
+        Me.lblAvailableDaysContainer.Text = "Available:"
+        '
+        'mcAvailability
+        '
+        Me.mcAvailability.Location = New System.Drawing.Point(914, 530)
+        Me.mcAvailability.Name = "mcAvailability"
+        Me.mcAvailability.TabIndex = 39
+        '
         'FormBooking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1424, 771)
+        Me.Controls.Add(Me.mcAvailability)
+        Me.Controls.Add(Me.lblAvailableDaysContainer)
+        Me.Controls.Add(Me.lblHoursContainer)
+        Me.Controls.Add(Me.tcDetails)
+        Me.Controls.Add(Me.lblAvailability)
+        Me.Controls.Add(Me.lblDescriptionContainer)
+        Me.Controls.Add(Me.lblDescription)
+        Me.Controls.Add(Me.lblPricePerDayContainer)
+        Me.Controls.Add(Me.lblFeaturesContainer)
+        Me.Controls.Add(Me.lblPricePerDay)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnNext)
+        Me.Controls.Add(Me.lblFeatures)
+        Me.Controls.Add(Me.lblPlaceIDContainer)
+        Me.Controls.Add(Me.lblCapacityContainer)
         Me.Controls.Add(Me.btnBack)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.gbCustomerInformation)
+        Me.Controls.Add(Me.lblEventPlace)
+        Me.Controls.Add(Me.lblPlaceID)
+        Me.Controls.Add(Me.lblCapacity)
         Me.Name = "FormBooking"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormBooking"
-        Me.gbCustomerInformation.ResumeLayout(False)
-        Me.gbCustomerInformation.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tcDetails.ResumeLayout(False)
+        Me.tpBookingDetails.ResumeLayout(False)
+        Me.pnlBookingDetails.ResumeLayout(False)
+        Me.pnlBookingDetails.PerformLayout()
+        Me.tpCustomerDetails.ResumeLayout(False)
+        Me.pnlCustomerDetails.ResumeLayout(False)
+        Me.pnlCustomerDetails.PerformLayout()
+        Me.tpPaymentDetails.ResumeLayout(False)
+        Me.tpPaymentDetails.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents txtCustomerName As TextBox
-    Friend WithEvents txtAge As TextBox
-    Friend WithEvents dtpBirthday As DateTimePicker
-    Friend WithEvents cmbSex As ComboBox
-    Friend WithEvents txtAddress As TextBox
-    Friend WithEvents lblName As Label
-    Friend WithEvents lblAge As Label
-    Friend WithEvents lblBirthday As Label
-    Friend WithEvents lblSex As Label
-    Friend WithEvents lblAddress As Label
-    Friend WithEvents gbCustomerInformation As GroupBox
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents txtPlaceID As TextBox
     Friend WithEvents lblPricePerDay As Label
-    Friend WithEvents txtVenueName As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents txtPricePerDay As TextBox
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lblCapacity As Label
+    Friend WithEvents lblEventPlace As Label
+    Friend WithEvents lblPlaceID As Label
     Friend WithEvents lblFeatures As Label
-    Friend WithEvents txtCapacity As TextBox
-    Friend WithEvents txtFeatures As TextBox
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents dtpEventDate As DateTimePicker
+    Friend WithEvents dtpEventDateStart As DateTimePicker
     Friend WithEvents txtNumGuests As TextBox
     Friend WithEvents lblTotalPrice As Label
     Friend WithEvents lblServicesAvailed As Label
-    Friend WithEvents lblEventDate As Label
+    Friend WithEvents lblEventDateStart As Label
     Friend WithEvents txtTotalPrice As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents btnBook As Button
+    Friend WithEvents lblNumGuests As Label
+    Friend WithEvents btBookingProceed As Button
     Friend WithEvents chkVideoke As CheckBox
     Friend WithEvents chkDancer As CheckBox
     Friend WithEvents chkSinger As CheckBox
@@ -489,4 +995,70 @@ Partial Class FormBooking
     Friend WithEvents chkCatering As CheckBox
     Friend WithEvents btnBack As Button
     Friend WithEvents btnNext As Button
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents lblFeaturesContainer As Label
+    Friend WithEvents lblPricePerDayContainer As Label
+    Friend WithEvents lblCapacityContainer As Label
+    Friend WithEvents lblPlaceIDContainer As Label
+    Friend WithEvents lblDescription As Label
+    Friend WithEvents lblDescriptionContainer As Label
+    Friend WithEvents dtpEventTimeStart As DateTimePicker
+    Friend WithEvents lblEventSchedule As Label
+    Friend WithEvents dtpEventDateEnd As DateTimePicker
+    Friend WithEvents lblEnd As Label
+    Friend WithEvents lblDate As Label
+    Friend WithEvents dtpEventTimeEnd As DateTimePicker
+    Friend WithEvents lblEventTimeEnd As Label
+    Friend WithEvents lblEventTimeStart As Label
+    Friend WithEvents lblTime As Label
+    Friend WithEvents lblAvailability As Label
+    Friend WithEvents tcDetails As TabControl
+    Friend WithEvents tpBookingDetails As TabPage
+    Friend WithEvents pnlBookingDetails As Panel
+    Friend WithEvents tpCustomerDetails As TabPage
+    Friend WithEvents txtCustomerName As TextBox
+    Friend WithEvents lblAddress As Label
+    Friend WithEvents txtAge As TextBox
+    Friend WithEvents lblSex As Label
+    Friend WithEvents lblBirthday As Label
+    Friend WithEvents dtpBirthday As DateTimePicker
+    Friend WithEvents cmbSex As ComboBox
+    Friend WithEvents lblAge As Label
+    Friend WithEvents txtAddress As TextBox
+    Friend WithEvents lblName As Label
+    Friend WithEvents pnlCustomerDetails As Panel
+    Friend WithEvents tpPaymentDetails As TabPage
+    Friend WithEvents btnCustomerProceed As Button
+    Friend WithEvents lblCustomerContainer As Label
+    Friend WithEvents lblCustomerName As Label
+    Friend WithEvents lblEventTypePayment As Label
+    Friend WithEvents lblEventPlacePaymentContainer As Label
+    Friend WithEvents lblEventPlacePayment As Label
+    Friend WithEvents lblEventType As Label
+    Friend WithEvents cbEventType As ComboBox
+    Friend WithEvents lblServicesPaymentContainer As Label
+    Friend WithEvents lblServicesPayment As Label
+    Friend WithEvents lblEventTimePaymentContainer As Label
+    Friend WithEvents lblEventTimePayment As Label
+    Friend WithEvents lblEventDatePaymentContainer As Label
+    Friend WithEvents lblEventDatePayment As Label
+    Friend WithEvents lblNumGuestsPaymentContainer As Label
+    Friend WithEvents lblNumGuestsPayment As Label
+    Friend WithEvents lblEventTypePaymentContainer As Label
+    Friend WithEvents btnVoucher As Button
+    Friend WithEvents txtPayAmount As TextBox
+    Friend WithEvents lblPayAmount As Label
+    Friend WithEvents lblTotalPricePaymentContainer As Label
+    Friend WithEvents lblTotalPricePayment As Label
+    Friend WithEvents lblVoucher As Label
+    Friend WithEvents lblVoucherDiscountContainer As Label
+    Friend WithEvents lblVoucherDiscount As Label
+    Friend WithEvents btnPlaceBooking As Button
+    Friend WithEvents lblHoursContainer As Label
+    Friend WithEvents lblAvailableDaysContainer As Label
+    Friend WithEvents mcAvailability As MonthCalendar
+    Friend WithEvents lblSelectedVoucherContainer As Label
+    Friend WithEvents lblSelectedVoucher As Label
+    Friend WithEvents mtxtEventTimeEnd As MaskedTextBox
+    Friend WithEvents mtxtEventTimeStart As MaskedTextBox
 End Class
