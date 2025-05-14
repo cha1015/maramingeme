@@ -227,7 +227,7 @@ Partial Class FormBooking
         Me.lblEventPlace.Location = New System.Drawing.Point(46, 453)
         Me.lblEventPlace.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEventPlace.Name = "lblEventPlace"
-        Me.lblEventPlace.Size = New System.Drawing.Size(225, 60)
+        Me.lblEventPlace.Size = New System.Drawing.Size(219, 58)
         Me.lblEventPlace.TabIndex = 9
         Me.lblEventPlace.Text = "Event Place"
         '
@@ -880,6 +880,8 @@ Partial Class FormBooking
         '
         'tpPaymentDetails
         '
+        Me.tpPaymentDetails.BackgroundImage = Global.maramingeme.My.Resources.Resources.panel
+        Me.tpPaymentDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.tpPaymentDetails.Controls.Add(Me.lblOffHoursMinutesContainer)
         Me.tpPaymentDetails.Controls.Add(Me.lblOffHoursTotalFeeContainer)
         Me.tpPaymentDetails.Controls.Add(Me.lblOffHoursBookingFee)
