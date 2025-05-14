@@ -48,27 +48,19 @@ Partial Class FormSignUp
         '
         'gbCreateAcc
         '
+        Me.gbCreateAcc.Controls.Add(Me.btnNext)
         Me.gbCreateAcc.Controls.Add(Me.lblRole)
-        Me.gbCreateAcc.Controls.Add(Me.cbRole)
-        Me.gbCreateAcc.Controls.Add(Me.btnShowPass)
-        Me.gbCreateAcc.Controls.Add(Me.btnShowConfPass)
-        Me.gbCreateAcc.Controls.Add(Me.btnSignUp)
-        Me.gbCreateAcc.Controls.Add(Me.lnklblLogIn)
         Me.gbCreateAcc.Controls.Add(Me.lblConfPass)
         Me.gbCreateAcc.Controls.Add(Me.lblPass)
-        Me.gbCreateAcc.Controls.Add(Me.txtEmail)
-        Me.gbCreateAcc.Controls.Add(Me.txtPass)
-        Me.gbCreateAcc.Controls.Add(Me.txtConfPass)
-        Me.gbCreateAcc.Controls.Add(Me.txtFirstName)
         Me.gbCreateAcc.Controls.Add(Me.lblEmail)
-        Me.gbCreateAcc.Controls.Add(Me.txtLastName)
         Me.gbCreateAcc.Controls.Add(Me.lblUsername)
         Me.gbCreateAcc.Controls.Add(Me.lblLastName)
-        Me.gbCreateAcc.Controls.Add(Me.txtUsername)
         Me.gbCreateAcc.Controls.Add(Me.lblFirstName)
-        Me.gbCreateAcc.Location = New System.Drawing.Point(541, 271)
+        Me.gbCreateAcc.Location = New System.Drawing.Point(801, 143)
+        Me.gbCreateAcc.Margin = New System.Windows.Forms.Padding(4)
         Me.gbCreateAcc.Name = "gbCreateAcc"
-        Me.gbCreateAcc.Size = New System.Drawing.Size(342, 292)
+        Me.gbCreateAcc.Padding = New System.Windows.Forms.Padding(4)
+        Me.gbCreateAcc.Size = New System.Drawing.Size(456, 359)
         Me.gbCreateAcc.TabIndex = 14
         Me.gbCreateAcc.TabStop = False
         Me.gbCreateAcc.Text = "Create Account"
@@ -76,188 +68,247 @@ Partial Class FormSignUp
         'lblRole
         '
         Me.lblRole.AutoSize = True
-        Me.lblRole.Location = New System.Drawing.Point(10, 177)
+        Me.lblRole.Location = New System.Drawing.Point(13, 218)
+        Me.lblRole.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblRole.Name = "lblRole"
-        Me.lblRole.Size = New System.Drawing.Size(29, 13)
+        Me.lblRole.Size = New System.Drawing.Size(36, 16)
         Me.lblRole.TabIndex = 23
         Me.lblRole.Text = "Role"
         '
         'cbRole
         '
+        Me.cbRole.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbRole.Font = New System.Drawing.Font("Poppins Light", 4.0!)
         Me.cbRole.FormattingEnabled = True
         Me.cbRole.Items.AddRange(New Object() {"User", "Admin"})
-        Me.cbRole.Location = New System.Drawing.Point(107, 174)
+        Me.cbRole.Location = New System.Drawing.Point(97, 565)
+        Me.cbRole.Margin = New System.Windows.Forms.Padding(4)
         Me.cbRole.Name = "cbRole"
-        Me.cbRole.Size = New System.Drawing.Size(226, 21)
+        Me.cbRole.Size = New System.Drawing.Size(236, 20)
         Me.cbRole.TabIndex = 22
         '
         'btnShowPass
         '
-        Me.btnShowPass.Location = New System.Drawing.Point(285, 120)
+        Me.btnShowPass.BackColor = System.Drawing.Color.Transparent
+        Me.btnShowPass.FlatAppearance.BorderSize = 0
+        Me.btnShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnShowPass.Location = New System.Drawing.Point(346, 453)
+        Me.btnShowPass.Margin = New System.Windows.Forms.Padding(4)
         Me.btnShowPass.Name = "btnShowPass"
-        Me.btnShowPass.Size = New System.Drawing.Size(48, 23)
+        Me.btnShowPass.Size = New System.Drawing.Size(70, 30)
         Me.btnShowPass.TabIndex = 21
-        Me.btnShowPass.Text = "Show"
-        Me.btnShowPass.UseVisualStyleBackColor = True
+        Me.btnShowPass.UseVisualStyleBackColor = False
         '
         'btnShowConfPass
         '
-        Me.btnShowConfPass.Location = New System.Drawing.Point(285, 145)
+        Me.btnShowConfPass.BackColor = System.Drawing.Color.Transparent
+        Me.btnShowConfPass.FlatAppearance.BorderSize = 0
+        Me.btnShowConfPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnShowConfPass.Location = New System.Drawing.Point(346, 505)
+        Me.btnShowConfPass.Margin = New System.Windows.Forms.Padding(4)
         Me.btnShowConfPass.Name = "btnShowConfPass"
-        Me.btnShowConfPass.Size = New System.Drawing.Size(48, 23)
+        Me.btnShowConfPass.Size = New System.Drawing.Size(70, 30)
         Me.btnShowConfPass.TabIndex = 20
-        Me.btnShowConfPass.Text = "Show"
-        Me.btnShowConfPass.UseVisualStyleBackColor = True
+        Me.btnShowConfPass.UseVisualStyleBackColor = False
         '
         'btnSignUp
         '
-        Me.btnSignUp.Location = New System.Drawing.Point(258, 258)
+        Me.btnSignUp.BackColor = System.Drawing.Color.Transparent
+        Me.btnSignUp.FlatAppearance.BorderSize = 0
+        Me.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSignUp.Location = New System.Drawing.Point(1114, 638)
+        Me.btnSignUp.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSignUp.Name = "btnSignUp"
-        Me.btnSignUp.Size = New System.Drawing.Size(75, 23)
+        Me.btnSignUp.Size = New System.Drawing.Size(218, 55)
         Me.btnSignUp.TabIndex = 19
-        Me.btnSignUp.Text = "Sign Up"
-        Me.btnSignUp.UseVisualStyleBackColor = True
+        Me.btnSignUp.UseVisualStyleBackColor = False
         '
         'lnklblLogIn
         '
         Me.lnklblLogIn.AutoSize = True
-        Me.lnklblLogIn.Location = New System.Drawing.Point(9, 258)
+        Me.lnklblLogIn.BackColor = System.Drawing.Color.Transparent
+        Me.lnklblLogIn.Font = New System.Drawing.Font("Poppins", 11.0!)
+        Me.lnklblLogIn.LinkColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.lnklblLogIn.Location = New System.Drawing.Point(364, 599)
+        Me.lnklblLogIn.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lnklblLogIn.Name = "lnklblLogIn"
-        Me.lnklblLogIn.Size = New System.Drawing.Size(130, 13)
+        Me.lnklblLogIn.Size = New System.Drawing.Size(70, 33)
         Me.lnklblLogIn.TabIndex = 18
         Me.lnklblLogIn.TabStop = True
-        Me.lnklblLogIn.Text = "I have an account. Log In"
+        Me.lnklblLogIn.Text = "Log In"
         '
         'lblConfPass
         '
         Me.lblConfPass.AutoSize = True
-        Me.lblConfPass.Location = New System.Drawing.Point(9, 152)
+        Me.lblConfPass.Location = New System.Drawing.Point(12, 187)
+        Me.lblConfPass.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblConfPass.Name = "lblConfPass"
-        Me.lblConfPass.Size = New System.Drawing.Size(91, 13)
+        Me.lblConfPass.Size = New System.Drawing.Size(115, 16)
         Me.lblConfPass.TabIndex = 17
         Me.lblConfPass.Text = "Confirm Password"
         '
         'lblPass
         '
         Me.lblPass.AutoSize = True
-        Me.lblPass.Location = New System.Drawing.Point(9, 125)
+        Me.lblPass.Location = New System.Drawing.Point(12, 154)
+        Me.lblPass.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPass.Name = "lblPass"
-        Me.lblPass.Size = New System.Drawing.Size(53, 13)
+        Me.lblPass.Size = New System.Drawing.Size(67, 16)
         Me.lblPass.TabIndex = 16
         Me.lblPass.Text = "Password"
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(107, 95)
+        Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtEmail.Font = New System.Drawing.Font("Poppins Light", 8.0!)
+        Me.txtEmail.Location = New System.Drawing.Point(97, 351)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(226, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(310, 20)
         Me.txtEmail.TabIndex = 13
         '
         'txtPass
         '
-        Me.txtPass.Location = New System.Drawing.Point(107, 121)
+        Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPass.Font = New System.Drawing.Font("Poppins Light", 8.0!)
+        Me.txtPass.Location = New System.Drawing.Point(97, 458)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass.Size = New System.Drawing.Size(172, 20)
+        Me.txtPass.Size = New System.Drawing.Size(236, 20)
         Me.txtPass.TabIndex = 14
         '
         'txtConfPass
         '
-        Me.txtConfPass.Location = New System.Drawing.Point(107, 147)
+        Me.txtConfPass.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtConfPass.Font = New System.Drawing.Font("Poppins Light", 8.0!)
+        Me.txtConfPass.Location = New System.Drawing.Point(97, 511)
+        Me.txtConfPass.Margin = New System.Windows.Forms.Padding(4)
         Me.txtConfPass.Name = "txtConfPass"
         Me.txtConfPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtConfPass.Size = New System.Drawing.Size(172, 20)
+        Me.txtConfPass.Size = New System.Drawing.Size(236, 20)
         Me.txtConfPass.TabIndex = 15
         '
         'txtFirstName
         '
-        Me.txtFirstName.Location = New System.Drawing.Point(107, 17)
+        Me.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtFirstName.Font = New System.Drawing.Font("Poppins Light", 8.0!)
+        Me.txtFirstName.Location = New System.Drawing.Point(97, 296)
+        Me.txtFirstName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(226, 20)
+        Me.txtFirstName.Size = New System.Drawing.Size(176, 20)
         Me.txtFirstName.TabIndex = 0
         '
         'lblEmail
         '
         Me.lblEmail.AutoSize = True
-        Me.lblEmail.Location = New System.Drawing.Point(9, 98)
+        Me.lblEmail.Location = New System.Drawing.Point(12, 121)
+        Me.lblEmail.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(32, 13)
+        Me.lblEmail.Size = New System.Drawing.Size(41, 16)
         Me.lblEmail.TabIndex = 12
         Me.lblEmail.Text = "Email"
         '
         'txtLastName
         '
-        Me.txtLastName.Location = New System.Drawing.Point(107, 43)
+        Me.txtLastName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtLastName.Font = New System.Drawing.Font("Poppins Light", 8.0!)
+        Me.txtLastName.Location = New System.Drawing.Point(287, 296)
+        Me.txtLastName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(226, 20)
+        Me.txtLastName.Size = New System.Drawing.Size(211, 20)
         Me.txtLastName.TabIndex = 1
         '
         'lblUsername
         '
         Me.lblUsername.AutoSize = True
-        Me.lblUsername.Location = New System.Drawing.Point(9, 71)
+        Me.lblUsername.Location = New System.Drawing.Point(12, 87)
+        Me.lblUsername.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(55, 13)
+        Me.lblUsername.Size = New System.Drawing.Size(70, 16)
         Me.lblUsername.TabIndex = 11
         Me.lblUsername.Text = "Username"
         '
         'lblLastName
         '
         Me.lblLastName.AutoSize = True
-        Me.lblLastName.Location = New System.Drawing.Point(9, 44)
+        Me.lblLastName.Location = New System.Drawing.Point(12, 54)
+        Me.lblLastName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblLastName.Name = "lblLastName"
-        Me.lblLastName.Size = New System.Drawing.Size(58, 13)
+        Me.lblLastName.Size = New System.Drawing.Size(72, 16)
         Me.lblLastName.TabIndex = 9
         Me.lblLastName.Text = "Last Name"
         '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(107, 69)
+        Me.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtUsername.Font = New System.Drawing.Font("Poppins Light", 8.0!)
+        Me.txtUsername.Location = New System.Drawing.Point(97, 403)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(226, 20)
+        Me.txtUsername.Size = New System.Drawing.Size(310, 20)
         Me.txtUsername.TabIndex = 6
         '
         'lblFirstName
         '
         Me.lblFirstName.AutoSize = True
-        Me.lblFirstName.Location = New System.Drawing.Point(9, 17)
+        Me.lblFirstName.Location = New System.Drawing.Point(12, 21)
+        Me.lblFirstName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(57, 13)
+        Me.lblFirstName.Size = New System.Drawing.Size(72, 16)
         Me.lblFirstName.TabIndex = 8
         Me.lblFirstName.Text = "First Name"
         '
         'btnNext
         '
-        Me.btnNext.Location = New System.Drawing.Point(60, 25)
+        Me.btnNext.Location = New System.Drawing.Point(213, 109)
+        Me.btnNext.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNext.Name = "btnNext"
-        Me.btnNext.Size = New System.Drawing.Size(31, 33)
+        Me.btnNext.Size = New System.Drawing.Size(41, 41)
         Me.btnNext.TabIndex = 32
         Me.btnNext.Text = "→"
         Me.btnNext.UseVisualStyleBackColor = True
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(23, 25)
+        Me.btnBack.BackColor = System.Drawing.Color.Transparent
+        Me.btnBack.FlatAppearance.BorderSize = 0
+        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBack.Location = New System.Drawing.Point(80, 652)
+        Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(31, 33)
+        Me.btnBack.Size = New System.Drawing.Size(139, 41)
         Me.btnBack.TabIndex = 31
-        Me.btnBack.Text = "←"
-        Me.btnBack.UseVisualStyleBackColor = True
+        Me.btnBack.UseVisualStyleBackColor = False
         '
         'FormSignUp
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1424, 771)
-        Me.Controls.Add(Me.btnNext)
+        Me.BackgroundImage = Global.maramingeme.My.Resources.Resources.SignUp_Window
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(1422, 763)
+        Me.Controls.Add(Me.btnSignUp)
+        Me.Controls.Add(Me.btnShowConfPass)
+        Me.Controls.Add(Me.lnklblLogIn)
+        Me.Controls.Add(Me.btnShowPass)
+        Me.Controls.Add(Me.cbRole)
         Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.gbCreateAcc)
+        Me.Controls.Add(Me.txtFirstName)
+        Me.Controls.Add(Me.txtLastName)
+        Me.Controls.Add(Me.txtUsername)
+        Me.Controls.Add(Me.txtEmail)
+        Me.Controls.Add(Me.txtPass)
+        Me.Controls.Add(Me.txtConfPass)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FormSignUp"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormSignUp"
         Me.gbCreateAcc.ResumeLayout(False)
         Me.gbCreateAcc.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents gbCreateAcc As GroupBox

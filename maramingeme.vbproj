@@ -261,5 +261,35 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogIn Bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogIn Bg 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogIn Bg 21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SignUp Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BOOking.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg chinom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no pan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnProceed.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
