@@ -60,9 +60,19 @@ Public Class FormMain
     Private Sub LoadSearchResults()
         Dim query As String = "SELECT * FROM eventplace WHERE 1=1"
 
-        If cbAvailableOn.SelectedItem IsNot Nothing Then
-            query &= " AND FIND_IN_SET(@available_day, available_days) > 0"
+        Dim selectedDays As New List(Of String)
+        For Each selectedItem As String In clbAvailableOn.CheckedItems
+            selectedDays.Add(selectedItem)
+        Next
+
+        If selectedDays.Count > 0 Then
+            Dim dayConditions As New List(Of String)
+            For Each day In selectedDays
+                dayConditions.Add($"FIND_IN_SET('{day}', available_days) > 0")
+            Next
+            query &= " AND (" & String.Join(" OR ", dayConditions) & ")"
         End If
+
 
         Dim selectedEventTypes As New List(Of String)
         For Each selectedItem In clbEventType.CheckedItems
@@ -130,9 +140,6 @@ Public Class FormMain
                 If Decimal.TryParse(txtMaxPrice.Text, maxPrice) Then
                     cmd.Parameters.AddWithValue("@maxPrice", maxPrice)
                 End If
-                If cbAvailableOn.SelectedItem IsNot Nothing Then
-                    cmd.Parameters.AddWithValue("@available_day", cbAvailableOn.SelectedItem.ToString())
-                End If
 
                 Dim adapter As New MySqlDataAdapter(cmd)
                 Try
@@ -157,40 +164,53 @@ Public Class FormMain
 
     Private Sub btnBook_Click(sender As Object, e As EventArgs)
         If String.IsNullOrEmpty(CurrentUser.Username) Then
-            MessageBox.Show("You need to log in to book an event place.", "Login Required", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-            Dim loginForm As New FormLogIn()
-            loginForm.ShowDialog()
+            Dim result As DialogResult = MessageBox.Show("You need to log in to book an event place. Proceed to login?", "Login Required", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+
+            If result = DialogResult.Yes Then
+                Dim loginForm As New FormLogIn()
+                loginForm.ShowDialog()
+            Else
+                Exit Sub
+            End If
+        End If
+
+        ' Prevent admins from booking an event place
+        If CurrentUser.Role = "Admin" Then
+            MessageBox.Show("Admins cannot book an event place. Redirecting to Admin Center.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+            ' Check if FormAdminCenter is already open
+            If Application.OpenForms.OfType(Of FormAdminCenter).Any() Then
+                Me.Hide()
+                Exit Sub
+            End If
+
+            Dim adminForm As New FormAdminCenter()
+            adminForm.Show()
+            Me.Hide()
             Exit Sub
         End If
 
+        ' Proceed with booking logic if user is not an admin
         Dim btn As Button = CType(sender, Button)
         Dim row As DataRow = CType(btn.Tag, DataRow)
         Dim placeId As Integer = CInt(row("place_id"))
         Dim capacity As Integer = CInt(row("capacity"))
         Dim pricePerDay As Decimal = CDec(row("price_per_day"))
 
-
-        'If customerId <= 0 Then
-        '    MessageBox.Show("Cannot proceed without a valid customer ID.")
-        '    Return
-        'End If
-
-        Dim bookingForm As New FormBooking(customerId) With {
-    .EventPlaceId = placeId,
-    .EventPlaceName = row("event_place").ToString(),
-    .EventPlaceCapacity = CInt(row("capacity")),
-    .BasePricePerDay = CDec(row("price_per_day")),
-    .EventPlaceFeatures = row("features").ToString(),
-    .EventPlaceDescription = row("description").ToString(),
-    .OpeningHours = row("opening_hours").ToString(),
-    .ClosingHours = row("closing_hours").ToString(),
-    .AvailableDays = row("available_days").ToString()
-}
-
+        Dim bookingForm As New FormBooking(CurrentUser.UserID) With {
+        .EventPlaceId = placeId,
+        .EventPlaceName = row("event_place").ToString(),
+        .EventPlaceCapacity = capacity,
+        .BasePricePerDay = pricePerDay,
+        .EventPlaceFeatures = row("features").ToString(),
+        .EventPlaceDescription = row("description").ToString(),
+        .OpeningHours = row("opening_hours").ToString(),
+        .ClosingHours = row("closing_hours").ToString(),
+        .AvailableDays = row("available_days").ToString()
+    }
 
         bookingForm.ShowDialog()
         Me.Hide()
-
     End Sub
 
 
@@ -209,22 +229,18 @@ Public Class FormMain
         signUpForm.Show()
         Me.Hide()
     End Sub
-
     Private Sub btnLogIn_Click(sender As Object, e As EventArgs) Handles btnLogIn.Click
         Dim loginForm As New FormLogIn()
         loginForm.ShowDialog()
 
         If Not String.IsNullOrEmpty(CurrentUser.Username) Then
-            ' Force refresh of the UI
             UpdatePanelVisibility()
-            Me.Refresh() ' This forces a UI update
-
-            ' Bring FormMain to focus
-            Me.BringToFront()
-            Me.Focus()
+            pnlAccount.Visible = True
+            pnlSignUpLogIn.Visible = False
+            Me.Refresh()
+            Application.DoEvents()
         End If
     End Sub
-
 
     Private Sub txtField_Enter(sender As Object, e As EventArgs) Handles txtMinCapacity.Enter, txtMaxCapacity.Enter, txtMinPrice.Enter, txtMaxPrice.Enter
         Dim txt As TextBox = CType(sender, TextBox)
@@ -278,12 +294,56 @@ Public Class FormMain
     End Sub
 
     Private Sub btnLogOut_Click(sender As Object, e As EventArgs) Handles btnLogOut.Click
-        CurrentUser.Username = String.Empty ' Clear logged-in user
-        pnlSignUpLogIn.Visible = True ' Show login options again
+        CurrentUser.Username = String.Empty ' Clear session
+
+        ' Reset panels properly
+        pnlSignUpLogIn.Visible = True
+        pnlAccount.Visible = False
         btnSignUp.Visible = True
         btnLogIn.Visible = True
         btnCustomerView.Visible = False
+
         UpdatePanelVisibility()
+        Me.Refresh()
+        Application.DoEvents()
+    End Sub
+
+    Private Sub ClearFilters()
+        clbEventType.ClearSelected() ' Clears selected event types
+        txtMinCapacity.Text = "Min" ' Restores placeholder formatting
+        txtMaxCapacity.Text = "Max"
+        txtMinPrice.Text = "Min"
+        txtMaxPrice.Text = "Max"
+        cbSort.SelectedIndex = -1 ' Clears sorting option
+        cbSortDirection.SelectedIndex = -1 ' Clears sorting direction
+    End Sub
+
+    Private Sub btnClearFilters_Click(sender As Object, e As EventArgs) Handles btnClearFilters.Click
+        ClearFilters()
+    End Sub
+
+
+
+    Private Sub PopulateComboBoxes()
+        cbSort.Items.Clear()
+        cbSort.Items.Add("Select...") ' Allows users to unselect sorting
+        cbSort.Items.AddRange(New String() {"Alphabetical", "Capacity", "Price"})
+
+        cbSortDirection.Items.Clear()
+        cbSortDirection.Items.Add("Select...")
+        cbSortDirection.Items.AddRange(New String() {"Least to Greatest", "Greatest to Least"})
+    End Sub
+
+    Private Sub cbSort_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSort.SelectedIndexChanged
+        If cbSort.SelectedItem IsNot Nothing AndAlso cbSort.SelectedItem.ToString() = "Select..." Then
+            cbSort.SelectedIndex = -1 ' Clears selection
+        End If
+    End Sub
+
+    Private Sub cbSortDirection_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbSortDirection.SelectedIndexChanged
+        If cbSortDirection.SelectedItem IsNot Nothing AndAlso cbSortDirection.SelectedItem.ToString() = "Select..." Then
+            cbSortDirection.SelectedIndex = -1
+        End If
     End Sub
 
 

@@ -15,7 +15,8 @@ Public Class FormLogIn
             Return
         End If
 
-        Dim query As String = "SELECT user_id, username, email, password_hash, role FROM Users WHERE email = @email"
+        Dim query As String = "SELECT user_id, username, email, password_hash, role FROM Users WHERE BINARY email = @email"
+
         Dim parameters As New Dictionary(Of String, Object) From {{"@email", txtEmail.Text}}
         Dim dt As DataTable = DBHelper.GetDataTable(query, parameters)
 
@@ -27,6 +28,7 @@ Public Class FormLogIn
                 CurrentUser.UserID = CInt(dt.Rows(0)("user_id"))
                 CurrentUser.Username = dt.Rows(0)("username").ToString()
                 CurrentUser.Email = dt.Rows(0)("email").ToString()
+                CurrentUser.Role = dt.Rows(0)("role").ToString()
 
                 MessageBox.Show("Login successful!", "Welcome " & CurrentUser.Username, MessageBoxButtons.OK, MessageBoxIcon.Information)
 

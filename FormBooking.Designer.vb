@@ -31,7 +31,6 @@ Partial Class FormBooking
         Me.lblCapacity = New System.Windows.Forms.Label()
         Me.lblPlaceID = New System.Windows.Forms.Label()
         Me.lblEventPlace = New System.Windows.Forms.Label()
-        Me.dtpEventTimeStart = New System.Windows.Forms.DateTimePicker()
         Me.lblEventSchedule = New System.Windows.Forms.Label()
         Me.btBookingProceed = New System.Windows.Forms.Button()
         Me.chkVideoke = New System.Windows.Forms.CheckBox()
@@ -57,13 +56,18 @@ Partial Class FormBooking
         Me.lblTime = New System.Windows.Forms.Label()
         Me.lblEventTimeEnd = New System.Windows.Forms.Label()
         Me.lblEventTimeStart = New System.Windows.Forms.Label()
-        Me.dtpEventTimeEnd = New System.Windows.Forms.DateTimePicker()
         Me.lblAvailability = New System.Windows.Forms.Label()
         Me.tcDetails = New System.Windows.Forms.TabControl()
         Me.tpBookingDetails = New System.Windows.Forms.TabPage()
         Me.pnlBookingDetails = New System.Windows.Forms.Panel()
-        Me.mtxtEventTimeEnd = New System.Windows.Forms.MaskedTextBox()
-        Me.mtxtEventTimeStart = New System.Windows.Forms.MaskedTextBox()
+        Me.chkOutsideAvailableHours = New System.Windows.Forms.CheckBox()
+        Me.cbSameDayEvent = New System.Windows.Forms.CheckBox()
+        Me.cbEndAMPM = New System.Windows.Forms.ComboBox()
+        Me.cbEndMinutes = New System.Windows.Forms.ComboBox()
+        Me.cbEndHour = New System.Windows.Forms.ComboBox()
+        Me.cbStartAMPM = New System.Windows.Forms.ComboBox()
+        Me.cbStartMinutes = New System.Windows.Forms.ComboBox()
+        Me.cbStartHour = New System.Windows.Forms.ComboBox()
         Me.lblEventType = New System.Windows.Forms.Label()
         Me.cbEventType = New System.Windows.Forms.ComboBox()
         Me.tpCustomerDetails = New System.Windows.Forms.TabPage()
@@ -80,6 +84,9 @@ Partial Class FormBooking
         Me.lblBirthday = New System.Windows.Forms.Label()
         Me.dtpBirthday = New System.Windows.Forms.DateTimePicker()
         Me.tpPaymentDetails = New System.Windows.Forms.TabPage()
+        Me.lblOffHoursMinutesContainer = New System.Windows.Forms.Label()
+        Me.lblOffHoursTotalFeeContainer = New System.Windows.Forms.Label()
+        Me.lblOffHoursBookingFee = New System.Windows.Forms.Label()
         Me.lblSelectedVoucherContainer = New System.Windows.Forms.Label()
         Me.lblSelectedVoucher = New System.Windows.Forms.Label()
         Me.btnPlaceBooking = New System.Windows.Forms.Button()
@@ -108,6 +115,9 @@ Partial Class FormBooking
         Me.lblHoursContainer = New System.Windows.Forms.Label()
         Me.lblAvailableDaysContainer = New System.Windows.Forms.Label()
         Me.mcAvailability = New System.Windows.Forms.MonthCalendar()
+        Me.lblCapacityExceedanceFee = New System.Windows.Forms.Label()
+        Me.lblBeyondAvailabilityFee = New System.Windows.Forms.Label()
+        Me.lblPriceBreakdown = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.tcDetails.SuspendLayout()
         Me.tpBookingDetails.SuspendLayout()
@@ -198,14 +208,6 @@ Partial Class FormBooking
         Me.lblEventPlace.TabIndex = 9
         Me.lblEventPlace.Text = "Event Place"
         '
-        'dtpEventTimeStart
-        '
-        Me.dtpEventTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.dtpEventTimeStart.Location = New System.Drawing.Point(113, 171)
-        Me.dtpEventTimeStart.Name = "dtpEventTimeStart"
-        Me.dtpEventTimeStart.Size = New System.Drawing.Size(226, 20)
-        Me.dtpEventTimeStart.TabIndex = 22
-        '
         'lblEventSchedule
         '
         Me.lblEventSchedule.AutoSize = True
@@ -217,7 +219,7 @@ Partial Class FormBooking
         '
         'btBookingProceed
         '
-        Me.btBookingProceed.Location = New System.Drawing.Point(230, 344)
+        Me.btBookingProceed.Location = New System.Drawing.Point(638, 365)
         Me.btBookingProceed.Name = "btBookingProceed"
         Me.btBookingProceed.Size = New System.Drawing.Size(110, 23)
         Me.btBookingProceed.TabIndex = 20
@@ -227,51 +229,51 @@ Partial Class FormBooking
         'chkVideoke
         '
         Me.chkVideoke.AutoSize = True
-        Me.chkVideoke.Location = New System.Drawing.Point(230, 250)
+        Me.chkVideoke.Location = New System.Drawing.Point(274, 265)
         Me.chkVideoke.Name = "chkVideoke"
-        Me.chkVideoke.Size = New System.Drawing.Size(65, 17)
+        Me.chkVideoke.Size = New System.Drawing.Size(140, 17)
         Me.chkVideoke.TabIndex = 18
-        Me.chkVideoke.Text = "Videoke"
+        Me.chkVideoke.Text = "Videoke (₱20 per guest)"
         Me.chkVideoke.UseVisualStyleBackColor = True
         '
         'chkDancer
         '
         Me.chkDancer.AutoSize = True
-        Me.chkDancer.Location = New System.Drawing.Point(230, 229)
+        Me.chkDancer.Location = New System.Drawing.Point(274, 244)
         Me.chkDancer.Name = "chkDancer"
-        Me.chkDancer.Size = New System.Drawing.Size(61, 17)
+        Me.chkDancer.Size = New System.Drawing.Size(142, 17)
         Me.chkDancer.TabIndex = 17
-        Me.chkDancer.Text = "Dancer"
+        Me.chkDancer.Text = "Dancer (₱140 per guest)"
         Me.chkDancer.UseVisualStyleBackColor = True
         '
         'chkSinger
         '
         Me.chkSinger.AutoSize = True
-        Me.chkSinger.Location = New System.Drawing.Point(114, 273)
+        Me.chkSinger.Location = New System.Drawing.Point(116, 288)
         Me.chkSinger.Name = "chkSinger"
-        Me.chkSinger.Size = New System.Drawing.Size(56, 17)
+        Me.chkSinger.Size = New System.Drawing.Size(137, 17)
         Me.chkSinger.TabIndex = 16
-        Me.chkSinger.Text = "Singer"
+        Me.chkSinger.Text = "Singer (₱140 per guest)"
         Me.chkSinger.UseVisualStyleBackColor = True
         '
         'chkClown
         '
         Me.chkClown.AutoSize = True
-        Me.chkClown.Location = New System.Drawing.Point(114, 250)
+        Me.chkClown.Location = New System.Drawing.Point(116, 265)
         Me.chkClown.Name = "chkClown"
-        Me.chkClown.Size = New System.Drawing.Size(55, 17)
+        Me.chkClown.Size = New System.Drawing.Size(136, 17)
         Me.chkClown.TabIndex = 15
-        Me.chkClown.Text = "Clown"
+        Me.chkClown.Text = "Clown (₱200 per guest)"
         Me.chkClown.UseVisualStyleBackColor = True
         '
         'chkCatering
         '
         Me.chkCatering.AutoSize = True
-        Me.chkCatering.Location = New System.Drawing.Point(114, 228)
+        Me.chkCatering.Location = New System.Drawing.Point(116, 243)
         Me.chkCatering.Name = "chkCatering"
-        Me.chkCatering.Size = New System.Drawing.Size(65, 17)
+        Me.chkCatering.Size = New System.Drawing.Size(146, 17)
         Me.chkCatering.TabIndex = 14
-        Me.chkCatering.Text = "Catering"
+        Me.chkCatering.Text = "Catering (₱400 per guest)"
         Me.chkCatering.UseVisualStyleBackColor = True
         '
         'dtpEventDateStart
@@ -291,7 +293,7 @@ Partial Class FormBooking
         'lblTotalPrice
         '
         Me.lblTotalPrice.AutoSize = True
-        Me.lblTotalPrice.Location = New System.Drawing.Point(15, 306)
+        Me.lblTotalPrice.Location = New System.Drawing.Point(17, 321)
         Me.lblTotalPrice.Name = "lblTotalPrice"
         Me.lblTotalPrice.Size = New System.Drawing.Size(58, 13)
         Me.lblTotalPrice.TabIndex = 12
@@ -300,7 +302,7 @@ Partial Class FormBooking
         'lblServicesAvailed
         '
         Me.lblServicesAvailed.AutoSize = True
-        Me.lblServicesAvailed.Location = New System.Drawing.Point(15, 228)
+        Me.lblServicesAvailed.Location = New System.Drawing.Point(17, 243)
         Me.lblServicesAvailed.Name = "lblServicesAvailed"
         Me.lblServicesAvailed.Size = New System.Drawing.Size(86, 13)
         Me.lblServicesAvailed.TabIndex = 11
@@ -317,7 +319,7 @@ Partial Class FormBooking
         '
         'txtTotalPrice
         '
-        Me.txtTotalPrice.Location = New System.Drawing.Point(112, 303)
+        Me.txtTotalPrice.Location = New System.Drawing.Point(114, 318)
         Me.txtTotalPrice.Name = "txtTotalPrice"
         Me.txtTotalPrice.ReadOnly = True
         Me.txtTotalPrice.Size = New System.Drawing.Size(226, 20)
@@ -352,9 +354,9 @@ Partial Class FormBooking
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(174, 102)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 92)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(715, 411)
+        Me.PictureBox1.Size = New System.Drawing.Size(613, 411)
         Me.PictureBox1.TabIndex = 30
         Me.PictureBox1.TabStop = False
         '
@@ -428,14 +430,6 @@ Partial Class FormBooking
         Me.lblEventTimeStart.TabIndex = 27
         Me.lblEventTimeStart.Text = "Start"
         '
-        'dtpEventTimeEnd
-        '
-        Me.dtpEventTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.dtpEventTimeEnd.Location = New System.Drawing.Point(113, 196)
-        Me.dtpEventTimeEnd.Name = "dtpEventTimeEnd"
-        Me.dtpEventTimeEnd.Size = New System.Drawing.Size(226, 20)
-        Me.dtpEventTimeEnd.TabIndex = 29
-        '
         'lblAvailability
         '
         Me.lblAvailability.AutoSize = True
@@ -450,10 +444,10 @@ Partial Class FormBooking
         Me.tcDetails.Controls.Add(Me.tpBookingDetails)
         Me.tcDetails.Controls.Add(Me.tpCustomerDetails)
         Me.tcDetails.Controls.Add(Me.tpPaymentDetails)
-        Me.tcDetails.Location = New System.Drawing.Point(904, 102)
+        Me.tcDetails.Location = New System.Drawing.Point(631, 77)
         Me.tcDetails.Name = "tcDetails"
         Me.tcDetails.SelectedIndex = 0
-        Me.tcDetails.Size = New System.Drawing.Size(387, 411)
+        Me.tcDetails.Size = New System.Drawing.Size(781, 426)
         Me.tcDetails.TabIndex = 35
         '
         'tpBookingDetails
@@ -462,18 +456,26 @@ Partial Class FormBooking
         Me.tpBookingDetails.Location = New System.Drawing.Point(4, 22)
         Me.tpBookingDetails.Name = "tpBookingDetails"
         Me.tpBookingDetails.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpBookingDetails.Size = New System.Drawing.Size(379, 385)
+        Me.tpBookingDetails.Size = New System.Drawing.Size(773, 400)
         Me.tpBookingDetails.TabIndex = 0
         Me.tpBookingDetails.Text = "Booking Details"
         Me.tpBookingDetails.UseVisualStyleBackColor = True
         '
         'pnlBookingDetails
         '
-        Me.pnlBookingDetails.Controls.Add(Me.mtxtEventTimeEnd)
-        Me.pnlBookingDetails.Controls.Add(Me.mtxtEventTimeStart)
+        Me.pnlBookingDetails.Controls.Add(Me.lblPriceBreakdown)
+        Me.pnlBookingDetails.Controls.Add(Me.lblBeyondAvailabilityFee)
+        Me.pnlBookingDetails.Controls.Add(Me.lblCapacityExceedanceFee)
+        Me.pnlBookingDetails.Controls.Add(Me.chkOutsideAvailableHours)
+        Me.pnlBookingDetails.Controls.Add(Me.cbSameDayEvent)
+        Me.pnlBookingDetails.Controls.Add(Me.cbEndAMPM)
+        Me.pnlBookingDetails.Controls.Add(Me.cbEndMinutes)
+        Me.pnlBookingDetails.Controls.Add(Me.cbEndHour)
+        Me.pnlBookingDetails.Controls.Add(Me.cbStartAMPM)
+        Me.pnlBookingDetails.Controls.Add(Me.cbStartMinutes)
+        Me.pnlBookingDetails.Controls.Add(Me.cbStartHour)
         Me.pnlBookingDetails.Controls.Add(Me.lblEventType)
         Me.pnlBookingDetails.Controls.Add(Me.cbEventType)
-        Me.pnlBookingDetails.Controls.Add(Me.dtpEventTimeEnd)
         Me.pnlBookingDetails.Controls.Add(Me.lblNumGuests)
         Me.pnlBookingDetails.Controls.Add(Me.lblEventTimeEnd)
         Me.pnlBookingDetails.Controls.Add(Me.txtTotalPrice)
@@ -487,7 +489,6 @@ Partial Class FormBooking
         Me.pnlBookingDetails.Controls.Add(Me.txtNumGuests)
         Me.pnlBookingDetails.Controls.Add(Me.lblEnd)
         Me.pnlBookingDetails.Controls.Add(Me.dtpEventDateStart)
-        Me.pnlBookingDetails.Controls.Add(Me.dtpEventTimeStart)
         Me.pnlBookingDetails.Controls.Add(Me.chkCatering)
         Me.pnlBookingDetails.Controls.Add(Me.lblEventSchedule)
         Me.pnlBookingDetails.Controls.Add(Me.chkClown)
@@ -497,22 +498,82 @@ Partial Class FormBooking
         Me.pnlBookingDetails.Controls.Add(Me.chkDancer)
         Me.pnlBookingDetails.Location = New System.Drawing.Point(6, 6)
         Me.pnlBookingDetails.Name = "pnlBookingDetails"
-        Me.pnlBookingDetails.Size = New System.Drawing.Size(367, 373)
+        Me.pnlBookingDetails.Size = New System.Drawing.Size(761, 388)
         Me.pnlBookingDetails.TabIndex = 36
         '
-        'mtxtEventTimeEnd
+        'chkOutsideAvailableHours
         '
-        Me.mtxtEventTimeEnd.Location = New System.Drawing.Point(114, 196)
-        Me.mtxtEventTimeEnd.Name = "mtxtEventTimeEnd"
-        Me.mtxtEventTimeEnd.Size = New System.Drawing.Size(225, 20)
-        Me.mtxtEventTimeEnd.TabIndex = 39
+        Me.chkOutsideAvailableHours.AutoSize = True
+        Me.chkOutsideAvailableHours.Location = New System.Drawing.Point(72, 221)
+        Me.chkOutsideAvailableHours.Name = "chkOutsideAvailableHours"
+        Me.chkOutsideAvailableHours.Size = New System.Drawing.Size(221, 17)
+        Me.chkOutsideAvailableHours.TabIndex = 45
+        Me.chkOutsideAvailableHours.Text = "Book outside available hours (+ extra fee)"
+        Me.chkOutsideAvailableHours.UseVisualStyleBackColor = True
         '
-        'mtxtEventTimeStart
+        'cbSameDayEvent
         '
-        Me.mtxtEventTimeStart.Location = New System.Drawing.Point(112, 171)
-        Me.mtxtEventTimeStart.Name = "mtxtEventTimeStart"
-        Me.mtxtEventTimeStart.Size = New System.Drawing.Size(227, 20)
-        Me.mtxtEventTimeStart.TabIndex = 38
+        Me.cbSameDayEvent.AutoSize = True
+        Me.cbSameDayEvent.Location = New System.Drawing.Point(234, 83)
+        Me.cbSameDayEvent.Name = "cbSameDayEvent"
+        Me.cbSameDayEvent.Size = New System.Drawing.Size(106, 17)
+        Me.cbSameDayEvent.TabIndex = 44
+        Me.cbSameDayEvent.Text = "Same Day Event"
+        Me.cbSameDayEvent.UseVisualStyleBackColor = True
+        '
+        'cbEndAMPM
+        '
+        Me.cbEndAMPM.FormattingEnabled = True
+        Me.cbEndAMPM.Items.AddRange(New Object() {"AM", "PM"})
+        Me.cbEndAMPM.Location = New System.Drawing.Point(258, 193)
+        Me.cbEndAMPM.Name = "cbEndAMPM"
+        Me.cbEndAMPM.Size = New System.Drawing.Size(66, 21)
+        Me.cbEndAMPM.TabIndex = 43
+        '
+        'cbEndMinutes
+        '
+        Me.cbEndMinutes.FormattingEnabled = True
+        Me.cbEndMinutes.Items.AddRange(New Object() {"00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"})
+        Me.cbEndMinutes.Location = New System.Drawing.Point(186, 193)
+        Me.cbEndMinutes.Name = "cbEndMinutes"
+        Me.cbEndMinutes.Size = New System.Drawing.Size(66, 21)
+        Me.cbEndMinutes.TabIndex = 42
+        '
+        'cbEndHour
+        '
+        Me.cbEndHour.FormattingEnabled = True
+        Me.cbEndHour.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"})
+        Me.cbEndHour.Location = New System.Drawing.Point(114, 193)
+        Me.cbEndHour.Name = "cbEndHour"
+        Me.cbEndHour.Size = New System.Drawing.Size(66, 21)
+        Me.cbEndHour.TabIndex = 41
+        '
+        'cbStartAMPM
+        '
+        Me.cbStartAMPM.FormattingEnabled = True
+        Me.cbStartAMPM.Items.AddRange(New Object() {"AM", "PM"})
+        Me.cbStartAMPM.Location = New System.Drawing.Point(258, 168)
+        Me.cbStartAMPM.Name = "cbStartAMPM"
+        Me.cbStartAMPM.Size = New System.Drawing.Size(66, 21)
+        Me.cbStartAMPM.TabIndex = 40
+        '
+        'cbStartMinutes
+        '
+        Me.cbStartMinutes.FormattingEnabled = True
+        Me.cbStartMinutes.Items.AddRange(New Object() {"00", "05", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55"})
+        Me.cbStartMinutes.Location = New System.Drawing.Point(186, 168)
+        Me.cbStartMinutes.Name = "cbStartMinutes"
+        Me.cbStartMinutes.Size = New System.Drawing.Size(66, 21)
+        Me.cbStartMinutes.TabIndex = 39
+        '
+        'cbStartHour
+        '
+        Me.cbStartHour.FormattingEnabled = True
+        Me.cbStartHour.Items.AddRange(New Object() {"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"})
+        Me.cbStartHour.Location = New System.Drawing.Point(114, 168)
+        Me.cbStartHour.Name = "cbStartHour"
+        Me.cbStartHour.Size = New System.Drawing.Size(66, 21)
+        Me.cbStartHour.TabIndex = 38
         '
         'lblEventType
         '
@@ -537,7 +598,7 @@ Partial Class FormBooking
         Me.tpCustomerDetails.Location = New System.Drawing.Point(4, 22)
         Me.tpCustomerDetails.Name = "tpCustomerDetails"
         Me.tpCustomerDetails.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpCustomerDetails.Size = New System.Drawing.Size(379, 385)
+        Me.tpCustomerDetails.Size = New System.Drawing.Size(660, 400)
         Me.tpCustomerDetails.TabIndex = 1
         Me.tpCustomerDetails.Text = "Customer Details"
         Me.tpCustomerDetails.UseVisualStyleBackColor = True
@@ -654,6 +715,9 @@ Partial Class FormBooking
         '
         'tpPaymentDetails
         '
+        Me.tpPaymentDetails.Controls.Add(Me.lblOffHoursMinutesContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.lblOffHoursTotalFeeContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.lblOffHoursBookingFee)
         Me.tpPaymentDetails.Controls.Add(Me.lblSelectedVoucherContainer)
         Me.tpPaymentDetails.Controls.Add(Me.lblSelectedVoucher)
         Me.tpPaymentDetails.Controls.Add(Me.btnPlaceBooking)
@@ -682,15 +746,42 @@ Partial Class FormBooking
         Me.tpPaymentDetails.Location = New System.Drawing.Point(4, 22)
         Me.tpPaymentDetails.Name = "tpPaymentDetails"
         Me.tpPaymentDetails.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpPaymentDetails.Size = New System.Drawing.Size(379, 385)
+        Me.tpPaymentDetails.Size = New System.Drawing.Size(660, 400)
         Me.tpPaymentDetails.TabIndex = 2
         Me.tpPaymentDetails.Text = "Payment Details"
         Me.tpPaymentDetails.UseVisualStyleBackColor = True
         '
+        'lblOffHoursMinutesContainer
+        '
+        Me.lblOffHoursMinutesContainer.AutoSize = True
+        Me.lblOffHoursMinutesContainer.Location = New System.Drawing.Point(119, 110)
+        Me.lblOffHoursMinutesContainer.Name = "lblOffHoursMinutesContainer"
+        Me.lblOffHoursMinutesContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblOffHoursMinutesContainer.TabIndex = 29
+        Me.lblOffHoursMinutesContainer.Text = "-"
+        '
+        'lblOffHoursTotalFeeContainer
+        '
+        Me.lblOffHoursTotalFeeContainer.AutoSize = True
+        Me.lblOffHoursTotalFeeContainer.Location = New System.Drawing.Point(274, 110)
+        Me.lblOffHoursTotalFeeContainer.Name = "lblOffHoursTotalFeeContainer"
+        Me.lblOffHoursTotalFeeContainer.Size = New System.Drawing.Size(10, 13)
+        Me.lblOffHoursTotalFeeContainer.TabIndex = 28
+        Me.lblOffHoursTotalFeeContainer.Text = "-"
+        '
+        'lblOffHoursBookingFee
+        '
+        Me.lblOffHoursBookingFee.AutoSize = True
+        Me.lblOffHoursBookingFee.Location = New System.Drawing.Point(17, 92)
+        Me.lblOffHoursBookingFee.Name = "lblOffHoursBookingFee"
+        Me.lblOffHoursBookingFee.Size = New System.Drawing.Size(109, 13)
+        Me.lblOffHoursBookingFee.TabIndex = 27
+        Me.lblOffHoursBookingFee.Text = "Off-hours booking fee"
+        '
         'lblSelectedVoucherContainer
         '
         Me.lblSelectedVoucherContainer.AutoSize = True
-        Me.lblSelectedVoucherContainer.Location = New System.Drawing.Point(128, 209)
+        Me.lblSelectedVoucherContainer.Location = New System.Drawing.Point(129, 263)
         Me.lblSelectedVoucherContainer.Name = "lblSelectedVoucherContainer"
         Me.lblSelectedVoucherContainer.Size = New System.Drawing.Size(10, 13)
         Me.lblSelectedVoucherContainer.TabIndex = 26
@@ -699,7 +790,7 @@ Partial Class FormBooking
         'lblSelectedVoucher
         '
         Me.lblSelectedVoucher.AutoSize = True
-        Me.lblSelectedVoucher.Location = New System.Drawing.Point(17, 209)
+        Me.lblSelectedVoucher.Location = New System.Drawing.Point(18, 263)
         Me.lblSelectedVoucher.Name = "lblSelectedVoucher"
         Me.lblSelectedVoucher.Size = New System.Drawing.Size(92, 13)
         Me.lblSelectedVoucher.TabIndex = 25
@@ -717,7 +808,7 @@ Partial Class FormBooking
         'lblVoucherDiscountContainer
         '
         Me.lblVoucherDiscountContainer.AutoSize = True
-        Me.lblVoucherDiscountContainer.Location = New System.Drawing.Point(345, 300)
+        Me.lblVoucherDiscountContainer.Location = New System.Drawing.Point(275, 301)
         Me.lblVoucherDiscountContainer.Name = "lblVoucherDiscountContainer"
         Me.lblVoucherDiscountContainer.Size = New System.Drawing.Size(10, 13)
         Me.lblVoucherDiscountContainer.TabIndex = 23
@@ -726,7 +817,7 @@ Partial Class FormBooking
         'lblVoucherDiscount
         '
         Me.lblVoucherDiscount.AutoSize = True
-        Me.lblVoucherDiscount.Location = New System.Drawing.Point(234, 300)
+        Me.lblVoucherDiscount.Location = New System.Drawing.Point(164, 301)
         Me.lblVoucherDiscount.Name = "lblVoucherDiscount"
         Me.lblVoucherDiscount.Size = New System.Drawing.Size(92, 13)
         Me.lblVoucherDiscount.TabIndex = 22
@@ -735,7 +826,7 @@ Partial Class FormBooking
         'lblVoucher
         '
         Me.lblVoucher.AutoSize = True
-        Me.lblVoucher.Location = New System.Drawing.Point(16, 185)
+        Me.lblVoucher.Location = New System.Drawing.Point(17, 239)
         Me.lblVoucher.Name = "lblVoucher"
         Me.lblVoucher.Size = New System.Drawing.Size(47, 13)
         Me.lblVoucher.TabIndex = 19
@@ -743,7 +834,7 @@ Partial Class FormBooking
         '
         'btnVoucher
         '
-        Me.btnVoucher.Location = New System.Drawing.Point(118, 180)
+        Me.btnVoucher.Location = New System.Drawing.Point(119, 234)
         Me.btnVoucher.Name = "btnVoucher"
         Me.btnVoucher.Size = New System.Drawing.Size(238, 23)
         Me.btnVoucher.TabIndex = 18
@@ -769,7 +860,7 @@ Partial Class FormBooking
         'lblTotalPricePaymentContainer
         '
         Me.lblTotalPricePaymentContainer.AutoSize = True
-        Me.lblTotalPricePaymentContainer.Location = New System.Drawing.Point(345, 287)
+        Me.lblTotalPricePaymentContainer.Location = New System.Drawing.Point(275, 288)
         Me.lblTotalPricePaymentContainer.Name = "lblTotalPricePaymentContainer"
         Me.lblTotalPricePaymentContainer.Size = New System.Drawing.Size(10, 13)
         Me.lblTotalPricePaymentContainer.TabIndex = 15
@@ -778,7 +869,7 @@ Partial Class FormBooking
         'lblTotalPricePayment
         '
         Me.lblTotalPricePayment.AutoSize = True
-        Me.lblTotalPricePayment.Location = New System.Drawing.Point(268, 287)
+        Me.lblTotalPricePayment.Location = New System.Drawing.Point(198, 288)
         Me.lblTotalPricePayment.Name = "lblTotalPricePayment"
         Me.lblTotalPricePayment.Size = New System.Drawing.Size(58, 13)
         Me.lblTotalPricePayment.TabIndex = 14
@@ -787,7 +878,7 @@ Partial Class FormBooking
         'lblServicesPaymentContainer
         '
         Me.lblServicesPaymentContainer.AutoSize = True
-        Me.lblServicesPaymentContainer.Location = New System.Drawing.Point(120, 151)
+        Me.lblServicesPaymentContainer.Location = New System.Drawing.Point(120, 133)
         Me.lblServicesPaymentContainer.Name = "lblServicesPaymentContainer"
         Me.lblServicesPaymentContainer.Size = New System.Drawing.Size(10, 13)
         Me.lblServicesPaymentContainer.TabIndex = 13
@@ -796,7 +887,7 @@ Partial Class FormBooking
         'lblServicesPayment
         '
         Me.lblServicesPayment.AutoSize = True
-        Me.lblServicesPayment.Location = New System.Drawing.Point(16, 151)
+        Me.lblServicesPayment.Location = New System.Drawing.Point(16, 133)
         Me.lblServicesPayment.Name = "lblServicesPayment"
         Me.lblServicesPayment.Size = New System.Drawing.Size(86, 13)
         Me.lblServicesPayment.TabIndex = 12
@@ -805,7 +896,7 @@ Partial Class FormBooking
         'lblEventTimePaymentContainer
         '
         Me.lblEventTimePaymentContainer.AutoSize = True
-        Me.lblEventTimePaymentContainer.Location = New System.Drawing.Point(120, 129)
+        Me.lblEventTimePaymentContainer.Location = New System.Drawing.Point(120, 67)
         Me.lblEventTimePaymentContainer.Name = "lblEventTimePaymentContainer"
         Me.lblEventTimePaymentContainer.Size = New System.Drawing.Size(10, 13)
         Me.lblEventTimePaymentContainer.TabIndex = 11
@@ -814,7 +905,7 @@ Partial Class FormBooking
         'lblEventTimePayment
         '
         Me.lblEventTimePayment.AutoSize = True
-        Me.lblEventTimePayment.Location = New System.Drawing.Point(16, 129)
+        Me.lblEventTimePayment.Location = New System.Drawing.Point(16, 67)
         Me.lblEventTimePayment.Name = "lblEventTimePayment"
         Me.lblEventTimePayment.Size = New System.Drawing.Size(61, 13)
         Me.lblEventTimePayment.TabIndex = 10
@@ -823,7 +914,7 @@ Partial Class FormBooking
         'lblEventDatePaymentContainer
         '
         Me.lblEventDatePaymentContainer.AutoSize = True
-        Me.lblEventDatePaymentContainer.Location = New System.Drawing.Point(120, 107)
+        Me.lblEventDatePaymentContainer.Location = New System.Drawing.Point(120, 54)
         Me.lblEventDatePaymentContainer.Name = "lblEventDatePaymentContainer"
         Me.lblEventDatePaymentContainer.Size = New System.Drawing.Size(10, 13)
         Me.lblEventDatePaymentContainer.TabIndex = 9
@@ -832,7 +923,7 @@ Partial Class FormBooking
         'lblEventDatePayment
         '
         Me.lblEventDatePayment.AutoSize = True
-        Me.lblEventDatePayment.Location = New System.Drawing.Point(16, 107)
+        Me.lblEventDatePayment.Location = New System.Drawing.Point(16, 54)
         Me.lblEventDatePayment.Name = "lblEventDatePayment"
         Me.lblEventDatePayment.Size = New System.Drawing.Size(61, 13)
         Me.lblEventDatePayment.TabIndex = 8
@@ -841,7 +932,7 @@ Partial Class FormBooking
         'lblNumGuestsPaymentContainer
         '
         Me.lblNumGuestsPaymentContainer.AutoSize = True
-        Me.lblNumGuestsPaymentContainer.Location = New System.Drawing.Point(120, 81)
+        Me.lblNumGuestsPaymentContainer.Location = New System.Drawing.Point(120, 41)
         Me.lblNumGuestsPaymentContainer.Name = "lblNumGuestsPaymentContainer"
         Me.lblNumGuestsPaymentContainer.Size = New System.Drawing.Size(10, 13)
         Me.lblNumGuestsPaymentContainer.TabIndex = 7
@@ -850,7 +941,7 @@ Partial Class FormBooking
         'lblNumGuestsPayment
         '
         Me.lblNumGuestsPayment.AutoSize = True
-        Me.lblNumGuestsPayment.Location = New System.Drawing.Point(16, 81)
+        Me.lblNumGuestsPayment.Location = New System.Drawing.Point(16, 41)
         Me.lblNumGuestsPayment.Name = "lblNumGuestsPayment"
         Me.lblNumGuestsPayment.Size = New System.Drawing.Size(92, 13)
         Me.lblNumGuestsPayment.TabIndex = 6
@@ -859,7 +950,7 @@ Partial Class FormBooking
         'lblEventTypePaymentContainer
         '
         Me.lblEventTypePaymentContainer.AutoSize = True
-        Me.lblEventTypePaymentContainer.Location = New System.Drawing.Point(120, 57)
+        Me.lblEventTypePaymentContainer.Location = New System.Drawing.Point(338, 25)
         Me.lblEventTypePaymentContainer.Name = "lblEventTypePaymentContainer"
         Me.lblEventTypePaymentContainer.Size = New System.Drawing.Size(10, 13)
         Me.lblEventTypePaymentContainer.TabIndex = 5
@@ -868,7 +959,7 @@ Partial Class FormBooking
         'lblEventTypePayment
         '
         Me.lblEventTypePayment.AutoSize = True
-        Me.lblEventTypePayment.Location = New System.Drawing.Point(16, 57)
+        Me.lblEventTypePayment.Location = New System.Drawing.Point(234, 25)
         Me.lblEventTypePayment.Name = "lblEventTypePayment"
         Me.lblEventTypePayment.Size = New System.Drawing.Size(62, 13)
         Me.lblEventTypePayment.TabIndex = 4
@@ -877,7 +968,7 @@ Partial Class FormBooking
         'lblEventPlacePaymentContainer
         '
         Me.lblEventPlacePaymentContainer.AutoSize = True
-        Me.lblEventPlacePaymentContainer.Location = New System.Drawing.Point(120, 35)
+        Me.lblEventPlacePaymentContainer.Location = New System.Drawing.Point(338, 12)
         Me.lblEventPlacePaymentContainer.Name = "lblEventPlacePaymentContainer"
         Me.lblEventPlacePaymentContainer.Size = New System.Drawing.Size(10, 13)
         Me.lblEventPlacePaymentContainer.TabIndex = 3
@@ -886,7 +977,7 @@ Partial Class FormBooking
         'lblEventPlacePayment
         '
         Me.lblEventPlacePayment.AutoSize = True
-        Me.lblEventPlacePayment.Location = New System.Drawing.Point(16, 35)
+        Me.lblEventPlacePayment.Location = New System.Drawing.Point(234, 12)
         Me.lblEventPlacePayment.Name = "lblEventPlacePayment"
         Me.lblEventPlacePayment.Size = New System.Drawing.Size(65, 13)
         Me.lblEventPlacePayment.TabIndex = 2
@@ -933,6 +1024,33 @@ Partial Class FormBooking
         Me.mcAvailability.Location = New System.Drawing.Point(914, 530)
         Me.mcAvailability.Name = "mcAvailability"
         Me.mcAvailability.TabIndex = 39
+        '
+        'lblCapacityExceedanceFee
+        '
+        Me.lblCapacityExceedanceFee.AutoSize = True
+        Me.lblCapacityExceedanceFee.Location = New System.Drawing.Point(341, 47)
+        Me.lblCapacityExceedanceFee.Name = "lblCapacityExceedanceFee"
+        Me.lblCapacityExceedanceFee.Size = New System.Drawing.Size(135, 26)
+        Me.lblCapacityExceedanceFee.TabIndex = 46
+        Me.lblCapacityExceedanceFee.Text = "Capacity Exceedance Fee " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(₱100 per additional)"
+        '
+        'lblBeyondAvailabilityFee
+        '
+        Me.lblBeyondAvailabilityFee.AutoSize = True
+        Me.lblBeyondAvailabilityFee.Location = New System.Drawing.Point(341, 168)
+        Me.lblBeyondAvailabilityFee.Name = "lblBeyondAvailabilityFee"
+        Me.lblBeyondAvailabilityFee.Size = New System.Drawing.Size(119, 26)
+        Me.lblBeyondAvailabilityFee.TabIndex = 47
+        Me.lblBeyondAvailabilityFee.Text = "Beyond Availability Fee " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "(₱17 per minute)"
+        '
+        'lblPriceBreakdown
+        '
+        Me.lblPriceBreakdown.AutoSize = True
+        Me.lblPriceBreakdown.Location = New System.Drawing.Point(477, 17)
+        Me.lblPriceBreakdown.Name = "lblPriceBreakdown"
+        Me.lblPriceBreakdown.Size = New System.Drawing.Size(88, 13)
+        Me.lblPriceBreakdown.TabIndex = 48
+        Me.lblPriceBreakdown.Text = "Price Breakdown"
         '
         'FormBooking
         '
@@ -1002,12 +1120,10 @@ Partial Class FormBooking
     Friend WithEvents lblPlaceIDContainer As Label
     Friend WithEvents lblDescription As Label
     Friend WithEvents lblDescriptionContainer As Label
-    Friend WithEvents dtpEventTimeStart As DateTimePicker
     Friend WithEvents lblEventSchedule As Label
     Friend WithEvents dtpEventDateEnd As DateTimePicker
     Friend WithEvents lblEnd As Label
     Friend WithEvents lblDate As Label
-    Friend WithEvents dtpEventTimeEnd As DateTimePicker
     Friend WithEvents lblEventTimeEnd As Label
     Friend WithEvents lblEventTimeStart As Label
     Friend WithEvents lblTime As Label
@@ -1059,6 +1175,18 @@ Partial Class FormBooking
     Friend WithEvents mcAvailability As MonthCalendar
     Friend WithEvents lblSelectedVoucherContainer As Label
     Friend WithEvents lblSelectedVoucher As Label
-    Friend WithEvents mtxtEventTimeEnd As MaskedTextBox
-    Friend WithEvents mtxtEventTimeStart As MaskedTextBox
+    Friend WithEvents cbEndAMPM As ComboBox
+    Friend WithEvents cbEndMinutes As ComboBox
+    Friend WithEvents cbEndHour As ComboBox
+    Friend WithEvents cbStartAMPM As ComboBox
+    Friend WithEvents cbStartMinutes As ComboBox
+    Friend WithEvents cbStartHour As ComboBox
+    Friend WithEvents cbSameDayEvent As CheckBox
+    Friend WithEvents lblOffHoursBookingFee As Label
+    Friend WithEvents lblOffHoursMinutesContainer As Label
+    Friend WithEvents lblOffHoursTotalFeeContainer As Label
+    Friend WithEvents chkOutsideAvailableHours As CheckBox
+    Friend WithEvents lblCapacityExceedanceFee As Label
+    Friend WithEvents lblBeyondAvailabilityFee As Label
+    Friend WithEvents lblPriceBreakdown As Label
 End Class

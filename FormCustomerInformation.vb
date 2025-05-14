@@ -5,6 +5,16 @@ Imports System.Data
 Public Class FormCustomerInformation
     Public Property CustomerId As Integer  ' Store customerId
 
+
+    Public Sub New(name As String, birthday As Date, sex As String, address As String)
+        InitializeComponent()
+
+        txtCustomerName.Text = name
+        dtpBirthday.Value = birthday
+        cmbSex.Text = sex
+        txtAddress.Text = address
+    End Sub
+
     Private Sub dtpBirthday_ValueChanged(sender As Object, e As EventArgs) Handles dtpBirthday.ValueChanged
         Dim birthDate As Date = dtpBirthday.Value
         Dim today As Date = Date.Today

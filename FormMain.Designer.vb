@@ -27,13 +27,15 @@ Partial Class FormMain
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblLocation = New System.Windows.Forms.Label()
         Me.pnlFilter = New System.Windows.Forms.Panel()
+        Me.btnClearFilters = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.cbAvailableOn = New System.Windows.Forms.ComboBox()
+        Me.clbAvailableOn = New System.Windows.Forms.CheckedListBox()
         Me.lblAvailability = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.lblSortDirection = New System.Windows.Forms.Label()
         Me.cbSortDirection = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.lblSortBy = New System.Windows.Forms.Label()
         Me.cbSort = New System.Windows.Forms.ComboBox()
         Me.pnlPrice = New System.Windows.Forms.Panel()
@@ -91,7 +93,7 @@ Partial Class FormMain
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 0)
+        Me.Label2.Location = New System.Drawing.Point(2, 8)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(74, 13)
         Me.Label2.TabIndex = 5
@@ -108,6 +110,7 @@ Partial Class FormMain
         '
         'pnlFilter
         '
+        Me.pnlFilter.Controls.Add(Me.btnClearFilters)
         Me.pnlFilter.Controls.Add(Me.Panel3)
         Me.pnlFilter.Controls.Add(Me.Panel2)
         Me.pnlFilter.Controls.Add(Me.Panel1)
@@ -120,23 +123,32 @@ Partial Class FormMain
         Me.pnlFilter.Size = New System.Drawing.Size(324, 681)
         Me.pnlFilter.TabIndex = 15
         '
+        'btnClearFilters
+        '
+        Me.btnClearFilters.Location = New System.Drawing.Point(99, 629)
+        Me.btnClearFilters.Name = "btnClearFilters"
+        Me.btnClearFilters.Size = New System.Drawing.Size(99, 33)
+        Me.btnClearFilters.TabIndex = 33
+        Me.btnClearFilters.Text = "Clear All"
+        Me.btnClearFilters.UseVisualStyleBackColor = True
+        '
         'Panel3
         '
-        Me.Panel3.Controls.Add(Me.cbAvailableOn)
+        Me.Panel3.Controls.Add(Me.clbAvailableOn)
         Me.Panel3.Controls.Add(Me.lblAvailability)
-        Me.Panel3.Location = New System.Drawing.Point(25, 378)
+        Me.Panel3.Location = New System.Drawing.Point(22, 322)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(278, 54)
+        Me.Panel3.Size = New System.Drawing.Size(281, 110)
         Me.Panel3.TabIndex = 30
         '
-        'cbAvailableOn
+        'clbAvailableOn
         '
-        Me.cbAvailableOn.FormattingEnabled = True
-        Me.cbAvailableOn.Items.AddRange(New Object() {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"})
-        Me.cbAvailableOn.Location = New System.Drawing.Point(20, 26)
-        Me.cbAvailableOn.Name = "cbAvailableOn"
-        Me.cbAvailableOn.Size = New System.Drawing.Size(241, 21)
-        Me.cbAvailableOn.TabIndex = 8
+        Me.clbAvailableOn.FormattingEnabled = True
+        Me.clbAvailableOn.Items.AddRange(New Object() {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"})
+        Me.clbAvailableOn.Location = New System.Drawing.Point(3, 25)
+        Me.clbAvailableOn.Name = "clbAvailableOn"
+        Me.clbAvailableOn.Size = New System.Drawing.Size(272, 79)
+        Me.clbAvailableOn.TabIndex = 36
         '
         'lblAvailability
         '
@@ -159,7 +171,7 @@ Partial Class FormMain
         'lblSortDirection
         '
         Me.lblSortDirection.AutoSize = True
-        Me.lblSortDirection.Location = New System.Drawing.Point(17, 6)
+        Me.lblSortDirection.Location = New System.Drawing.Point(12, 6)
         Me.lblSortDirection.Name = "lblSortDirection"
         Me.lblSortDirection.Size = New System.Drawing.Size(69, 13)
         Me.lblSortDirection.TabIndex = 29
@@ -169,19 +181,29 @@ Partial Class FormMain
         '
         Me.cbSortDirection.FormattingEnabled = True
         Me.cbSortDirection.Items.AddRange(New Object() {"Least to Greatest", "Greatest to Least"})
-        Me.cbSortDirection.Location = New System.Drawing.Point(20, 22)
+        Me.cbSortDirection.Location = New System.Drawing.Point(15, 31)
         Me.cbSortDirection.Name = "cbSortDirection"
         Me.cbSortDirection.Size = New System.Drawing.Size(77, 21)
         Me.cbSortDirection.TabIndex = 0
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.lblSortBy)
         Me.Panel1.Controls.Add(Me.cbSort)
         Me.Panel1.Location = New System.Drawing.Point(25, 558)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(158, 65)
         Me.Panel1.TabIndex = 31
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(233, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(42, 23)
+        Me.Button1.TabIndex = 41
+        Me.Button1.Text = "Clear"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'lblSortBy
         '
@@ -196,7 +218,7 @@ Partial Class FormMain
         '
         Me.cbSort.FormattingEnabled = True
         Me.cbSort.Items.AddRange(New Object() {"Alphabetical", "Capacity", "Price"})
-        Me.cbSort.Location = New System.Drawing.Point(20, 22)
+        Me.cbSort.Location = New System.Drawing.Point(20, 31)
         Me.cbSort.Name = "cbSort"
         Me.cbSort.Size = New System.Drawing.Size(127, 21)
         Me.cbSort.TabIndex = 0
@@ -247,7 +269,7 @@ Partial Class FormMain
         '
         'txtMaxCapacity
         '
-        Me.txtMaxCapacity.Location = New System.Drawing.Point(187, 25)
+        Me.txtMaxCapacity.Location = New System.Drawing.Point(179, 25)
         Me.txtMaxCapacity.Name = "txtMaxCapacity"
         Me.txtMaxCapacity.Size = New System.Drawing.Size(74, 20)
         Me.txtMaxCapacity.TabIndex = 25
@@ -260,16 +282,16 @@ Partial Class FormMain
         Me.pnlEventType.Controls.Add(Me.Label2)
         Me.pnlEventType.Location = New System.Drawing.Point(22, 19)
         Me.pnlEventType.Name = "pnlEventType"
-        Me.pnlEventType.Size = New System.Drawing.Size(281, 353)
+        Me.pnlEventType.Size = New System.Drawing.Size(281, 297)
         Me.pnlEventType.TabIndex = 22
         '
         'clbEventType
         '
         Me.clbEventType.FormattingEnabled = True
         Me.clbEventType.Items.AddRange(New Object() {"Classes & Workshops", "    Coffee Workshop", "    Cooking", "    Fitness", "    Tea Workshop", "Corporate Event", "    Dining", "    Party", "Formal Meetings & Team Gatherings", "    Conference", "    Interview", "    Sales Meeting", "    Team Meeting", "        Offsite Meeting", "        Team Bonding", "        Training", "Parties & Celebrations", "    Anniversary", "    Baby Shower", "    Birthday Party", "    Holiday & Festive Celebrations", "        Deepavali", "        Hari Raya", "        Year-End Party", "    Graduation Party", "    Dinner & Dance", "    Lunch/Dinner", "    Prom", "Shoots & Productions", "    Green Screen Shoot", "    Live Stream", "    Live Webinar", "    Photo Shoot", "    Video Production", "Weddings & Related Events", "    Bachelor/Bachelorette Party", "    Bridal Shower", "    Ceremony", "    Engagement", "    Proposal", "    Reception", "    Solemnization", "    Wedding"})
-        Me.clbEventType.Location = New System.Drawing.Point(3, 16)
+        Me.clbEventType.Location = New System.Drawing.Point(3, 31)
         Me.clbEventType.Name = "clbEventType"
-        Me.clbEventType.Size = New System.Drawing.Size(275, 334)
+        Me.clbEventType.Size = New System.Drawing.Size(275, 259)
         Me.clbEventType.TabIndex = 0
         '
         'flpResults
@@ -464,7 +486,6 @@ Partial Class FormMain
     Friend WithEvents lblSortBy As Label
     Friend WithEvents cbSort As ComboBox
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents cbAvailableOn As ComboBox
     Friend WithEvents lblAvailability As Label
     Friend WithEvents btnLogOut As Button
     Friend WithEvents lblUser As Label
@@ -474,4 +495,7 @@ Partial Class FormMain
     Friend WithEvents btnLogIn As Button
     Friend WithEvents btnSignUp As Button
     Friend WithEvents pnlSignUpLogIn As Panel
+    Friend WithEvents btnClearFilters As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents clbAvailableOn As CheckedListBox
 End Class

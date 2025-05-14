@@ -47,11 +47,12 @@ Public Class FormCustomerView
         dgvPastBookings.DataSource = dt
     End Sub
 
-    Private Sub btnEditInformation_Click(sender As Object, e As EventArgs) Handles btnEditInformation.Click
-        Dim customerInformation As New FormCustomerInformation()
-        customerInformation.Show()
-        Me.Hide()
-    End Sub
+    'Private Sub btnEditCustomer_Click(sender As Object, e As EventArgs) Handles btnEditCustomer.Click
+    '    ' Pass customer details to FormCustomerInformation before opening it
+    '    Dim customerForm As New FormCustomerInformation(txtCustomerName.Text, dtpBirthday.Value, cmbSex.Text, txtAddress.Text)
+    '    customerForm.ShowDialog()
+    'End Sub
+
 
     Private Sub btnMain_Click(sender As Object, e As EventArgs) Handles btnMain.Click
         Dim mainForm As New FormMain()
