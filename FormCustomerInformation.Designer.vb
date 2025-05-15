@@ -48,200 +48,248 @@ Partial Class FormCustomerInformation
         '
         'gbCustomerInformation
         '
-        Me.gbCustomerInformation.Controls.Add(Me.txtCustomerName)
+        Me.gbCustomerInformation.BackColor = System.Drawing.Color.Transparent
         Me.gbCustomerInformation.Controls.Add(Me.lblAddress)
-        Me.gbCustomerInformation.Controls.Add(Me.txtAge)
         Me.gbCustomerInformation.Controls.Add(Me.lblSex)
         Me.gbCustomerInformation.Controls.Add(Me.lblBirthday)
-        Me.gbCustomerInformation.Controls.Add(Me.dtpBirthday)
-        Me.gbCustomerInformation.Controls.Add(Me.cmbSex)
         Me.gbCustomerInformation.Controls.Add(Me.lblAge)
-        Me.gbCustomerInformation.Controls.Add(Me.txtAddress)
         Me.gbCustomerInformation.Controls.Add(Me.lblName)
-        Me.gbCustomerInformation.Location = New System.Drawing.Point(541, 270)
+        Me.gbCustomerInformation.Location = New System.Drawing.Point(901, 210)
+        Me.gbCustomerInformation.Margin = New System.Windows.Forms.Padding(4)
         Me.gbCustomerInformation.Name = "gbCustomerInformation"
-        Me.gbCustomerInformation.Size = New System.Drawing.Size(342, 164)
+        Me.gbCustomerInformation.Padding = New System.Windows.Forms.Padding(4)
+        Me.gbCustomerInformation.Size = New System.Drawing.Size(456, 202)
         Me.gbCustomerInformation.TabIndex = 15
         Me.gbCustomerInformation.TabStop = False
         Me.gbCustomerInformation.Text = "Default Customer Information"
         '
         'txtCustomerName
         '
-        Me.txtCustomerName.Location = New System.Drawing.Point(106, 19)
+        Me.txtCustomerName.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtCustomerName.Font = New System.Drawing.Font("Poppins", 6.0!)
+        Me.txtCustomerName.Location = New System.Drawing.Point(334, 278)
+        Me.txtCustomerName.Margin = New System.Windows.Forms.Padding(4)
         Me.txtCustomerName.Name = "txtCustomerName"
-        Me.txtCustomerName.Size = New System.Drawing.Size(226, 20)
+        Me.txtCustomerName.Size = New System.Drawing.Size(360, 15)
         Me.txtCustomerName.TabIndex = 0
         '
         'lblAddress
         '
         Me.lblAddress.AutoSize = True
-        Me.lblAddress.Location = New System.Drawing.Point(8, 131)
+        Me.lblAddress.Location = New System.Drawing.Point(11, 161)
+        Me.lblAddress.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAddress.Name = "lblAddress"
-        Me.lblAddress.Size = New System.Drawing.Size(45, 13)
+        Me.lblAddress.Size = New System.Drawing.Size(58, 16)
         Me.lblAddress.TabIndex = 12
         Me.lblAddress.Text = "Address"
         '
         'txtAge
         '
-        Me.txtAge.Location = New System.Drawing.Point(106, 71)
+        Me.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAge.Font = New System.Drawing.Font("Poppins", 6.0!)
+        Me.txtAge.Location = New System.Drawing.Point(334, 373)
+        Me.txtAge.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAge.Name = "txtAge"
         Me.txtAge.ReadOnly = True
-        Me.txtAge.Size = New System.Drawing.Size(226, 20)
+        Me.txtAge.Size = New System.Drawing.Size(360, 15)
         Me.txtAge.TabIndex = 1
         '
         'lblSex
         '
         Me.lblSex.AutoSize = True
-        Me.lblSex.Location = New System.Drawing.Point(8, 103)
+        Me.lblSex.Location = New System.Drawing.Point(11, 127)
+        Me.lblSex.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblSex.Name = "lblSex"
-        Me.lblSex.Size = New System.Drawing.Size(25, 13)
+        Me.lblSex.Size = New System.Drawing.Size(30, 16)
         Me.lblSex.TabIndex = 11
         Me.lblSex.Text = "Sex"
         '
         'lblBirthday
         '
         Me.lblBirthday.AutoSize = True
-        Me.lblBirthday.Location = New System.Drawing.Point(8, 47)
+        Me.lblBirthday.Location = New System.Drawing.Point(11, 58)
+        Me.lblBirthday.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblBirthday.Name = "lblBirthday"
-        Me.lblBirthday.Size = New System.Drawing.Size(45, 13)
+        Me.lblBirthday.Size = New System.Drawing.Size(56, 16)
         Me.lblBirthday.TabIndex = 10
         Me.lblBirthday.Text = "Birthday"
         '
         'dtpBirthday
         '
-        Me.dtpBirthday.Location = New System.Drawing.Point(106, 45)
+        Me.dtpBirthday.Font = New System.Drawing.Font("Poppins", 6.0!)
+        Me.dtpBirthday.Location = New System.Drawing.Point(334, 325)
+        Me.dtpBirthday.Margin = New System.Windows.Forms.Padding(4)
         Me.dtpBirthday.Name = "dtpBirthday"
-        Me.dtpBirthday.Size = New System.Drawing.Size(226, 20)
+        Me.dtpBirthday.Size = New System.Drawing.Size(360, 22)
         Me.dtpBirthday.TabIndex = 4
         '
         'cmbSex
         '
+        Me.cmbSex.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cmbSex.Font = New System.Drawing.Font("Poppins", 6.0!)
         Me.cmbSex.FormattingEnabled = True
         Me.cmbSex.Items.AddRange(New Object() {"Male", "Female", "Non-Binary", "Other", "Prefer Not to Say"})
-        Me.cmbSex.Location = New System.Drawing.Point(106, 97)
+        Me.cmbSex.Location = New System.Drawing.Point(334, 414)
+        Me.cmbSex.Margin = New System.Windows.Forms.Padding(4)
         Me.cmbSex.Name = "cmbSex"
-        Me.cmbSex.Size = New System.Drawing.Size(226, 21)
+        Me.cmbSex.Size = New System.Drawing.Size(360, 26)
         Me.cmbSex.TabIndex = 5
         '
         'lblAge
         '
         Me.lblAge.AutoSize = True
-        Me.lblAge.Location = New System.Drawing.Point(8, 75)
+        Me.lblAge.Location = New System.Drawing.Point(11, 92)
+        Me.lblAge.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblAge.Name = "lblAge"
-        Me.lblAge.Size = New System.Drawing.Size(26, 13)
+        Me.lblAge.Size = New System.Drawing.Size(32, 16)
         Me.lblAge.TabIndex = 9
         Me.lblAge.Text = "Age"
         '
         'txtAddress
         '
-        Me.txtAddress.Location = New System.Drawing.Point(106, 124)
+        Me.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtAddress.Font = New System.Drawing.Font("Poppins", 6.0!)
+        Me.txtAddress.Location = New System.Drawing.Point(334, 462)
+        Me.txtAddress.Margin = New System.Windows.Forms.Padding(4)
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(226, 20)
+        Me.txtAddress.Size = New System.Drawing.Size(360, 15)
         Me.txtAddress.TabIndex = 6
         '
         'lblName
         '
         Me.lblName.AutoSize = True
-        Me.lblName.Location = New System.Drawing.Point(8, 19)
+        Me.lblName.Location = New System.Drawing.Point(11, 23)
+        Me.lblName.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblName.Name = "lblName"
-        Me.lblName.Size = New System.Drawing.Size(35, 13)
+        Me.lblName.Size = New System.Drawing.Size(44, 16)
         Me.lblName.TabIndex = 8
         Me.lblName.Text = "Name"
         '
         'btnSave
         '
-        Me.btnSave.Location = New System.Drawing.Point(808, 561)
+        Me.btnSave.BackColor = System.Drawing.Color.Transparent
+        Me.btnSave.FlatAppearance.BorderSize = 0
+        Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSave.Location = New System.Drawing.Point(1143, 648)
+        Me.btnSave.Margin = New System.Windows.Forms.Padding(4)
         Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(75, 23)
+        Me.btnSave.Size = New System.Drawing.Size(175, 40)
         Me.btnSave.TabIndex = 16
-        Me.btnSave.Text = "Save"
-        Me.btnSave.UseVisualStyleBackColor = True
+        Me.btnSave.UseVisualStyleBackColor = False
         '
         'btnCancel
         '
-        Me.btnCancel.Location = New System.Drawing.Point(808, 590)
+        Me.btnCancel.BackColor = System.Drawing.Color.Transparent
+        Me.btnCancel.FlatAppearance.BorderSize = 0
+        Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancel.Location = New System.Drawing.Point(950, 646)
+        Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancel.Size = New System.Drawing.Size(175, 40)
         Me.btnCancel.TabIndex = 17
-        Me.btnCancel.Text = "Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
+        Me.btnCancel.UseVisualStyleBackColor = False
         '
         'btnShowPass
         '
-        Me.btnShowPass.Location = New System.Drawing.Point(828, 474)
+        Me.btnShowPass.BackColor = System.Drawing.Color.Transparent
+        Me.btnShowPass.FlatAppearance.BorderSize = 0
+        Me.btnShowPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnShowPass.Location = New System.Drawing.Point(630, 546)
+        Me.btnShowPass.Margin = New System.Windows.Forms.Padding(4)
         Me.btnShowPass.Name = "btnShowPass"
-        Me.btnShowPass.Size = New System.Drawing.Size(48, 23)
+        Me.btnShowPass.Size = New System.Drawing.Size(64, 28)
         Me.btnShowPass.TabIndex = 37
-        Me.btnShowPass.Text = "Show"
-        Me.btnShowPass.UseVisualStyleBackColor = True
+        Me.btnShowPass.UseVisualStyleBackColor = False
         '
         'btnShowConfPass
         '
-        Me.btnShowConfPass.Location = New System.Drawing.Point(828, 499)
+        Me.btnShowConfPass.BackColor = System.Drawing.Color.Transparent
+        Me.btnShowConfPass.FlatAppearance.BorderSize = 0
+        Me.btnShowConfPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnShowConfPass.Location = New System.Drawing.Point(630, 590)
+        Me.btnShowConfPass.Margin = New System.Windows.Forms.Padding(4)
         Me.btnShowConfPass.Name = "btnShowConfPass"
-        Me.btnShowConfPass.Size = New System.Drawing.Size(48, 23)
+        Me.btnShowConfPass.Size = New System.Drawing.Size(64, 28)
         Me.btnShowConfPass.TabIndex = 36
-        Me.btnShowConfPass.Text = "Show"
-        Me.btnShowConfPass.UseVisualStyleBackColor = True
+        Me.btnShowConfPass.UseVisualStyleBackColor = False
         '
         'lblConfPass
         '
         Me.lblConfPass.AutoSize = True
-        Me.lblConfPass.Location = New System.Drawing.Point(552, 506)
+        Me.lblConfPass.Location = New System.Drawing.Point(1002, 535)
+        Me.lblConfPass.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblConfPass.Name = "lblConfPass"
-        Me.lblConfPass.Size = New System.Drawing.Size(91, 13)
+        Me.lblConfPass.Size = New System.Drawing.Size(115, 16)
         Me.lblConfPass.TabIndex = 35
         Me.lblConfPass.Text = "Confirm Password"
         '
         'lblPass
         '
         Me.lblPass.AutoSize = True
-        Me.lblPass.Location = New System.Drawing.Point(552, 479)
+        Me.lblPass.Location = New System.Drawing.Point(1002, 502)
+        Me.lblPass.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblPass.Name = "lblPass"
-        Me.lblPass.Size = New System.Drawing.Size(53, 13)
+        Me.lblPass.Size = New System.Drawing.Size(67, 16)
         Me.lblPass.TabIndex = 34
         Me.lblPass.Text = "Password"
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(650, 449)
+        Me.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtEmail.Font = New System.Drawing.Font("Poppins", 6.0!)
+        Me.txtEmail.Location = New System.Drawing.Point(334, 508)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(4)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(226, 20)
+        Me.txtEmail.Size = New System.Drawing.Size(360, 15)
         Me.txtEmail.TabIndex = 31
         '
         'txtPass
         '
-        Me.txtPass.Location = New System.Drawing.Point(650, 475)
+        Me.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtPass.Font = New System.Drawing.Font("Poppins", 6.0!)
+        Me.txtPass.Location = New System.Drawing.Point(334, 552)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPass.Size = New System.Drawing.Size(172, 20)
+        Me.txtPass.Size = New System.Drawing.Size(276, 15)
         Me.txtPass.TabIndex = 32
         '
         'txtConfPass
         '
-        Me.txtConfPass.Location = New System.Drawing.Point(650, 501)
+        Me.txtConfPass.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.txtConfPass.Font = New System.Drawing.Font("Poppins", 6.0!)
+        Me.txtConfPass.Location = New System.Drawing.Point(334, 597)
+        Me.txtConfPass.Margin = New System.Windows.Forms.Padding(4)
         Me.txtConfPass.Name = "txtConfPass"
         Me.txtConfPass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtConfPass.Size = New System.Drawing.Size(172, 20)
+        Me.txtConfPass.Size = New System.Drawing.Size(276, 15)
         Me.txtConfPass.TabIndex = 33
         '
         'lblEmail
         '
         Me.lblEmail.AutoSize = True
-        Me.lblEmail.Location = New System.Drawing.Point(552, 452)
+        Me.lblEmail.Location = New System.Drawing.Point(1002, 468)
+        Me.lblEmail.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEmail.Name = "lblEmail"
-        Me.lblEmail.Size = New System.Drawing.Size(32, 13)
+        Me.lblEmail.Size = New System.Drawing.Size(41, 16)
         Me.lblEmail.TabIndex = 30
         Me.lblEmail.Text = "Email"
         '
         'FormCustomerInformation
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1424, 771)
+        Me.BackgroundImage = Global.maramingeme.My.Resources.Resources.Customer_Information_bg
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(1422, 763)
+        Me.Controls.Add(Me.txtCustomerName)
+        Me.Controls.Add(Me.txtAge)
         Me.Controls.Add(Me.btnShowPass)
+        Me.Controls.Add(Me.cmbSex)
+        Me.Controls.Add(Me.txtAddress)
         Me.Controls.Add(Me.btnShowConfPass)
         Me.Controls.Add(Me.lblConfPass)
+        Me.Controls.Add(Me.dtpBirthday)
         Me.Controls.Add(Me.lblPass)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.txtPass)
@@ -250,6 +298,7 @@ Partial Class FormCustomerInformation
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.gbCustomerInformation)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "FormCustomerInformation"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormCustomerInformation"

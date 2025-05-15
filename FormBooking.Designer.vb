@@ -395,17 +395,20 @@ Partial Class FormBooking
         '
         'btnBack
         '
-        Me.btnBack.Location = New System.Drawing.Point(31, 31)
+        Me.btnBack.BackgroundImage = Global.maramingeme.My.Resources.Resources.btnBack_black
+        Me.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnBack.FlatAppearance.BorderSize = 0
+        Me.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBack.Location = New System.Drawing.Point(37, 482)
         Me.btnBack.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBack.Name = "btnBack"
-        Me.btnBack.Size = New System.Drawing.Size(41, 41)
+        Me.btnBack.Size = New System.Drawing.Size(97, 41)
         Me.btnBack.TabIndex = 19
-        Me.btnBack.Text = "←"
         Me.btnBack.UseVisualStyleBackColor = True
         '
         'btnNext
         '
-        Me.btnNext.Location = New System.Drawing.Point(80, 31)
+        Me.btnNext.Location = New System.Drawing.Point(423, 697)
         Me.btnNext.Margin = New System.Windows.Forms.Padding(4)
         Me.btnNext.Name = "btnNext"
         Me.btnNext.Size = New System.Drawing.Size(41, 41)
@@ -897,6 +900,7 @@ Partial Class FormBooking
         Me.tpPaymentDetails.Controls.Add(Me.lblTotalPricePaymentContainer)
         Me.tpPaymentDetails.Controls.Add(Me.lblTotalPricePayment)
         Me.tpPaymentDetails.Controls.Add(Me.lblServicesPaymentContainer)
+        Me.tpPaymentDetails.Controls.Add(Me.btnBack)
         Me.tpPaymentDetails.Controls.Add(Me.lblServicesPayment)
         Me.tpPaymentDetails.Controls.Add(Me.lblEventTimePaymentContainer)
         Me.tpPaymentDetails.Controls.Add(Me.lblEventTimePayment)
@@ -933,6 +937,7 @@ Partial Class FormBooking
         'lblOffHoursTotalFeeContainer
         '
         Me.lblOffHoursTotalFeeContainer.AutoSize = True
+        Me.lblOffHoursTotalFeeContainer.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.lblOffHoursTotalFeeContainer.Location = New System.Drawing.Point(365, 135)
         Me.lblOffHoursTotalFeeContainer.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblOffHoursTotalFeeContainer.Name = "lblOffHoursTotalFeeContainer"
@@ -1034,6 +1039,7 @@ Partial Class FormBooking
         '
         'txtPayAmount
         '
+        Me.txtPayAmount.ForeColor = System.Drawing.Color.Gray
         Me.txtPayAmount.Location = New System.Drawing.Point(159, 399)
         Me.txtPayAmount.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPayAmount.Name = "txtPayAmount"
@@ -1181,10 +1187,12 @@ Partial Class FormBooking
         'lblEventTypePayment
         '
         Me.lblEventTypePayment.AutoSize = True
+        Me.lblEventTypePayment.Font = New System.Drawing.Font("Poppins Medium", 7.0!, System.Drawing.FontStyle.Bold)
+        Me.lblEventTypePayment.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.lblEventTypePayment.Location = New System.Drawing.Point(312, 31)
         Me.lblEventTypePayment.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEventTypePayment.Name = "lblEventTypePayment"
-        Me.lblEventTypePayment.Size = New System.Drawing.Size(79, 23)
+        Me.lblEventTypePayment.Size = New System.Drawing.Size(78, 21)
         Me.lblEventTypePayment.TabIndex = 4
         Me.lblEventTypePayment.Text = "Event Type"
         '
@@ -1202,10 +1210,12 @@ Partial Class FormBooking
         'lblEventPlacePayment
         '
         Me.lblEventPlacePayment.AutoSize = True
+        Me.lblEventPlacePayment.Font = New System.Drawing.Font("Poppins Medium", 7.0!, System.Drawing.FontStyle.Bold)
+        Me.lblEventPlacePayment.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.lblEventPlacePayment.Location = New System.Drawing.Point(312, 15)
         Me.lblEventPlacePayment.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblEventPlacePayment.Name = "lblEventPlacePayment"
-        Me.lblEventPlacePayment.Size = New System.Drawing.Size(84, 23)
+        Me.lblEventPlacePayment.Size = New System.Drawing.Size(82, 21)
         Me.lblEventPlacePayment.TabIndex = 2
         Me.lblEventPlacePayment.Text = "Event Place"
         '
@@ -1261,7 +1271,7 @@ Partial Class FormBooking
         'mcAvailability
         '
         Me.mcAvailability.Font = New System.Drawing.Font("Poppins", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.mcAvailability.Location = New System.Drawing.Point(246, 47)
+        Me.mcAvailability.Location = New System.Drawing.Point(296, 47)
         Me.mcAvailability.Margin = New System.Windows.Forms.Padding(12, 11, 12, 11)
         Me.mcAvailability.Name = "mcAvailability"
         Me.mcAvailability.TabIndex = 39
@@ -1288,7 +1298,6 @@ Partial Class FormBooking
         Me.Controls.Add(Me.lblFeatures)
         Me.Controls.Add(Me.lblPlaceIDContainer)
         Me.Controls.Add(Me.lblCapacityContainer)
-        Me.Controls.Add(Me.btnBack)
         Me.Controls.Add(Me.lblEventPlace)
         Me.Controls.Add(Me.lblPlaceID)
         Me.Controls.Add(Me.lblCapacity)

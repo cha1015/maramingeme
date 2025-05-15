@@ -118,37 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="SignUp Window" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SignUp Window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LogIn Bg 21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogIn Bg 21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BOOking" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BOOking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnPlaceBooking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnPlaceBooking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Customer Information bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Customer Information bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="no pan" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\no pan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LogIn Bg 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogIn Bg 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnProceed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnProceed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bg chinom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bg chinom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogIn Bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogIn Bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="LogIn Bg 21" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\LogIn Bg 21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BOOking" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BOOking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bg chinom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bg chinom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnBack black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnBack black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btnProceed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnProceed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="btnPlaceBooking" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnPlaceBooking.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SignUp Window" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SignUp Window.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogIn Bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogIn Bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogIn Bg 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LogIn Bg 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdminInformation bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdminInformation bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdminInformation bg1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdminInformation bg1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
