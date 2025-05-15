@@ -747,5 +747,23 @@ Public Class FormBooking
         Return True
     End Function
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
+    End Sub
+
+    Private Sub lblCapacityContainer_Click(sender As Object, e As EventArgs) Handles lblCapacityContainer.Click
+
+    End Sub
+
+    Private Sub lblAvailableDaysContainer_Click(sender As Object, e As EventArgs) Handles lblAvailableDaysContainer.Click
+
+    End Sub
+
+    Private Sub tpPaymentDetails_Click(sender As Object, e As EventArgs) Handles tpPaymentDetails.Click
+
+    End Sub
+
+    Private Sub lblPriceBreakdown_Click(sender As Object, e As EventArgs) Handles lblPriceBreakdown.Click
+
+    End Sub
 End Class
